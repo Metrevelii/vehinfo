@@ -4,10 +4,17 @@ const authController = {
     async register(req, res, next) {
 
         try {
-            req.status(200).send({ok: 'yes'})
             
-        } catch (error) {
 
+
+            const { email, password } = req.body;
+            const user = await authService.createUser(email, password);
+
+            res.status(200).send({
+                user
+            })
+        } catch (error) {
+            console.log(error);
         }
 
     },

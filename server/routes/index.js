@@ -4,12 +4,12 @@ const router = express.Router();
 
 const routesIndex = [
     {
-        path: "/auth",
+        path:'/auth',
         route: authRoute
     }
 ]
 
-routesIndex.forEach((route) => {
+routesIndex.forEach((route)=>{
     router.use(route.path, route.route);
 });
 

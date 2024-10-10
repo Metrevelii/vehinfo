@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
-
 require('dotenv').config();
 
 
@@ -24,7 +23,7 @@ const userSchema = mongoose.Schema({
     role: {
         type: String,
         enum: ['user', 'admin'],
-        default: ['user']
+        default: 'user'
     },
     firstname: {
         type: String,
@@ -43,6 +42,11 @@ const userSchema = mongoose.Schema({
         default: false
     }
 });
+/// to avoid duplicated mails
+userSchema.statics.emailTaken = async function(email) {
+    const user = await this.findOne({ email });
+    return !!user
+}
 
 const User = mongoose.model('User', userSchema);
 module.exports = { User };
