@@ -10,13 +10,15 @@ const allRights = {
 
 let grantsObject = {
     admin: {
-        profile: allRights
+        profile: allRights,
+        auction: allRights
     },
     user: {
         profile: {
             'read:own':['*', '!password', '!_id'],
             'update:own':['*']
-        }
+        },
+        auction: {'read:any':['*']}
     }
 
 }
