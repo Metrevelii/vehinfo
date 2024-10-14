@@ -8,6 +8,6 @@ router.route('/profile')
 .patch(auth('updateOwn','profile'),usersController.updateProfile)
 
 
-
+router.patch('/email', auth('updateOwn','profile'), usersController.updateUserEmail)
 
 module.exports = router;
