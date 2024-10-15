@@ -40,7 +40,7 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            <div className="haeder__switcher">
+            <div className="header__switcher">
               <LangBtn />
             </div>
           </div>

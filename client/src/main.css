@@ -6,7 +6,19 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  body {
+    padding: 0;
+    margin: 0;
+  }
   
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* * {
+    box-sizing: border-box;
+  } */
   * {
    
     background: none repeat scroll 0 0 transparent;
@@ -23,12 +35,50 @@ body {
     text-align: left;
     text-decoration: none;
     text-indent: 0;
+    box-sizing: border-box;
   }
+
+  @font-face {
+    font-family: 'InterLight';
+    src: url('../public/fonts/InterLights.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'InterBold';
+    src: url('../public/fonts/InterBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+
+  @font-face {
+    font-family: 'InterMedium';
+    src: url('../public/fonts/InterMedium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'InterRegular';
+    src: url('../public/fonts/InterRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
   
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
+
   
   .container {
     margin: 0 auto;
@@ -37,10 +87,22 @@ body {
     width: 100%;
   }
   
+
+  .container.mt-330 {
+    margin-top: 330px;
+  }
+
   .header {
-    background: #fff;
+    background: transparent;
     box-shadow: 0 4px 20px #1f163b12;
     margin-bottom: 50px;
+    height: 60px;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
   
   .header__inner {

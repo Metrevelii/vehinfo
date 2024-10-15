@@ -8,7 +8,11 @@
     justify-content: center;
     align-items: center;
 
-    color: #1f163b;
+    color: #fff;
+
+    font-family: 'InterMedium';
+    font-weight: 500;
+    font-style: normal;
 }
 
 .language_switcher {

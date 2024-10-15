@@ -1,9 +1,15 @@
 import React from 'react';
+import HeadlineBox from './HeadlineBox';
 
 const Home = () => {
     return (
-        <>
-            Home
+        <>   
+            <div className="homepage">
+                
+                <div className="container mt-330">
+                    <HeadlineBox />
+                </div>
+            </div>
         </>
     )
 }
