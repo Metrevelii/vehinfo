@@ -12,7 +12,8 @@ let grantsObject = {
     admin: {
         profile: allRights,
         auction: allRights,
-        location: allRights
+        location: allRights,
+        site: allRights
     },
     user: {
         profile: {
