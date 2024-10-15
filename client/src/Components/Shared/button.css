@@ -1,0 +1,36 @@
+.header_btn {
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #1f163b;
+}
+
+.language_switcher {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-btn {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    background: #1f163b;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 11px;
+    color: #fff;
+
+    cursor: pointer;
+}
