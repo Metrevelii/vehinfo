@@ -44,7 +44,16 @@ const calcControllers = {
         } catch (error) {
           next(error);
         }
-      }
+    },
+    async getAuctions(req, res, next) {
+        try {
+            const auctions = await calcService.getAuctions(req.body);
+            res.json(auctions);
+
+        } catch(error){
+            next(error);
+        }
+    }
 
 }
 

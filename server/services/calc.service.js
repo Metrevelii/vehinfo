@@ -54,9 +54,23 @@ const deleteAuctionById = async(id) => {
     }
 }
 
+const getAuctions = async() => {
+    try {
+        const auctions = await Auction.find({})
+
+        
+        if (!auctions) throw new ApiError(httpStatus.NOT_FOUND, 'Auctions not found');
+        return auctions;
+
+    } catch(error) {
+        throw error;
+    }
+}
+
 module.exports = {
     addAuction,
     getAuctionById,
     deleteAuctionById,
-    addLocationToAuction
+    addLocationToAuction,
+    getAuctions
 }

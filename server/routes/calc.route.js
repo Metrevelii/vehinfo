@@ -10,6 +10,7 @@ router.route('/calc/:id')
 
 router.post('/calc', auth('createAny', 'auction'), calcControllers.addAuction);
 router.post('/calc/:id/location', auth('createAny', 'location'), calcControllers.addLocationToAuction);
+router.get('/all', calcControllers.getAuctions)
 
 
 module.exports = router;
