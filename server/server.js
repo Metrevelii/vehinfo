@@ -7,18 +7,25 @@ const mongoSanitize = require('express-mongo-sanitize');
 const routes = require('./routes');
 const passport = require('passport');
 const {jwtStrategy} = require('./middleware/passport')
-const cors = require('cors');
+// const cors = require('cors');
 
 const { handleError, convertToApiError } = require('./middleware/apiError');
 
 
 const mongoUri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}?retryWrites=true&w=majority&appName=Cluster0`;
 
-mongoose.connect(mongoUri);
+mongoose.connect(mongoUri,{
+
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+ 
+     
+});
 
 /// body parse
 app.use(express.json())
-app.use(cors());
+// app.use(cors());
+// app.options('*', cors());
 
 
 /// sanitize

@@ -1,8 +1,14 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+// import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { sendContact } from '../../store/actions/contact.action'; 
 
 const ContactForm = () => {
+    const dispatch = useDispatch();
+    const { loading, success, error } = useSelector(state => state.contact);
+    
     const initialValues = {
         name: '',
         surname: '',
@@ -22,15 +28,8 @@ const ContactForm = () => {
     });
 
     const onSubmit = async(values) => {
-        console.log(values);
-        // try {
-        //     const response = await axios.post('http://localhost:3001/api/contact', values);
-        //     console.log('Contact saved:', response.data);
-        //     alert('Contact saved successfully!');
-        // } catch (error) {
-        //     console.error('Error saving contact:', error.response ? error.response.data : error.message);
-        //     alert('An error occurred while saving the contact. Please try again.');
-        // }
+        console.log('Submitting contact data:', values);
+        dispatch(sendContact(values));
     };
 
     return (
@@ -118,9 +117,11 @@ const ContactForm = () => {
                             type="submit" 
                             className="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600 transition-colors"
                         >
-                            Send
+                             {loading ? 'Sending...' : 'Send'}
                         </button>
                     </div>
+                    {success && <div className="text-green-500">Message sent successfully!</div>}
+                    {error && <div className="text-red-500">{error}</div>}
                 </Form>
             )}
         </Formik>

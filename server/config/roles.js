@@ -13,7 +13,8 @@ let grantsObject = {
         profile: allRights,
         auction: allRights,
         location: allRights,
-        site: allRights
+        site: allRights,
+ 
     },
     user: {
         profile: {
@@ -21,7 +22,8 @@ let grantsObject = {
             'update:own':['*']
         },
         auction: {'read:any':['*']},
-        location: {'read:any':['*']}
+        location: {'read:any':['*']},
+ 
     }
 
 }
