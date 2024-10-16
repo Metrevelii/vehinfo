@@ -113,13 +113,6 @@ body {
   }
   
 
-  .footer {
-    background-color: #1f163b;
-    box-shadow: 0 -6px 20px #1f163b1a;
-    margin-top: auto;
-    padding: 30px 0;
-  }
-  
   .default-layout {
     display: flex;
     flex-direction: column;
@@ -140,4 +133,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
+
+  /* #comment:focus,
+  #phone:focus,
+  #name:focus,
+  #surname:focus,
+  #countryCode:focus
+  {
+    border: 0 none #FFF;
+    overflow: hidden;
+  } */
