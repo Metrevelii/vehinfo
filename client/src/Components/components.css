@@ -1,6 +1,6 @@
 .homepage {
-    background: url("../../public/images/header-image.webp");
-    background-size: 100%;
+    background: linear-gradient(180deg, rgba(8, 11, 32, 0.09) 0%, rgba(8, 11, 32, 0.16) 7.58%, rgba(8, 11, 32, 0.32) 30.9%, rgba(8, 11, 32, 0.32) 52.51%, rgba(6, 7, 23, 0.814445) 84.23%, #050613 100%),  url("../../public/images/header-image.webp");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
 
@@ -10,78 +10,55 @@
     
 }
 
-.headlineBox {
-    width: 892px;
-    height: 254px;
 
-    background: rgba(0, 0, 0, 0.38);
+.aboutus {
     
+    padding: 2rem 0;
 }
 
-.headlineBox__inner {
+.aboutus__inner {
     width: 100%;
     height: 100%;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutus__info {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
 
-    padding: 35px;
+    width: 50%;
 }
 
-.headlineBox__title {
+.aboutus__info-headline {
     font-family: 'InterBold';
-    font-weight: 700;
+    font-weight: bold;
     font-style: normal;
     font-size: 32px;
-    color: #fff;
- 
+    color: #000000;
 }
 
-.headlineBox__para {
-    font-family: 'InterLight';
-    font-size: 20px;
+.aboutus__info-para {
+    font-family: 'InterMedium';
     font-weight: normal;
     font-style: normal;
-    color: rgba(255, 255, 255, 0.8);
-    
-    margin-top: 30px;
-}
-
-.headlineBox__bottom {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    
-    margin-top: auto;
-}
-
-.headlineBox__button {
-    width: 270px;
-    height: 70px;
-
-    background: linear-gradient(180deg, #2F53FE 0%, #1B3CDE 100%);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.headlineBox__button button {
-    width: 100%;
-    height: 100%;
-    font-family: 'InterBold';
-    font-style: normal;
-    font-weight: 700;
-    color: #fff;
     font-size: 20px;
-    text-align: center;
-    cursor: pointer;
+    color: #535353;
 }
 
+/* .aboutus__image {
+    width: 880px;
+    height: 515px;
+
+    background-image: url("../../public/images/ship-img.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
 
 .calculator__wrapper {
     width: 100%;

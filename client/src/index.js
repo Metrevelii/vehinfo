@@ -7,7 +7,7 @@ import global_ka from './Translations/ka/global.json';
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
 
-import './main.css';
+import './globals.css';
 
 
 i18next.init({
