@@ -13,7 +13,7 @@ const ContactForm = () => {
         name: '',
         surname: '',
         countryCode: '',
-        mobile: '',
+        mobileNumber: '',
         comment: '',
     };
 
@@ -21,7 +21,7 @@ const ContactForm = () => {
         name: Yup.string().required('Name is required'),
         surname: Yup.string().required('Surname is required'),
         countryCode: Yup.string().required('Country code is required'),
-        mobile: Yup.string()
+        mobileNumber: Yup.string()
         .required('Phone is required!')
         .matches(/^[0-9]*$/, 'Phone number is not valid'),
         comment: Yup.string().required('Comment is required'),
@@ -85,11 +85,11 @@ const ContactForm = () => {
                             <ErrorMessage name="countryCode" component="div" className="text-red-500 text-sm" />
                         </div>
                         <div className="flex-1">
-                            <label htmlFor="mobile" className="mb-1 font-bold block"></label>
+                            <label htmlFor="mobileNumber" className="mb-1 font-bold block"></label>
                             <Field 
                                 type="text" 
-                                id="mobile" 
-                                name="mobile" 
+                                id="mobileNumber" 
+                                name="mobileNumber" 
                                 placeholder="Mobile Number" 
                                 className="border p-2 rounded w-full bg-[#fff] text-[#5d636b]"
                             />
