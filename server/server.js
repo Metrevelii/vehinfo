@@ -7,6 +7,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const routes = require('./routes');
 const passport = require('passport');
 const {jwtStrategy} = require('./middleware/passport')
+const cors = require('cors');
 
 const { handleError, convertToApiError } = require('./middleware/apiError');
 
@@ -17,6 +18,7 @@ mongoose.connect(mongoUri);
 
 /// body parse
 app.use(express.json())
+app.use(cors());
 
 
 /// sanitize
@@ -42,6 +44,8 @@ app.use((err, req, res, next) => {
 
 
 const port = process.env.PORT || 3001;
+
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 })

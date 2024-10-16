@@ -21,9 +21,16 @@ const ContactForm = () => {
         comment: Yup.string().required('Comment is required'),
     });
 
-    const onSubmit = (values) => {
+    const onSubmit = async(values) => {
         console.log(values);
-        // Submit your form values here
+        // try {
+        //     const response = await axios.post('http://localhost:3001/api/contact', values);
+        //     console.log('Contact saved:', response.data);
+        //     alert('Contact saved successfully!');
+        // } catch (error) {
+        //     console.error('Error saving contact:', error.response ? error.response.data : error.message);
+        //     alert('An error occurred while saving the contact. Please try again.');
+        // }
     };
 
     return (

@@ -3,6 +3,7 @@ const authRoute = require('./auth.route');
 const usersRoute = require('./users.route');
 const calcRoute = require('./calc.route');
 const siteRoute = require('./site.route');
+const contactRoute = require('./contact.route');
 const router = express.Router();
 
 const routesIndex = [
@@ -21,6 +22,10 @@ const routesIndex = [
     {
         path:'/site',
         route: siteRoute
+    },
+    {
+        path: '/contact',
+        route: contactRoute
     }
 ]
 
