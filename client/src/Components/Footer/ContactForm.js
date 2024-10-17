@@ -41,7 +41,7 @@ const ContactForm = () => {
             validationSchema={validationSchema}
             onSubmit={onSubmit}
         >
-            {({ handleChange, values }) => (
+            {() => (
                 <Form className="w-full p-4 bg-transparent rounded mt-[2rem]">
             
                     <div className="flex justify-between mb-4">

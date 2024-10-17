@@ -226,3 +226,65 @@
 }
 
 
+
+.register_login_container {
+    width: 80%;
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #000;
+
+    margin: 0 auto;
+}
+
+.left {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.newcustomer {
+    font-family: 'InterBold';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: #000;
+}
+
+.para {
+    font-family: 'InterBold';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: #000;
+    
+    margin-top: 3rem;
+
+    text-align: center;
+}
+
+.register_button {
+    padding: 20px;
+
+    background: blue;
+    cursor: pointer;
+    font-family: 'InterMedium';
+    font-size: 13px;
+    color: #fff;
+    font-weight: 400;
+
+    margin-top: 3rem;
+}
+
+.form_headline {
+    font-family: 'InterRegular';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    color: #050613;
+
+    margin-bottom: 1.5rem;
+}
