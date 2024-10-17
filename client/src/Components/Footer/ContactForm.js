@@ -27,9 +27,12 @@ const ContactForm = () => {
         comment: Yup.string().required('Comment is required'),
     });
 
-    const onSubmit = async(values) => {
-        console.log('Submitting contact data:', values);
-        dispatch(sendContact(values));
+    const onSubmit = async(values, { resetForm }) => {
+        dispatch(sendContact(values)).then(() => {
+            resetForm();
+        }).catch((err) => {
+            console.error('Error sending contact data:', err);
+        });
     };
 
     return (
