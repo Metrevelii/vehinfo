@@ -42,7 +42,7 @@ const ContactForm = () => {
             onSubmit={onSubmit}
         >
             {() => (
-                <Form className="w-full p-4 bg-transparent rounded mt-[2rem]">
+                <Form className="w-full p-4 bg-transparent rounded">
             
                     <div className="flex justify-between mb-4">
                         <div className="flex flex-col w-[48%]">
@@ -52,9 +52,9 @@ const ContactForm = () => {
                                 id="name" 
                                 name="name" 
                                 placeholder="Name" 
-                                className="border p-2 bg-[#fff] text-[#a3acb9]"
+                                className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9]"
                             />
-                            <ErrorMessage name="name" component="div" className="text-red-500 text-sm" />
+                            <ErrorMessage name="name" component="div" className="text-red-500 text-sm font-interMedium mt-[5px]" />
                         </div>
                         <div className="flex flex-col w-[48%]">
                             <label htmlFor="surname" className="mb-1 font-bold"></label>
@@ -63,9 +63,9 @@ const ContactForm = () => {
                                 id="surname" 
                                 name="surname" 
                                 placeholder="Surname" 
-                                className="border p-2 bg-[#fff] text-[#a3acb9]"
+                                className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9]"
                             />
-                            <ErrorMessage name="surname" component="div" className="text-red-500 text-sm" />
+                            <ErrorMessage name="surname" component="div" className="text-red-500 text-sm font-interMedium mt-[5px]" />
                         </div>
                     </div>
 
@@ -85,7 +85,7 @@ const ContactForm = () => {
                                 <option value="+1" className="text-[#5d636b]">+1 (USA)</option>
                           
                             </Field>
-                            <ErrorMessage name="countryCode" component="div" className="text-red-500 text-sm" />
+                            <ErrorMessage name="countryCode" component="div" className="text-red-500 text-sm font-interMedium mt-[5px]" />
                         </div>
                         <div className="flex-1">
                             <label htmlFor="mobileNumber" className="mb-1 font-bold block"></label>
@@ -94,9 +94,9 @@ const ContactForm = () => {
                                 id="mobileNumber" 
                                 name="mobileNumber" 
                                 placeholder="Mobile Number" 
-                                className="border p-2 rounded w-full bg-[#fff] text-[#5d636b]"
+                                className=" shadow-custom border p-2 rounded w-full bg-[#fff] text-[#5d636b]"
                             />
-                            <ErrorMessage name="mobile" component="div" className="text-red-500 text-sm" />
+                            <ErrorMessage name="mobileNumber" component="div" className="text-red-500 text-sm font-interMedium mt-[5px]" />
                         </div>
                     </div>
 
@@ -109,16 +109,16 @@ const ContactForm = () => {
                             name="comment" 
                             rows="4" 
                             placeholder="You can leave comment here" 
-                            className="border p-2 rounded w-full h-[102px] bg-[#fff] resize-none text-[#5d636b]"
+                            className=" shadow-custom border p-2 rounded w-full h-[102px] shadow-boxShadow bg-[#fff] resize-none text-[#5d636b]"
                         />
-                        <ErrorMessage name="comment" component="div" className="text-red-500 text-sm" />
+                        <ErrorMessage name="comment" component="div" className="text-red-500 text-sm font-interMedium mt-[5px]" />
                     </div>
 
                  
-                    <div className="flex justify-end">
+                    <div className="flex justify-start">
                         <button 
                             type="submit" 
-                            className="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600 transition-colors"
+                            className="w-[220px] h-[48px] bg-gradient-to-b from-[#2F53FE] to-[#1B3CDE] font-interBold font-bold text-[20px] text-white text-center cursor-pointer rounded-[12px]"
                         >
                              {loading ? 'Sending...' : 'Send'}
                         </button>

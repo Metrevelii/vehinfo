@@ -5,6 +5,7 @@ import LangBtn from "../Shared/langbtn";
 import { Link } from "react-router-dom";
 import NavLink from './NavLink';
 
+
 const Header = ({users, signOutUser}) => {
   const { t } = useTranslation("global");
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,11 +31,11 @@ const Header = ({users, signOutUser}) => {
     <>
       <header
       className={`${
-        isScrolled ? "bg-black shadow-lg fixed" : "bg-transparent absolute"
-      } shadow-[0_4px_20px_rgba(31,22,59,0.07)] mb-[50px] h-[60px] z-30 top-0 left-0 right-0 mx-auto transition-colors duration-300`}
+        isScrolled ? "fixed" : "absolute"
+      } bg-transparent flex justify-center items-center h-[100px] z-30 top-0 left-0 right-0 mx-auto transition-colors duration-300`}
       >
         <div className="container">
-          <div className="flex justify-between items-center h-[70px]">
+          <div className={`${isScrolled ? "bg-primary-blue" : "bg-transparent"} px-[15px] flex justify-between items-center h-[100px]`}>
             <div className="header__logo">
               <Link to="/" className="w-100 h-100 centered">
                 {/* <Logo /> */}

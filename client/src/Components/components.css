@@ -20,135 +20,6 @@
 } 
 
 
-.footer {
-    width: 100%;
-    height: 571px;
-
-    background:rgba(0, 0, 0, 0.95) url("../../public/images/footer-background.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.footer__inner {
-    width: 100%;
-    height: 571px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer__left {
-    width: 50%;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.footer__right {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 4rem;
-    background: rgba(255, 255, 255, 0.85);
-}
-
-.footer__info {
-    width: 100%;
-    
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.footer__info-head {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.footer__info-headText {
-    font-family: 'InterBold';
-    font-style: normal;
-    font-weight: 700;
-    color: #bdbdbd;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-.footer__info-list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-
-    margin-top: 1rem;
-}
-
-.footer__info-para {
-    font-family: 'InterRegular';
-    font-style: normal;
-    font-weight: 400;
-    color: #bdbdbd;
-    font-size: 20px;
-}
-
-
-.footer__phone {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 3rem;
-    flex-direction: column;
-}
-
-.footer__phone-text {
-    font-family: 'InterRegular';
-    font-style: normal;
-    font-weight: 400;
-    color: rgba(83, 83, 83, 1);
-    font-size: 20px;
-    margin-top: 1rem;
-}
-
-
-
-.footer__mail {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    margin-top: 3rem;
-}
-
-.footer__phone-text {
-    font-family: 'InterRegular';
-    font-style: normal;
-    font-weight: 400;
-    color: rgba(83, 83, 83, 1);
-    font-size: 20px;
-    margin-top: 1rem;
-}
-
-
-
-
-
-
-
-
-
-
 
 .calculator__wrapper {
     width: 100%;
@@ -162,6 +33,9 @@
     flex-direction: column;
 
     padding-top: 70px;
+
+ 
+
 }
 
 .calculator {
