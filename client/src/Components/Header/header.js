@@ -2,17 +2,18 @@ import React, { useState, useEffect } from "react";
 
 import { useTranslation } from "react-i18next";
 import LangBtn from "../Shared/langbtn";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import NavLink from './NavLink';
 
 
 const Header = ({users, signOutUser}) => {
   const { t } = useTranslation("global");
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -27,15 +28,17 @@ const Header = ({users, signOutUser}) => {
     };
   }, []);
 
+  const isHomePage = location.pathname === '/';
+
   return (
     <>
       <header
       className={`${
-        isScrolled ? "fixed" : "absolute"
-      } bg-transparent flex justify-center items-center h-[100px] z-30 top-0 left-0 right-0 mx-auto transition-colors duration-300`}
+        isScrolled ? "fixed bg-primary-blue" : isHomePage ? "absolute bg-transparent" : "relative bg-primary-blue"
+      } w-full flex justify-center items-center h-[100px] z-30 top-0 left-0 right-0 mx-auto transition-colors duration-300`}
       >
         <div className="container">
-          <div className={`${isScrolled ? "bg-primary-blue" : "bg-transparent"} px-[15px] flex justify-between items-center h-[100px]`}>
+          <div className={`px-[15px] flex justify-between items-center h-[100px]`}>
             <div className="header__logo">
               <Link to="/" className="w-100 h-100 centered">
                 {/* <Logo /> */}
