@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { sendContact } from '../../store/actions/contact.action'; 
 
+
 const ContactForm = () => {
     const dispatch = useDispatch();
     const { loading, success, error } = useSelector(state => state.contact);
@@ -44,40 +45,40 @@ const ContactForm = () => {
             {() => (
                 <Form className="w-full p-4 bg-transparent rounded">
             
-                    <div className="flex justify-between mb-4">
-                        <div className="flex flex-col w-[48%]">
-                            <label htmlFor="name" className="mb-1 font-bold"></label>
+                    <div className="flex justify-between mb-[2rem]">
+                        <div className="flex flex-col w-[48%] relative">
+                       
                             <Field 
                                 type="text" 
                                 id="name" 
                                 name="name" 
                                 placeholder="Name" 
-                                className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9]"
+                                className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative"
                             />
-                            <ErrorMessage name="name" component="div" className="text-red-500 text-sm font-interMedium mt-[5px]" />
+                            <ErrorMessage name="name" component="div" className="text-red-500 text-sm font-interMedium mt-[5px] absolute z-[5] bottom-[-50%] left-[1%]" />
                         </div>
-                        <div className="flex flex-col w-[48%]">
-                            <label htmlFor="surname" className="mb-1 font-bold"></label>
+                        <div className="flex flex-col w-[48%] relative">
+               
                             <Field 
                                 type="text" 
                                 id="surname" 
                                 name="surname" 
                                 placeholder="Surname" 
-                                className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9]"
+                                className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative"
                             />
-                            <ErrorMessage name="surname" component="div" className="text-red-500 text-sm font-interMedium mt-[5px]" />
+                            <ErrorMessage name="surname" component="div" className="text-red-500 text-sm font-interMedium mt-[5px] absolute z-[5] bottom-[-50%] left-[2%]" />
                         </div>
                     </div>
 
                 
-                    <div className="flex mb-4">
-                        <div className="w-[200px] mr-4">
-                            <label htmlFor="countryCode" className="mb-1 font-bold block"></label>
+                    <div className="flex shadow-custom mb-[2rem]">
+                        <div className="w-[200px]">
+                            {/* <label htmlFor="countryCode" className="mb-1 font-bold block"></label> */}
                             <Field 
                                 as="select" 
                                 id="countryCode" 
                                 name="countryCode" 
-                                className="border p-2 rounded w-full bg-[#fff] text-[#5d636b]"
+                                className="h-[46px] rounded-tl-[12px] rounded-bl-[12px] appearance-none w-full bg-[#fff] text-[#5d636b] px-[20px] relative  border-r-2 border-r-primary-purpleLighter"
                             >
                                 <option value="" className="text-[#5d636b]">Select</option>
                                 <option value="+995" className="text-[#5d636b]">+995 (Georgia)</option>
@@ -85,33 +86,33 @@ const ContactForm = () => {
                                 <option value="+1" className="text-[#5d636b]">+1 (USA)</option>
                           
                             </Field>
-                            <ErrorMessage name="countryCode" component="div" className="text-red-500 text-sm font-interMedium mt-[5px]" />
+                            <ErrorMessage name="countryCode" component="div" className="text-red-500 text-sm font-interMedium mt-[5px] absolute z-[5]" />
                         </div>
                         <div className="flex-1">
-                            <label htmlFor="mobileNumber" className="mb-1 font-bold block"></label>
+                            {/* <label htmlFor="mobileNumber" className="mb-1 font-bold block"></label> */}
                             <Field 
                                 type="text" 
                                 id="mobileNumber" 
                                 name="mobileNumber" 
                                 placeholder="Mobile Number" 
-                                className=" shadow-custom border p-2 rounded w-full bg-[#fff] text-[#5d636b]"
+                                className="h-[46px]  rounded-tr-[12px] px-[20px] rounded-br-[12px] w-full bg-[#fff] text-[#5d636b] relative"
                             />
-                            <ErrorMessage name="mobileNumber" component="div" className="text-red-500 text-sm font-interMedium mt-[5px]" />
+                            <ErrorMessage name="mobileNumber" component="div" className="text-red-500 text-sm font-interMedium mt-[5px] absolute z-[5]" />
                         </div>
                     </div>
 
                      
-                    <div className="mb-4">
-                        <label htmlFor="comment" className="mb-1 font-bold block"></label>
+                    <div className="mb-[1.5rem] relative">
+               
                         <Field 
                             as="textarea" 
                             id="comment" 
                             name="comment" 
                             rows="4" 
                             placeholder="You can leave comment here" 
-                            className=" shadow-custom border p-2 rounded w-full h-[102px] shadow-boxShadow bg-[#fff] resize-none text-[#5d636b]"
+                            className=" shadow-custom border p-2 w-full h-[102px] rounded-[12px] shadow-boxShadow bg-[#fff] resize-none text-[#5d636b]"
                         />
-                        <ErrorMessage name="comment" component="div" className="text-red-500 text-sm font-interMedium mt-[5px]" />
+                        <ErrorMessage name="comment" component="div" className="text-red-500 text-sm font-interMedium mt-[5px] absolute z-[5] bottom-[-15px]" />
                     </div>
 
                  

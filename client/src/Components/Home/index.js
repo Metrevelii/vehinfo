@@ -9,13 +9,13 @@ const Home = () => {
         <Fragment>   
             <div className="homepage">
                 
-                <div className="container mt-330">
+                <div className="mx-auto max-w-[1432px] px-4 w-full mt-[30rem]">
                     <HeadlineBox />
                     <Advantages />
                 </div>
             </div>
             <AboutUs />
-            <div className="container">
+            <div className="mx-auto max-w-[1432px] px-4 w-full">
                 <h1 className="font-interBold font-bold text-[32px] text-black mb-4 uppercase">How you can contact us</h1>
             </div>
         </Fragment>

@@ -2,6 +2,40 @@ import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 
+import Select from "react-select";
+
+const customStyles = {
+  control: (provided) => ({
+    ...provided,
+    backgroundColor: "white",
+    border: "1px solid #e2e8f0", // Tailwind's border-gray-300
+    borderRadius: "8px",
+    padding: "2px",
+    boxShadow: "inset 0px 1px 3px rgba(0, 0, 0, 0.1)",
+    "&:hover": {
+      borderColor: "#3b82f6", // Tailwind's focus:border-blue-500
+    },
+  }),
+  option: (provided, state) => ({
+    ...provided,
+    padding: "10px 12px",
+    backgroundColor: state.isSelected ? "#3b82f6" : state.isFocused ? "#3b82f6" : null, // Tailwind's bg-blue-500 for selected, bg-gray-200 for hover
+    color: state.isSelected ? "#ffffff" : "#000000", // White text when selected
+    "&:hover": {
+      backgroundColor: "#3b82f6", // Tailwind's bg-gray-200
+      color: "#ffffff", 
+    },
+  }),
+  menu: (provided) => ({
+    ...provided,
+    zIndex: 10,  
+  }),
+  singleValue: (provided) => ({
+    ...provided,
+    color: "#000000",  
+  }),
+};
+
 const CalcForm = () => {
   const [auctions, setAuctions] = useState([]);
   const [states, setStates] = useState([]);
@@ -29,7 +63,7 @@ const CalcForm = () => {
       destination: "",
     },
     onSubmit: (values) => {
-      
+      console.log(values);
     },
   });
 
@@ -40,7 +74,6 @@ const CalcForm = () => {
       );
       if (selectedAuction) {
         setStates(selectedAuction.locations);
-   
         formik.setFieldValue("state", "");
         formik.setFieldValue("port", "");
         formik.setFieldValue("destination", "");
@@ -51,23 +84,21 @@ const CalcForm = () => {
     }
   }, [formik.values.auction, auctions]);
 
-  // Update ports when state changes
   useEffect(() => {
     if (formik.values.state) {
       const selectedState = states.find(
         (loc) => loc.name === formik.values.state
       );
       if (selectedState) {
-        setPorts(selectedState.ports); 
-        setDestinations(selectedState.destinations);  
-        formik.setFieldValue("port", "");  
-        formik.setFieldValue("destination", "");  
-        setPrice(0); 
+        setPorts(selectedState.ports);
+        setDestinations(selectedState.destinations);
+        formik.setFieldValue("port", "");
+        formik.setFieldValue("destination", "");
+        setPrice(0);
       }
     }
   }, [formik.values.state, states]);
 
- 
   useEffect(() => {
     if (formik.values.destination) {
       const selectedState = states.find(
@@ -84,88 +115,98 @@ const CalcForm = () => {
     }
   }, [formik.values.destination, states]);
 
+  // Convert data for react-select format
+  const auctionOptions = auctions.map((auction) => ({
+    value: auction._id,
+    label: auction.name,
+  }));
+
+  const stateOptions = states.map((state) => ({
+    value: state.name,
+    label: state.name,
+  }));
+
+  const portOptions = ports.map((port) => ({
+    value: port.name,
+    label: port.name,
+  }));
+
+  const destinationOptions = destinations.map((destination) => ({
+    value: destination.name,
+    label: destination.name,
+  }));
+
   return (
     <form onSubmit={formik.handleSubmit}>
       <div className="flex flex-col space-y-4">
-        <div className="flex justify-between items-center w-[360px] h-[42px]">
+        {/* Auction Dropdown */}
+        <div className="w-[360px]">
           <label className="mr-4">Auction</label>
-          <div className="w-[65%]">
-            <select
-              name="auction"
-              value={formik.values.auction}
-              onChange={formik.handleChange}
-              className="w-full h-[34px] p-[6px_12px] bg-white border border-gray-300 rounded shadow-inner focus:border-blue-500 transition"
-            >
-              <option value="">Choose</option>
-              {auctions.map((auction) => (
-                <option key={auction._id} value={auction._id}>
-                  {auction.name}
-                </option>
-              ))}
-            </select>
-          </div>
+          <Select
+            name="auction"
+            options={auctionOptions}
+            value={auctionOptions.find(
+              (option) => option.value === formik.values.auction
+            )}
+            onChange={(selectedOption) =>
+              formik.setFieldValue("auction", selectedOption.value)
+            }
+            styles={customStyles}
+          />
         </div>
 
-        <div className="flex justify-between items-center w-[360px] h-[42px]">
+        {/* State/City Dropdown */}
+        <div className="w-[360px]">
           <label className="mr-4">State / City</label>
-          <div className="w-[65%]">
-            <select
-              name="state"
-              value={formik.values.state}
-              onChange={formik.handleChange}
-              disabled={!formik.values.auction}
-              className="w-full h-[34px] p-[6px_12px] bg-white border border-gray-300 rounded shadow-inner focus:border-blue-500 transition"
-            >
-              <option value="">Choose</option>
-              {states.map((location, index) => (
-                <option key={index} value={location.name}>
-                  {location.name}
-                </option>
-              ))}
-            </select>
-          </div>
+          <Select
+            name="state"
+            options={stateOptions}
+            value={stateOptions.find(
+              (option) => option.value === formik.values.state
+            )}
+            onChange={(selectedOption) =>
+              formik.setFieldValue("state", selectedOption.value)
+            }
+            isDisabled={!formik.values.auction}
+            styles={customStyles}
+          />
         </div>
 
-        <div className="flex justify-between items-center w-[360px] h-[42px]">
+        {/* Port Dropdown */}
+        <div className="w-[360px]">
           <label className="mr-4">USA Port</label>
-          <div className="w-[65%]">
-            <select
-              name="port"
-              value={formik.values.port}
-              onChange={formik.handleChange}
-              disabled={!formik.values.state}
-              className="w-full h-[34px] p-[6px_12px] bg-white border border-gray-300 rounded shadow-inner focus:border-blue-500 transition"
-            >
-              <option value="">Choose</option>
-              {ports.map((port, index) => (
-                <option key={index} value={port.name}>
-                  {port.name}
-                </option>
-              ))}
-            </select>
-          </div>
+          <Select
+            name="port"
+            options={portOptions}
+            value={portOptions.find(
+              (option) => option.value === formik.values.port
+            )}
+            onChange={(selectedOption) =>
+              formik.setFieldValue("port", selectedOption.value)
+            }
+            isDisabled={!formik.values.state}
+            styles={customStyles}
+          />
         </div>
 
-        <div className="flex justify-between items-center w-[360px] h-[42px]">
+        {/* Destination Dropdown */}
+        <div className="w-[360px]">
           <label className="mr-4">Destination</label>
-          <div className="w-[65%]">
-            <select
-              name="destination"
-              value={formik.values.destination}
-              onChange={formik.handleChange}
-              disabled={!formik.values.port}
-              className="w-full h-[34px] p-[6px_12px] bg-white border border-gray-300 rounded shadow-inner focus:border-blue-500 transition"
-            >
-              <option value="">Choose</option>
-              {destinations.map((destination, index) => (
-                <option key={index} value={destination.name}>
-                  {destination.name}
-                </option>
-              ))}
-            </select>
-          </div>
+          <Select
+            name="destination"
+            options={destinationOptions}
+            value={destinationOptions.find(
+              (option) => option.value === formik.values.destination
+            )}
+            onChange={(selectedOption) =>
+              formik.setFieldValue("destination", selectedOption.value)
+            }
+            isDisabled={!formik.values.port}
+            styles={customStyles}
+          />
         </div>
       </div>
+
       <div className="mt-6 text-xl font-bold">{price} $</div>
     </form>
   );

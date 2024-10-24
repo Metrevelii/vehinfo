@@ -5,6 +5,24 @@ module.exports = {
     "./public/index.html",
 ],
   theme: {
+    screens: {
+      xs: '300px',
+      // => @media (min-width: 300px) { ... }
+      sm: '640px',
+      // => @media (min-width: 640px) { ... }
+
+      md: '768px',
+      // => @media (min-width: 768px) { ... }
+
+      lg: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      xl: '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    },
     extend: {
       fontFamily: {
         interBold: ['InterBold', 'sans-serif'],
@@ -23,6 +41,7 @@ module.exports = {
             whiteSecond: '#f8f8f8',
             whiteTransparent: '#ffffffcc',
             lightPurple: '#8a93c0',
+            purpleLighter: '#b9bed1',
             black: '#222222',
             blackSecond: '#2c2c2c'
         },

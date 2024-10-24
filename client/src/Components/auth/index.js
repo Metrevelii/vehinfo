@@ -11,7 +11,7 @@ const RegisterLogin = (props) => {
   return (
     <>
       <div className="w-full h-[70vh] mt-[80px] bg-[#fff] flex justify-center items-center">
-        <div className="container">
+        <div className="mx-auto max-w-[1432px] px-4 w-full">
           <div className="register_login_container">
             <div className="left">
               {formType ? (

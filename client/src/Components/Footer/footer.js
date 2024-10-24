@@ -1,10 +1,11 @@
 import React from "react";
 import ContactForm from "./ContactForm";
+import Social from './social';
 
 const Footer = () => {
   return (
     <footer className="w-full h-[571px] bg-overlay-black bg-footer bg-cover bg-center bg-no-repeat">
-      <div className="container mx-auto h-full">
+      <div className="mx-auto max-w-[1432px] px-4 w-full h-full">
         <div className="flex justify-center items-center h-full">
           <div className="flex flex-col justify-center items-center w-1/2 h-full">
             <div className="flex flex-col justify-start items-start w-full">
@@ -53,6 +54,7 @@ const Footer = () => {
               REQUEST A QUOTE
             </div>
             <ContactForm />
+            <Social />
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ const AboutUs = () => {
      return (
         <>
         <div className="py-8">
-            <div className="container">
+            <div className="mx-auto max-w-[1432px] px-4 w-full">
                 <div className="w-full h-full flex justify-between items-center">
 
                 <div className="flex flex-col justify-start items-start w-1/2">
