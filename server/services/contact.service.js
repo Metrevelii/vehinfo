@@ -12,4 +12,13 @@ const createContact = async (data) => {
     }
 };
 
-module.exports = { createContact };
+const getAllContacts = async () => {
+    try {
+        const contacts = await Contact.find({});
+        return contacts;
+    } catch (error) {
+        throw new ApiError(httpStatus.BAD_REQUEST, 'Error retrieving contacts');
+    }
+};
+
+module.exports = { createContact, getAllContacts };

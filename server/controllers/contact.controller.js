@@ -28,6 +28,14 @@ const contactController = {
         } catch (error) {
             next(error);
         }
+    },
+    async getAllContacts(req, res, next) {
+        try {
+            const contacts = await contactService.getAllContacts();
+            res.status(httpStatus.OK).json(contacts);
+        } catch ( error) {
+            next (error);
+        }
     }
 };
 

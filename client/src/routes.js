@@ -14,9 +14,11 @@ import Header from "./Components/Header/header";
 import RegisterLogin from "./Components/auth/index";
 
 import UserDashboard from "./Components/dashboard";
-// import UserInfo from './Components/dashboard/user/info';
+
+import ContactInfo from './Components/dashboard/admin/contactInfo';
 
 const ProtectedUserDashboard = AuthGuard(UserDashboard);
+const ProtectedContactInfo = AuthGuard(ContactInfo);
 // const ProtectedUserInfo = AuthGuard(UserInfo);
 
 const RoutesMain = (props) => {
@@ -55,7 +57,7 @@ const RoutesMain = (props) => {
                   <Route path="/delivery_calc" element={<Calculator />} />
                   <Route path="/sign_in" element={<RegisterLogin />} />
                   <Route path="/dashboard" element={ <ProtectedUserDashboard />} />
-                  {/* <Route path="/dashboard/user/user_info" element={ <ProtectedUserInfo />} /> */}
+                  <Route path="/dashboard/admin/contact_infos" element={ <ProtectedContactInfo />} />
 
 
                 </Routes>
