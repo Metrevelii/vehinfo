@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { useTranslation } from "react-i18next";
 import LangBtn from "../Shared/langbtn";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import NavLink from './NavLink';
 
 
@@ -10,6 +10,7 @@ const Header = ({users, signOutUser}) => {
   const { t } = useTranslation("global");
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +28,11 @@ const Header = ({users, signOutUser}) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleSignOut = () => {
+    signOutUser();
+    navigate("/");  
+  };
 
   const isHomePage = location.pathname === '/';
 
@@ -48,16 +54,16 @@ const Header = ({users, signOutUser}) => {
               <NavLink to="/about_us" title={t("header.aboutus")} />
               <NavLink to="/delivery_calc" title={t("header.calc")} />
               <NavLink to="/contacts" title={t("header.contact")} />
-              {/* {users.auth ? 
+              {users.auth ? 
                 <>
-                <button onClick={() => signOutUser()} >Logout</button> 
+                <button onClick={() => handleSignOut()} >Logout</button> 
                 <NavLink to="/dashboard" title={'My Acc'}></NavLink> 
                 
                 </>
                 :
                 <NavLink to="/sign_in" title={t("Register")} />
               
-              } */}
+              }
             </nav>
             <div className="header__switcher">
               <LangBtn />

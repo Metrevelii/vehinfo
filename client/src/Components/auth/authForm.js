@@ -6,11 +6,12 @@ import { userRegister, userSignIn } from '../../store/actions/user.actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
+
 const AuthForm = (props) => {
     const notifications = useSelector(state => state.notifications);
     const [loading,setLoading] = useState(false);
     const dispatch = useDispatch();
-
+    const users = useSelector((state) => state.users);
 
     const validationSchema = Yup.object({
         email: Yup.string().email('Invalid email format').required('Email is required'),
@@ -27,12 +28,12 @@ const AuthForm = (props) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (notifications && notifications.success) {
+        if (notifications && notifications.success && users.auth) {
             navigate('/dashboard');
         } else {
             setLoading(false);
         }
-    }, [notifications, navigate]);
+    }, [notifications, users.auth, navigate]);
     
     const initialValues = props.initialValues || { email: '', password: '' };
 

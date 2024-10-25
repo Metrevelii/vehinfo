@@ -9,7 +9,6 @@ let DEFAULT_USER_STATE = {
         email:null,
         firstname:null,
         lastname:null,
-        history:[],
         verified:null
     },
     auth:null   
