@@ -14,13 +14,15 @@ import Header from "./Components/Header/header";
 import RegisterLogin from "./Components/auth/index";
 
 import UserDashboard from "./Components/dashboard";
+// import UserInfo from './Components/dashboard/user/info';
 
 const ProtectedUserDashboard = AuthGuard(UserDashboard);
+// const ProtectedUserInfo = AuthGuard(UserInfo);
 
 const RoutesMain = (props) => {
   const [loading, setLoading] = useState(true);
   const users = useSelector((state) => state.users);
-  console.log(users);
+ 
   const dispatch = useDispatch();
 
   const signOutUser = () => {
@@ -53,6 +55,7 @@ const RoutesMain = (props) => {
                   <Route path="/delivery_calc" element={<Calculator />} />
                   <Route path="/sign_in" element={<RegisterLogin />} />
                   <Route path="/dashboard" element={ <ProtectedUserDashboard />} />
+                  {/* <Route path="/dashboard/user/user_info" element={ <ProtectedUserInfo />} /> */}
 
 
                 </Routes>

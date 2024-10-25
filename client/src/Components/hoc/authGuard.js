@@ -18,7 +18,7 @@ const AuthGuard = (ComposedComponent) => {
         }, [navigate, users]);
 
         if (!isAuth) {
-            console.log('here');
+    
             return (
                 <Loader full={true} />
             )
