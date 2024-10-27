@@ -218,3 +218,23 @@ body {
   font-size: 18px;
   font-weight: 300;
 }
+
+
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the track */
+  border-radius: 4px; /* Rounded corners for the track */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color on hover */
+}

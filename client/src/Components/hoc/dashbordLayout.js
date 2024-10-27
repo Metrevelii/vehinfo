@@ -36,23 +36,23 @@ const DashboardLayout = (props) => {
 
 
     return (
-        <div className="container">
-            <div className="user_container page_container">
-                <div className="user_left_nav">
-                    <h2>My account</h2>
-                    <div className="links">
+        <div className="mx-auto max-w-full sm:max-w-[620px] md:max-w-[760px]  lg:max-w-[940px] xl:max-w-[1280px]  2xl:max-w-[1432px] px-4 w-full">
+            <div className="user_container flex mb-[50px] min-h-[700px]">
+                <div className="border-r border-[#f8f8f8] mt-[30px] w-[20%]">
+                    <h2 className="font-interMedium font-bold text-gray-500 text-[18px]">My account</h2>
+                    <div className="font-interMedium font-bold text-blue-500text-[15px] mt-[7px] flex items-start justify-start flex-col">
                         {generateLinks(links)}
                     </div>
                     { users.data.role === 'admin' ?
                         <div>   
-                            <h2>Admin</h2>
-                            <div className="links">
+                            <h2 className="font-interMedium font-bold text-gray-500 text-[18px] mt-[30px]">Admin</h2>
+                            <div className="font-interMedium font-bold text-blue-500 text-[15px] mt-[7px] flex items-start justify-start flex-col">
                                 {generateLinks(admin)}
                             </div>
                         </div>
                     : null}
                 </div>
-                <div className="user_right">
+                <div className="w-[80%] pl-[10px]">
                     <div className="dashboard_title">{props.title}</div>
                     <div className="">{props.children}</div>
                 </div>
