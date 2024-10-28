@@ -16,9 +16,11 @@ import RegisterLogin from "./Components/auth/index";
 import UserDashboard from "./Components/dashboard";
 
 import ContactInfo from './Components/dashboard/admin/contactInfo';
+import ManageSite from "./Components/dashboard/admin/site";
 
 const ProtectedUserDashboard = AuthGuard(UserDashboard);
 const ProtectedContactInfo = AuthGuard(ContactInfo);
+const ProtectedManageSite = AuthGuard(ManageSite);
 // const ProtectedUserInfo = AuthGuard(UserInfo);
 
 const RoutesMain = (props) => {
@@ -58,6 +60,7 @@ const RoutesMain = (props) => {
                   <Route path="/sign_in" element={<RegisterLogin />} />
                   <Route path="/dashboard" element={ <ProtectedUserDashboard />} />
                   <Route path="/dashboard/admin/contact_infos" element={ <ProtectedContactInfo />} />
+                  <Route path="/dashboard/admin/manage_site" element={ <ProtectedManageSite />} />
 
 
                 </Routes>

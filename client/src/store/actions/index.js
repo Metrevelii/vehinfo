@@ -5,7 +5,8 @@ import {
     AUTH_USER,
     SIGN_OUT,
     UPDATE_USER_PROFILE,
-    GET_SITE_VARS
+    GET_SITE_VARS,
+    UPDATE_SITE_VARS
 } from '../types';
 
 // user
@@ -52,3 +53,8 @@ export const siteGetVars = (vars) => ({
     type: GET_SITE_VARS,
     payload: vars
 }) 
+
+export const updateSiteVars = (vars) => ({
+    type:UPDATE_SITE_VARS,
+    payload: vars
+})
