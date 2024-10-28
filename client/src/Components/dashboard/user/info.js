@@ -1,80 +1,79 @@
-import React from "react";
-import DashboardLayout from "../../hoc/dashbordLayout";
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from "yup";
+import React from 'react';
+import DashboardLayout from '../../hoc/dashbordLayout';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+ 
  
 
-import { useDispatch  } from "react-redux";
-import { userUpdateProfile } from "../../../store/actions";
+import { useDispatch } from 'react-redux';
+import { userUpdateProfile } from '../../../store/actions/user.actions';
 
 const UserInfo = ({ users }) => {
-  const dispatch = useDispatch();
- 
- 
+    const dispatch = useDispatch();
 
-  const initialValues = {
-      firstname: users.data.firstname || '',
-      lastname: users.data.lastname || '',
-  };
+    const formik = useFormik({
+        enableReinitialize: true,
+        initialValues: {
+            firstname: users.data.firstname,
+            lastname: users.data.lastname,
+        },
+        validationSchema: Yup.object({
+            firstname: Yup.string()
+                .min(3, '3 char min')
+                .max(30, '30 char max')
+                .required('Sorry, you need the firstname'),
+            lastname: Yup.string()
+                .min(3, '3 char min')
+                .max(30, '30 char max')
+                .required('Sorry, you need the lastname'),
+        }),
+        onSubmit: (values) => {
+            dispatch(userUpdateProfile(values));
+        },
+    });
 
-  const validationSchema = Yup.object({
-      firstname: Yup.string().required('Name is required'),
-      lastname: Yup.string().required('Lastname is required'),
-  });
+    return (
+        <DashboardLayout title="User information">
+            <form
+                className="mt-[30px] w-full"
+   
+                onSubmit={formik.handleSubmit}
+            >
+            <div className="flex items-start justify-center flex-col mt-[20px]">
+                    <label htmlFor="firstname">Edit your firstname</label>
+                    <input
+                        type="text"
+                        id="firstname"
+                        name="firstname"
+                        className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-[50%] bg-[#fff] text-[#5d636b] relative"
+                   
+                        {...formik.getFieldProps('firstname')}
+                    />
   
-  const onSubmit = async (values) => {
-    dispatch(userUpdateProfile(values))
-    
-
-};
- 
-
-  return (
-    <DashboardLayout title="User information">
-     <Formik
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            onSubmit={onSubmit}
-        >
-            {() => (
-                <Form className="w-full p-4 bg-transparent rounded">
-                    <div className="flex justify-between mb-4">
-                        <div className="flex flex-col w-[48%] relative">
-                            <Field 
-                                type="text" 
-                                id="firstname" 
-                                name="firstname" 
-                                placeholder="firstname" 
-                                className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative"
-                            />
-                            <ErrorMessage name="firstname" component="div" className="text-red-500 text-sm font-interMedium mt-[5px] absolute bottom-[-50%] left-[1%]" />
-                        </div>
-                        <div className="flex flex-col w-[48%] relative">
-                            <Field 
-                                type="text" 
-                                id="lastname" 
-                                name="lastname" 
-                                placeholder="lastname" 
-                                className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative"
-                            />
-                            <ErrorMessage name="lastname" component="div" className="text-red-500 text-sm font-interMedium mt-[5px] absolute bottom-[-50%] left-[1%]" />
-                        </div>
-                    </div>
-                    
-                    <div className="flex justify-start">
-                        <button 
-                            type="submit" 
-                            className="w-[220px] h-[48px] bg-gradient-to-b from-[#2F53FE] to-[#1B3CDE] flex justify-center items-center font-interBold font-bold text-[20px] text-white rounded-[12px]"
-                        >
-                            Edit Profile
-                        </button>
-                    </div>
-      
-                </Form>
-            )}
-        </Formik>
-    </DashboardLayout>
-  );
+                </div>
+            <div className="flex items-start justify-center flex-col mt-[20px]">
+                    <label htmlFor="lastname">Edit your lastname</label>
+                    <input
+                        type="text"
+                        id="lastname"
+                        name="lastname"
+                        className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-[50%] bg-[#fff] text-[#5d636b] relative"
+                        {...formik.getFieldProps('lastname')}
+                    />
+          
+                </div>
+                <button
+                   className="w-auto h-auto px-[20px] py-[7px] bg-primary-blue text-primary-white text-interMedium text-[15px] rounded mt-[20px]"
+                   type="submit"
+                   
+                >
+                    Edit profile
+                </button>
+            </form>
+            <hr />
+            
+        </DashboardLayout>
+    );
 };
 
 export default UserInfo;

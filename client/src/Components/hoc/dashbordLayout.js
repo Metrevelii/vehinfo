@@ -7,6 +7,10 @@ export const links = [
   {
     name: "My Account",
     linkTo: "/dashboard",
+  },
+  {
+    name:'User information',
+    linkTo:'/dashboard/user/user_info'
   }
 ];
 

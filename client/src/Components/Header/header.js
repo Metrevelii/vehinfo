@@ -56,7 +56,7 @@ const Header = ({users, signOutUser}) => {
               <NavLink to="/contacts" title={t("header.contact")} />
               {users.auth ? 
                 <>
-                <button onClick={() => handleSignOut()} >Logout</button> 
+                <button className="font-medium text-[12px] md:text-[14px] xl:text-[16px] 2xl:text-[16px] text-white" onClick={() => handleSignOut()} >Logout</button> 
                 <NavLink to="/dashboard" title={'My Acc'}></NavLink> 
                 
                 </>
