@@ -16,6 +16,14 @@ const siteSchema = mongoose.Schema({
     email: {
         required: true,
         type: String
+    },
+    facebook: {
+        required: true,
+        type: String
+    },
+    instagram: {
+        required: true,
+        type: String
     }
 });
 

@@ -4,7 +4,8 @@ import {
     CLEAR_NOTIFICATION,
     AUTH_USER,
     SIGN_OUT,
-    UPDATE_USER_PROFILE
+    UPDATE_USER_PROFILE,
+    GET_SITE_VARS
 } from '../types';
 
 // user
@@ -43,3 +44,11 @@ export const clearNotification = () => {
     }
 } 
 
+
+
+///////// SITE
+
+export const siteGetVars = (vars) => ({
+    type: GET_SITE_VARS,
+    payload: vars
+}) 

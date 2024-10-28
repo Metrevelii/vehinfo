@@ -36,7 +36,7 @@ const DashboardLayout = (props) => {
 
 
     return (
-        <div className="mx-auto max-w-full sm:max-w-[620px] md:max-w-[760px]  lg:max-w-[940px] xl:max-w-[1280px]  2xl:max-w-[1432px] px-4 w-full">
+        <div className="mx-auto max-w-full sm:max-w-[620px] md:max-w-[760px] px-[15px] lg:max-w-[940px] xl:max-w-[1280px]  2xl:max-w-[1432px] w-full">
             <div className="user_container flex mb-[50px] min-h-[700px]">
                 <div className="border-r border-[#f8f8f8] mt-[30px] w-[20%]">
                     <h2 className="font-interMedium font-bold text-gray-500 text-[18px]">My account</h2>

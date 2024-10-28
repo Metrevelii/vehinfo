@@ -2,11 +2,19 @@ import React from "react";
 import ContactForm from "./ContactForm";
 import Social from './social';
 
+import { useSelector } from 'react-redux';
+
 const Footer = () => {
+  const site = useSelector(state => state.site);
+  console.log(site);
+
+
   return (
     <footer className="w-full h-[571px] bg-overlay-black bg-footer bg-cover bg-center bg-no-repeat">
       <div className="mx-auto max-w-[1432px] px-4 w-full h-full">
         <div className="flex justify-center items-center h-full">
+          { site && site.vars ? 
+          
           <div className="flex flex-col justify-center items-center w-1/2 h-full">
             <div className="flex flex-col justify-start items-start w-full">
               <div className="flex flex-col justify-start items-start">
@@ -15,19 +23,19 @@ const Footer = () => {
                 </h4>
                 <div className="mt-4 flex flex-col justify-start items-start">
                   <p className="font-interRegular text-[20px] text-primary-whiteTransparent">
-                    SA: Keyport, 3 Cass Street, NJ
+                    SA: {site.vars.address}
                   </p>
                   <p className="font-interRegular text-[20px] text-primary-whiteTransparent">
-                    Tbilisi: U. Chkheidze 12
+                    Tbilisi: {site.vars.address}
                   </p>
                   <p className="font-interRegular text-[20px] text-primary-whiteTransparent">
-                    Gori: 37 Of Tsereteli
+                    Gori: {site.vars.address}
                   </p>
                   <p className="font-interRegular text-[20px] text-primary-whiteTransparent">
-                    Kutaisi: Sh. Rustaveli Ave.35
+                    Kutaisi: {site.vars.address}
                   </p>
                   <p className="font-interRegular text-[20px] text-primary-whiteTransparent">
-                    Batumi: 65 Of Heydar Abashidze, 36 Of Petre Tchaikovsky
+                    Batumi: {site.vars.address}
                   </p>
                 </div>
                 <div className="mt-12">
@@ -35,7 +43,7 @@ const Footer = () => {
                     Phone
                   </h4>
                   <p className="mt-4 text-[20px] text-primary-whiteTransparent">
-                    568 200 900
+                  {site.vars.phone}
                   </p>
                 </div>
                 <div className="mt-12">
@@ -43,18 +51,23 @@ const Footer = () => {
                     Mail
                   </h4>
                   <p className="mt-4 text-[20px] text-primary-whiteTransparent">
-                    Company@Gmail.com
+                  {site.vars.email}
                   </p>
                 </div>
               </div>
             </div>
           </div>
+          :
+
+           null
+          }
+          
           <div className="flex flex-col justify-start pt-[2rem] items-center w-[700px] h-[505px] rounded-[12px] px-16 bg-white bg-contactBg bg-cover bg-center bg-no-repeat">
             <div className="font-interBold text-[32px] text-black mb-[0.5rem] uppercase">
               REQUEST A QUOTE
             </div>
             <ContactForm />
-            <Social />
+            <Social facebook={site.vars.facebook} instagram={site.vars.instagram} />
           </div>
         </div>
       </div>

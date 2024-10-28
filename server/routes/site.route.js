@@ -6,7 +6,9 @@ const siteController = require('../controllers/site.controller');
 
 
 router.route('/')
-.post( auth('createAny', 'site') , siteController.postSiteArgs)
+    .get(siteController.getSiteArgs)
+    .post(auth('createAny','site'), siteController.postSiteArgs)
+    .patch(auth('updateAny','site'),siteController.updateSiteArgs)
 
 
 module.exports = router;

@@ -2,13 +2,13 @@ import React from "react";
 import InstagramIcon from "../../icons/InstagramIcon";
 import FacebookIcon from "../../icons/FacebookIcon";
 
-const Social = () => {
+const Social = ({facebook, instagram}) => {
     const openFacebook = () => {
-        window.open("https://www.facebook.com", "_blank");
+        window.open(`https://www.facebook.com/${facebook}`, "_blank");
       };
     
       const openInstagram = () => {
-        window.open("https://www.instagram.com", "_blank");
+        window.open(`https://www.instagram.com/${instagram}`, "_blank");
       };
 
   return (
