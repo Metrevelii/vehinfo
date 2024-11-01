@@ -33,10 +33,10 @@ const SiteVars = () => {
                 .email('You need to add a valid email')
                 .required('This is required'),
             facebook: Yup.string()
-                .email('You need to add a valid facebook profile')
+                
                 .required('This is required'),
             instagram: Yup.string()
-                .email('You need to add a valid instagram profile')
+              
                 .required('This is required')
         }),
         onSubmit: (values) => {
@@ -136,7 +136,7 @@ const SiteVars = () => {
                     {...formik.getFieldProps('instagram')}
                     className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-[50%] bg-[#fff] text-[#5d636b] relative"
                 />
-                {formik.touched.facebook && formik.errors.instagram ? (
+                {formik.touched.instagram && formik.errors.instagram ? (
                     <div className="error">{formik.errors.instagram}</div>
                 ) : null}
             </div>
