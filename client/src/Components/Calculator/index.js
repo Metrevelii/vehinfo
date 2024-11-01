@@ -4,7 +4,7 @@ import "../components.css";
 
 const Calculator = () => {
   return (
-    <div className="w-full h-[71.1vh] bg-primary-white flex justify-start items-center flex-col pt-[70px]">
+    <div className="w-full h-auto pb-[20px] bg-primary-white flex justify-start items-center flex-col pt-[70px]">
       <div className="w-[420px] bg-white/95 rounded-[12px] p-[30px] shadow-custom">
         <div className="flex flex-col items-center w-full h-full">
           <div className="mb-6">
