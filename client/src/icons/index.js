@@ -4,6 +4,8 @@ import LocationIcon from './LocationIcon';
 import PricesIcon from './PricesIcon';
 import InstagramIcon from './InstagramIcon';
 import FacebookIcon from './FacebookIcon';
+import EarthIcon from './EarthIcon';
+import DownArrow from './DownArrow';
 
 export const Icons = {
     ExpIcon: ExpIcon,
@@ -11,5 +13,7 @@ export const Icons = {
     LocationIcon: LocationIcon,
     PricesIcon: PricesIcon,
     InstagramIcon: InstagramIcon,
-    FacebookIcon: FacebookIcon
+    FacebookIcon: FacebookIcon,
+    EarthIcon: EarthIcon,
+    DownArrow: DownArrow
 }

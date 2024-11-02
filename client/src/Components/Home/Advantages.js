@@ -12,33 +12,33 @@ const Advantages = () => {
                     icon={<Icons.ExpIcon className="w-[25px] h-[25px] fill-primary-lightPurple text-primary" />} 
                     title="Experience" 
                     description="Some random text1 Some random text Some random text Some random text" 
-                    bgColor={"bg-primary-blue"}
-                    textColor={"text-primary-white"}
-                    paraColor={"text-primary-whiteSecond"}
+                    bgColor="bg-white"
+                    textColor="text-primary-black"
+                    paraColor="text-primary-blackSecond"
                 />
                 <AdvantageBox 
-                     icon={<Icons.SafetyIcon className="w-[20px] h-[24px] fill-primary-lightPurple text-primary" />} 
+                    icon={<Icons.SafetyIcon className="w-[20px] h-[24px] fill-primary-lightPurple text-primary" />} 
                     title="Safety" 
                     description="Some random text2 Some random text Some random text Some random text" 
-                    bgColor={"bg-white"}
-                    textColor={"text-primary-black"}
-                    paraColor={"text-primary-blackSecond"}
+                    bgColor="bg-white"
+                    textColor="text-primary-black"
+                    paraColor="text-primary-blackSecond"
                 />
                 <AdvantageBox 
                     icon={<Icons.LocationIcon className="w-[18px] h-[28px] fill-primary-lightPurple text-primary" />} 
                     title="Office In Georgia" 
                     description="Some random text3 Some random text Some random text Some random text" 
-                    bgColor={"bg-white"}
-                    textColor={"text-primary-black"}
-                    paraColor={"text-primary-blackSecond"}
+                    bgColor="bg-white"
+                    textColor="text-primary-black"
+                    paraColor="text-primary-blackSecond"
                 />
                 <AdvantageBox 
                     icon={<Icons.PricesIcon className="w-[28px] h-[28px] fill-primary-lightPurple text-primary" />} 
                     title="Low Prices" 
                     description="Some random text4 Some random text Some random text Some random text" 
-                    bgColor={"bg-white"}
-                    textColor={"text-primary-black"}
-                    paraColor={"text-primary-blackSecond"}
+                    bgColor="bg-white"
+                    textColor="text-primary-black"
+                    paraColor="text-primary-blackSecond"
                 />
             </div>
         </div>

@@ -33,6 +33,8 @@ module.exports = {
     backgroundImage: {
       'footer': "url('../public/images/footer-main-bg.jpg')",
       'contactBg': "url('../public/images/contactform-bg.webp')",
+      'azFlag': "url('../public/images/az-flag.png')",
+      'ruFlag': "url('../public/images/ru-flag.png')",
     },
     colors: {
         primary: {

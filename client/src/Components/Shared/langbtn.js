@@ -18,7 +18,7 @@ const LangBtn = () => {
           }`}
           onClick={() => handleChangeLanguage("ka")}
         >
-          <div className="w-6 h-6 rounded-full bg-red-500"></div>
+          <div className="w-6 h-6 rounded-full bg-ruFlag bg-repeat bg-contain bg-center border border-white"></div>
           <div
             className={`ml-1 font-medium text-base ${
               currentLanguage === "ka" ? "text-white" : "text-black"
@@ -33,7 +33,7 @@ const LangBtn = () => {
           }`}
           onClick={() => handleChangeLanguage("en")}
         >
-          <div className="w-6 h-6 rounded-full bg-red-500"></div>
+          <div className="w-6 h-6 rounded-full bg-azFlag bg-repeat bg-contain bg-center border border-white"></div>
           <div
             className={`ml-1 font-medium text-base ${
               currentLanguage === "en" ? "text-white" : "text-black"

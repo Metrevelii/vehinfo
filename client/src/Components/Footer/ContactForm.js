@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-// import axios from 'axios';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { sendContact } from '../../store/actions/contact.action'; 
+import { Icons } from '../../icons/index';
 
 
 const ContactForm = () => {
     const dispatch = useDispatch();
     const { loading, success, error } = useSelector(state => state.contact);
+    const [isOpen, setIsOpen] = useState(false);
+    const handleClick = () => {
+        setIsOpen((prev) => !prev); // Toggle the open state on each click
+    };
+
+    const handleBlur = () => {
+        setIsOpen(false); // Close when the select loses focus
+    };
     
     const initialValues = {
         name: '',
@@ -72,13 +81,17 @@ const ContactForm = () => {
 
                 
                     <div className="flex shadow-custom mb-[2rem]">
-                        <div className="w-[200px]">
-                            {/* <label htmlFor="countryCode" className="mb-1 font-bold block"></label> */}
+                        <div className="w-[200px] relative">
+                            <Icons.EarthIcon className="w-[20px] h-[20px] absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-[10%] z-10"/>
+                            <Icons.DownArrow className={`w-[16px] h-[16px] absolute top-1/2 transform -translate-y-1/2 right-[10%] z-10 pointer-events-none transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}/>
+
                             <Field 
                                 as="select" 
                                 id="countryCode" 
                                 name="countryCode" 
-                                className="h-[46px] rounded-tl-[12px] rounded-bl-[12px] appearance-none w-full bg-[#fff] text-[#5d636b] px-[20px] relative  border-r-2 border-r-primary-purpleLighter"
+                                className="h-[46px] rounded-tl-[12px] rounded-bl-[12px] appearance-none w-full bg-[#fff] text-[#5d636b] pl-[40px] pr-[25px] relative  border-r-2 border-r-primary-purpleLighter"
+                                onClick={handleClick} 
+                                onBlur={handleBlur} 
                             >
                                 <option value="" className="text-[#5d636b]">Select</option>
                                 <option value="+995" className="text-[#5d636b]">+995 (Georgia)</option>
