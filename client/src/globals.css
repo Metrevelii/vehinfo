@@ -2,130 +2,239 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  body {
-    padding: 0;
-    margin: 0;
- 
-  }
-  
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  /* * {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* * {
     box-sizing: border-box;
   } */
-  * {
-   
-    background: none repeat scroll 0 0 transparent;
-    /* border: medium none; */
-    border-spacing: 0;
-    color: #26589F;
-    font-family: 'PT Sans Narrow',sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 1.42rem;
-    list-style: none outside none;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    text-decoration: none;
-    text-indent: 0;
-    box-sizing: border-box;
+* {
+  background: none repeat scroll 0 0 transparent;
+  /* border: medium none; */
+  border-spacing: 0;
+  color: #26589f;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.42rem;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "InterLight";
+  src: url("../public/fonts/InterLights.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "InterBold";
+  src: url("../public/fonts/InterBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "InterMedium";
+  src: url("../public/fonts/InterMedium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "InterRegular";
+  src: url("../public/fonts/InterRegular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.homepage {
+  background: linear-gradient(
+      180deg,
+      rgba(8, 11, 32, 0.09) 0%,
+      rgba(8, 11, 32, 0.16) 7.58%,
+      rgba(8, 11, 32, 0.32) 30.9%,
+      rgba(8, 11, 32, 0.32) 52.51%,
+      rgba(6, 7, 23, 0.814445) 84.23%,
+      #050613 100%
+    ),
+    url("../public/images/header-image.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  width: 100%;
+  height: 1273px;
+}
+
+
+@media screen and (max-width: 1024px) and (min-width: 300px) {
+
+  .homepage {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 11, 32, 0.09) 0%,
+      rgba(8, 11, 32, 0.16) 7.58%,
+      rgba(8, 11, 32, 0.32) 30.9%,
+      rgba(8, 11, 32, 0.32) 52.51%,
+      rgba(6, 7, 23, 0.814445) 84.23%,
+      #050613 100%
+    ),
+    url("../public/images/headerimg-mob.webp");
+    height: 193.7vw;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
 
-  @font-face {
-    font-family: 'InterLight';
-    src: url('../public/fonts/InterLights.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+}
+
+
+ 
+/*@media (min-width: 640px) {
+  .homepage {
+ 
   }
+}
 
-  @font-face {
-    font-family: 'InterBold';
-    src: url('../public/fonts/InterBold.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+ 
+@media (min-width: 768px) {
+  .homepage {
+ 
   }
-  
+}
 
-  @font-face {
-    font-family: 'InterMedium';
-    src: url('../public/fonts/InterMedium.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+ 
+@media (min-width: 1024px) {
+  .homepage {
+ 
   }
+}
 
-  @font-face {
-    font-family: 'InterRegular';
-    src: url('../public/fonts/InterRegular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+ 
+@media (min-width: 1280px) {
+  .homepage {
+ 
   }
+}
 
-
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+ 
+@media (min-width: 1536px) {
+  .homepage {
+ 
   }
+}  */
 
 
-  
+.aboutus__image {
+  width: 880px;
+  height: 515px;
 
+  background-image: url("../public/images/ship-img.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  
-  .header__logo {
-    width: 166px;
-    height: 50px;
-  
-    border: 1px solid red;
-  
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+} 
 
-  .default-layout {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .w-100 {
+@media screen and (max-width: 1024px) and (min-width: 300px) {
+
+  .aboutus__image {
     width: 100%;
+    height: 61vw;
+  
+ 
+  
+  } 
+  
+
+}
+
+.footer_bg_img {
+  background-image: url("../public/images/footer-main-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 100%;
+  height: 571px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 300px) {
+  .footer_bg_img {
+    background-image: url("../public/images/footer-bg-mob.webp");
+ 
+  
+    width: 100%;
+    height: 213vw;
   }
   
-  .h-100 {
-    height: 100%;
-  }
-  
-  .centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-  }
+}
 
-  /* #comment:focus,
+.header__logo {
+  width: 166px;
+  height: 50px;
+
+  border: 1px solid red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.default-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* #comment:focus,
   #phone:focus,
   #name:focus,
   #surname:focus,
@@ -135,29 +244,26 @@ body {
     overflow: hidden;
   } */
 
-
-
-
-  .container {
-    width:1100px;
-    margin: 0 auto;
+.container {
+  width: 1100px;
+  margin: 0 auto;
 }
 .page_container {
-    min-height: 75vh;
+  min-height: 75vh;
 }
 
 .user_container {
-  display:flex;
+  display: flex;
   margin-bottom: 50px;
   min-height: 700px;
 }
 
-.user_container .dashboard_title{
+.user_container .dashboard_title {
   margin-top: 20px;
 }
 
 .user_container .user_left_nav {
-  border-right: 1px solid #f8f8f8; 
+  border-right: 1px solid #f8f8f8;
   margin-top: 30px;
 }
 
@@ -174,7 +280,7 @@ body {
   width: 280px;
 }
 
-.user_container  .user_right {
+.user_container .user_right {
   flex-grow: 1;
   padding: 0 0 0 29px;
 }
@@ -192,8 +298,7 @@ body {
   font-size: 25px;
 }
 
-
-.user_container .user_nfo_panel span{
+.user_container .user_nfo_panel span {
   display: block;
   font-size: 18px;
   font-weight: 300;
@@ -212,14 +317,11 @@ body {
   font-size: 25px;
 }
 
-
-.user_container .user_nfo_panel span{
+.user_container .user_nfo_panel span {
   display: block;
   font-size: 18px;
   font-weight: 300;
 }
-
-
 
 .scrollbar-thin::-webkit-scrollbar {
   width: 8px; /* Width of the scrollbar */

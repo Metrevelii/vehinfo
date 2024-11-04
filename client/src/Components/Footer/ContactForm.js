@@ -95,8 +95,8 @@ const ContactForm = () => {
                             >
                                 <option value="" className="text-[#5d636b]">Select</option>
                                 <option value="+995" className="text-[#5d636b]">+995 (Georgia)</option>
-                                <option value="+44" className="text-[#5d636b]">+44 (UK)</option>
-                                <option value="+1" className="text-[#5d636b]">+1 (USA)</option>
+                                <option value="+994" className="text-[#5d636b]">+994 (AZ)</option>
+                                <option value="+7" className="text-[#5d636b]">+7 (RUS)</option>
                           
                             </Field>
                             <ErrorMessage name="countryCode" component="div" className="text-red-500 text-sm font-interMedium mt-[5px] absolute z-[5]" />
@@ -123,7 +123,7 @@ const ContactForm = () => {
                             name="comment" 
                             rows="4" 
                             placeholder="You can leave comment here" 
-                            className=" shadow-custom border p-2 w-full h-[102px] rounded-[12px] shadow-boxShadow bg-[#fff] resize-none text-[#5d636b]"
+                            className=" shadow-custom border p-2 w-full  h-[112px] sm:h-[70px] md:h-[70px] xl:h-[102px] 2xl:h-[102px] rounded-[12px] shadow-boxShadow bg-[#fff] resize-none text-[#5d636b]"
                         />
                         <ErrorMessage name="comment" component="div" className="text-red-500 text-sm font-interMedium mt-[5px] absolute z-[5] bottom-[-15px]" />
                     </div>
@@ -132,7 +132,7 @@ const ContactForm = () => {
                     <div className="flex justify-start">
                         <button 
                             type="submit" 
-                            className="w-[220px] h-[48px] bg-gradient-to-b from-[#2F53FE] to-[#1B3CDE] font-interBold font-bold text-[20px] text-white text-center cursor-pointer rounded-[12px]"
+                            className="w-[220px] h-[38px] xl:w-[220px] 2xl:w-[220px] xl:h-[48px] 2xl:h-[48px] bg-gradient-to-b from-[#2F53FE] to-[#1B3CDE] font-interBold font-bold text-[16px] xl:text-[20px] 2xl:text-[20px] text-white text-center cursor-pointer rounded-[12px]"
                         >
                              {loading ? 'Sending...' : 'Send'}
                         </button>

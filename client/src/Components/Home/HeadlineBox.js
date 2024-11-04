@@ -3,9 +3,9 @@ import React from "react";
 const HeadlineBox = () => {
   return (
     <>
-      <div className="w-[892px] h-[254px] bg-black/40">
+      <div className="hidden sm:hidden md:block xl:block lg:block 2xl:block md:w-[600px] md:h-[230px] xl:w-[750px] xl:h-[234px] 2xl:w-[892px] 2xl:h-[254px] bg-black/40">
         <div className="w-full h-full flex flex-col justify-start items-start p-[35px]">
-          <h1 className="font-interBold font-bold text-[32px] text-white">
+          <h1 className="font-interBold font-bold text-[3vw] sm:text-[3.2vw] md:text-[20px] xl:text-[24px] 2xl:text-[32px] text-white">
             YOUR LOGISTIC PARTNER FOR SEAMLESS DELIVERY
           </h1>
           <p className="font-interLight text-[20px] text-white/80 mt-[30px]">

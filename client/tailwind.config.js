@@ -30,11 +30,18 @@ module.exports = {
         interMedium: ['interMedium', 'sans-serif'],
         interRegular: ['InterRegular', 'sans-serif'],
     },
+    backdropBlur: {
+      'custom-19': '19px',
+    },
+    backgroundSize: {
+      'full': '100% 100%',
+    },
     backgroundImage: {
       'footer': "url('../public/images/footer-main-bg.jpg')",
       'contactBg': "url('../public/images/contactform-bg.webp')",
       'azFlag': "url('../public/images/az-flag.png')",
       'ruFlag': "url('../public/images/ru-flag.png')",
+      'linear-gradient-white': 'linear-gradient(180deg, rgba(255, 255, 255, 0.57) 0%, #FFFFFF 100%)',
     },
     colors: {
         primary: {

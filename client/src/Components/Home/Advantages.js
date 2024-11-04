@@ -6,8 +6,8 @@ import { Icons } from '../../icons';
 const Advantages = () => {
     return (
         <div className="flex flex-col justify-start items-start mt-[5rem]">
-            <div className="font-interBold font-bold text-[32px] text-white mb-6">ADVANTAGES OF WORKING WITH US</div>
-            <div className="flex justify-between w-full items-center mt-[1.5rem]">
+            <div className="font-interBold font-bold xs:[text-4vw] sm:text-[26px] md:text-[28px] xl:text-[32px] 2xl:text-[32px] text-white xs:mb-[2vw] sm:mb-[2vw] mb-6">ADVANTAGES OF WORKING WITH US</div>
+            <div className="grid grid-cols-2 xs:gap-[0.2rem] gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 w-full  items-center">
                 <AdvantageBox 
                     icon={<Icons.ExpIcon className="w-[25px] h-[25px] fill-primary-lightPurple text-primary" />} 
                     title="Experience" 

@@ -38,11 +38,15 @@ const Header = ({users, signOutUser}) => {
 
   return (
     <>
-      <header
+    <header
       className={`${
-        isScrolled ? "fixed bg-primary-blue" : isHomePage ? "absolute bg-transparent" : "relative bg-primary-blue"
+        isHomePage
+          ? isScrolled
+            ? "fixed bg-primary-blue"
+            : "absolute bg-transparent"
+          : "relative bg-primary-blue"
       } w-full flex justify-center items-center h-[100px] z-30 top-0 left-0 right-0 mx-auto transition-colors duration-300`}
-      >
+    >
         <div className="mx-auto max-w-full sm:max-w-[620px] md:max-w-[760px]  lg:max-w-[940px] xl:max-w-[1280px]  2xl:max-w-[1432px] w-full">
           <div className={`px-[15px] flex justify-between items-center h-[100px]`}>
             <div className="header__logo">
