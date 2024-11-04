@@ -4,6 +4,8 @@ import axios from "axios";
 
 import Select from "react-select";
 
+import { useSelector } from 'react-redux';
+
 const customStyles = {
   control: (provided) => ({
     ...provided,
@@ -42,6 +44,10 @@ const CalcForm = () => {
   const [ports, setPorts] = useState([]);
   const [destinations, setDestinations] = useState([]);
   const [price, setPrice] = useState(0);
+   const [newPrice, setNewPrice] = useState(0);
+   const [destinationId, setDestinationId] = useState(null);
+
+   const users = useSelector(state => state.users);
 
   useEffect(() => {
     const fetchAuctions = async () => {
@@ -110,6 +116,7 @@ const CalcForm = () => {
         );
         if (selectedDestination) {
           setPrice(selectedDestination.price);
+          setDestinationId(selectedDestination._id);
         }
       }
     }
@@ -136,8 +143,24 @@ const CalcForm = () => {
     label: destination.name,
   }));
 
+  const handlePriceUpdate = async (e) => {
+    e.preventDefault(); // Prevent default form submission
+    try {
+      await axios.patch(`/api/calculator/calc/destination/${destinationId}`, {
+        price: newPrice,
+      });
+      alert('Price updated successfully!');
+      // Optionally, fetch the auctions again to refresh data
+      const response = await axios.get("/api/calculator/all");
+      setAuctions(response.data);
+    } catch (error) {
+      console.error("Error updating price", error);
+      alert('Failed to update price.');
+    }
+  };
+
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form onSubmit={handlePriceUpdate}>
       <div className="flex flex-col space-y-4">
         {/* Auction Dropdown */}
         <div className="w-[360px]">
@@ -208,6 +231,28 @@ const CalcForm = () => {
       </div>
 
       <div className="mt-6 text-xl font-bold">{price} $</div>
+          { users.data.role === 'admin' ? 
+          
+            <div className="mt-4">
+              <label className="mr-4">New Price</label>
+              <input
+                type="number"
+                value={newPrice}
+                onChange={(e) => setNewPrice(e.target.value)}
+                className="border rounded p-2"
+                min="0"
+              />
+              <button
+                onClick={handlePriceUpdate}
+                className="ml-4 bg-blue-500 text-white p-2 rounded"
+              >
+                Update Price
+              </button>
+          </div>
+
+           : 
+           null
+          }
     </form>
   );
 };

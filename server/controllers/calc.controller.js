@@ -53,6 +53,17 @@ const calcControllers = {
         } catch(error){
             next(error);
         }
+    },
+    async patchDestinationPrice(req, res, next) {
+        try {
+            const { destinationId } = req.params;
+            const { price } = req.body;
+    
+            const updatedDestination = await calcService.patchDestinationPrice(destinationId, price);
+            res.json(updatedDestination);
+        } catch (error) {
+            next(error);
+        }
     }
 
 }

@@ -9,6 +9,7 @@ const verify = (req, res, resolve, reject, rights) => async(err, user) => {
         return reject(new ApiError(httpStatus.UNAUTHORIZED, 'Sorry, unauthorized'))
     }
     req.user = user;
+    
     /////
     if (rights.length) {
         const action = rights[0]

@@ -4,7 +4,7 @@ const allRights = {
     'create:any': ['*'],
     'read:any': ['*'],
     'update:any': ['*'],
-    'delete:any': ['*']
+    'delete:any': ['*'],
 
 }
 
@@ -15,6 +15,7 @@ let grantsObject = {
         location: allRights,
         site: allRights,
  
+ 
     },
     user: {
         profile: {
@@ -23,6 +24,8 @@ let grantsObject = {
         },
         auction: {'read:any':['*']},
         location: {'read:any':['*']},
+ 
+        
  
     }
 

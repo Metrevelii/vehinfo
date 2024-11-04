@@ -26,7 +26,7 @@ const destinationSchema = new mongoose.Schema({
     required: true,
     min: 0
   }
-}, { _id: false });
+}, { _id: true });
 
 // Define Location Schema
 const locationSchema = new mongoose.Schema({
@@ -37,7 +37,7 @@ const locationSchema = new mongoose.Schema({
   },
   ports: [portSchema],  // Allow multiple ports
   destinations: [destinationSchema]  // Allow multiple destinations
-}, { _id: false });
+}, { _id: true });
 
 // Define Auction Schema
 const auctionSchema = new mongoose.Schema({

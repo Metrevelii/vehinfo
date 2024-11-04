@@ -67,10 +67,35 @@ const getAuctions = async() => {
     }
 }
 
+const patchDestinationPrice = async (destinationId, newPrice) => {
+    try {
+        const result = await Auction.updateOne(
+            { "locations.destinations._id": destinationId },
+            { $set: { "locations.$[loc].destinations.$[dest].price": newPrice } },
+            {
+                arrayFilters: [
+                    { "loc.destinations._id": destinationId },
+                    { "dest._id": destinationId }
+                ],
+                new: true,
+            }
+        );
+
+        if (result.modifiedCount === 0) {
+            throw new ApiError(httpStatus.NOT_FOUND, 'Destination not found');
+        }
+
+        return result;
+    } catch (error) {
+        throw error;
+    }
+};
+
 module.exports = {
     addAuction,
     getAuctionById,
     deleteAuctionById,
     addLocationToAuction,
-    getAuctions
+    getAuctions,
+    patchDestinationPrice
 }
