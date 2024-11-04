@@ -3,10 +3,13 @@ import ContactForm from "./ContactForm";
 import Social from './social';
 
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const site = useSelector(state => state.site);
-  console.log(site);
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+ 
 
 
   return (
@@ -23,20 +26,9 @@ const Footer = () => {
                 </h4>
                 <div className="mt-4 flex flex-col justify-start items-start">
                   <p className="font-interRegular text-[20px] text-primary-whiteTransparent">
-                    SA: {site.vars.address}
+                    {currentLanguage === 'az' ? site.vars.addressaz : site.vars.addressru}
                   </p>
-                  <p className="font-interRegular text-[20px] text-primary-whiteTransparent">
-                    Tbilisi: {site.vars.address}
-                  </p>
-                  <p className="font-interRegular text-[20px] text-primary-whiteTransparent">
-                    Gori: {site.vars.address}
-                  </p>
-                  <p className="font-interRegular text-[20px] text-primary-whiteTransparent">
-                    Kutaisi: {site.vars.address}
-                  </p>
-                  <p className="font-interRegular text-[20px] text-primary-whiteTransparent">
-                    Batumi: {site.vars.address}
-                  </p>
+                 
                 </div>
                 <div className="mt-12">
                   <h4 className="font-interBold text-[20px] uppercase text-primary-whiteTransparent">

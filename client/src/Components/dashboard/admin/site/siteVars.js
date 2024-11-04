@@ -11,7 +11,8 @@ const SiteVars = () => {
 
     const formik = useFormik({
         initialValues: {
-            address: site.vars.address,
+            addressaz: site.vars.addressaz,
+            addressru: site.vars.addressru,
             phone: site.vars.phone,
             hours: site.vars.hours,
             email: site.vars.email,
@@ -19,7 +20,11 @@ const SiteVars = () => {
             instagram: site.vars.instagram,
         },
         validationSchema: Yup.object({
-            address: Yup.string()
+            addressaz: Yup.string()
+                .min(3, 'You need to add more')
+                .max(100, 'You need to add less')
+                .required('This is required'),
+            addressru: Yup.string()
                 .min(3, 'You need to add more')
                 .max(100, 'You need to add less')
                 .required('This is required'),
@@ -46,6 +51,7 @@ const SiteVars = () => {
                     ...values
                 }
             ));
+            alert('Updated successfully');
         }
     });
 
@@ -53,18 +59,33 @@ const SiteVars = () => {
         <form className="mt-3" onSubmit={formik.handleSubmit}>
 
             <div className="flex items-start justify-center flex-col mt-[20px]">
-                <label htmlFor="address">Edit address</label>
+                <label htmlFor="address">Edit address AZ</label>
                 <input
                     type="text"
-                    id="address"
-                    name="address"
+                    id="addressaz"
+                    name="addressaz"
                     className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-[50%] bg-[#fff] text-[#5d636b] relative"
                    
-                    {...formik.getFieldProps('address')}
+                    {...formik.getFieldProps('addressaz')}
                 />
                 
-                {formik.touched.address && formik.errors.address ? (
-                    <div className="error">{formik.errors.address}</div>
+                {formik.touched.addressaz && formik.errors.addressaz ? (
+                    <div className="error">{formik.errors.addressaz}</div>
+                ) : null}
+            </div>
+            <div className="flex items-start justify-center flex-col mt-[20px]">
+                <label htmlFor="address">Edit address RU</label>
+                <input
+                    type="text"
+                    id="addressru"
+                    name="addressru"
+                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-[50%] bg-[#fff] text-[#5d636b] relative"
+                   
+                    {...formik.getFieldProps('addressru')}
+                />
+                
+                {formik.touched.addressru && formik.errors.addressru ? (
+                    <div className="error">{formik.errors.addressru}</div>
                 ) : null}
             </div>
 

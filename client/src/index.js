@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import RoutesMain from './routes';
 
-import global_en from './Translations/en/global.json';
-import global_ka from './Translations/ka/global.json';
+import global_ru from './Translations/ru/global.json';
+import global_az from './Translations/az/global.json';
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
 import { Provider } from 'react-redux';
@@ -14,13 +14,13 @@ import './globals.css';
 
 i18next.init({
   interpolation: {escapeValue: false},
-  lng: "en",
+  lng: "az",
   resources: {
-    en: {
-      global: global_en
+    az: {
+      global: global_az
     },
-    ka: {
-      global: global_ka
+    ru: {
+      global: global_ru
     }
   }
 })

@@ -1,9 +1,13 @@
 const mongoose = require('mongoose');
 
 const siteSchema = mongoose.Schema({
-    address: {
+    addressaz: {
         required: true,
-        type: String
+        type: String,
+    },
+    addressru: {
+        required: true,
+        type: String,
     },
     hours: {
         required: true,
