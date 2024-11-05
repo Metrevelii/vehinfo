@@ -6,6 +6,7 @@ import AuthGuard  from './Components/hoc/authGuard';
 
 import { useDispatch, useSelector } from "react-redux";
 import { userIsAuth, userSignOut } from "../src/store/actions/user.actions";
+ 
 
 import Footer from "./Components/Footer/footer";
 import Calculator from "./Components/Calculator/index";
@@ -28,10 +29,12 @@ const RoutesMain = (props) => {
   const [loading, setLoading] = useState(true);
   const users = useSelector((state) => state.users);
  
+ 
   const dispatch = useDispatch();
 
   const signOutUser = () => {
     dispatch(userSignOut());
+ 
   };
 
   useEffect(() => {
@@ -59,10 +62,10 @@ const RoutesMain = (props) => {
                   <Route path="/" element={<Home />} />
                   <Route path="/delivery_calc" element={<Calculator />} />
                   <Route path="/sign_in" element={<RegisterLogin />} />
-                  <Route path="/dashboard" element={ <ProtectedUserDashboard />} />
-                  <Route path="/dashboard/admin/contact_infos" element={ <ProtectedContactInfo />} />
-                  <Route path="/dashboard/admin/manage_site" element={ <ProtectedManageSite />} />
-                  <Route path="/dashboard/user/user_info" element={ <ProtectedUserInfo />} />
+                  <Route path="/dashboard" element={ <ProtectedUserDashboard signOutUser={signOutUser} />} />
+                  <Route path="/dashboard/admin/contact_infos" element={ <ProtectedContactInfo signOutUser={signOutUser} />} />
+                  <Route path="/dashboard/admin/manage_site" element={ <ProtectedManageSite signOutUser={signOutUser} />} />
+                  <Route path="/dashboard/user/user_info" element={ <ProtectedUserInfo signOutUser={signOutUser} />} />
 
 
                 </Routes>

@@ -8,7 +8,7 @@ import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { userUpdateProfile } from '../../../store/actions/user.actions';
 
-const UserInfo = ({ users }) => {
+const UserInfo = ({ users, signOutUser }) => {
     const dispatch = useDispatch();
 
     const formik = useFormik({
@@ -33,7 +33,7 @@ const UserInfo = ({ users }) => {
     });
 
     return (
-        <DashboardLayout title="User information">
+        <DashboardLayout title="User information"  signOutUser={signOutUser}>
             <form
                 className="mt-[30px] w-full"
    

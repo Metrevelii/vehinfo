@@ -26,9 +26,9 @@ export const admin = [
 ];
 
 
-const DashboardLayout = (props) => {
+const DashboardLayout = ({signOutUser, title, children}) => {
     const users = useSelector(state => state.users);
-
+ 
 
     const generateLinks = (data) => (
         data.map((item, i) => (
@@ -47,6 +47,12 @@ const DashboardLayout = (props) => {
                     <div className="font-interMedium font-bold text-blue-500text-[15px] mt-[7px] flex items-start justify-start flex-col">
                         {generateLinks(links)}
                     </div>
+                    <button 
+                        className="font-interMedium text-[16px] text-primary-blue"
+                        onClick={signOutUser}
+                    >
+                        Log out
+                    </button>
                     { users.data.role === 'admin' ?
                         <div>   
                             <h2 className="font-interMedium font-bold text-gray-500 text-[18px] mt-[30px]">Admin</h2>
@@ -57,8 +63,8 @@ const DashboardLayout = (props) => {
                     : null}
                 </div>
                 <div className="w-[80%] pl-[10px]">
-                    <div className="dashboard_title">{props.title}</div>
-                    <div className="">{props.children}</div>
+                    <div className="dashboard_title">{title}</div>
+                    <div className="">{children}</div>
                 </div>
             </div>
         </div>

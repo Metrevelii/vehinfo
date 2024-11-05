@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from "../../../store/actions/contact.action";
  
 
-const ContactInfo = () => {
+const ContactInfo = (signOutUser) => {
     const dispatch = useDispatch();
     const { contacts, loading, error } = useSelector((state) => state.contact);
 
@@ -24,7 +24,7 @@ const ContactInfo = () => {
     console.log(contacts);
 
     return (
-        <DashboardLayout title="">
+        <DashboardLayout title=""  signOutUser={signOutUser}>
 
             <div className="w-full h-[500px] flex justify-center items-center">
                 <div className="w-[600px] h-[450px] rounded-lg border border-gray-300 flex flex-col">
