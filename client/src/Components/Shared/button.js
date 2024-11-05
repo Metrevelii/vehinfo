@@ -2,12 +2,12 @@ import React from 'react';
 
 import './button.css';
 
-const Button = ({title, className }) => {
+const ButtonComponent = ({title, className }) => {
     return (
-        <button className={className}>
-            {title}
+        <button className={`buttonComponent ${className}`} type="submit">
+            <p className="buttonComponent-para">{title}</p>
         </button>
     )
 }
 
-export default Button;
+export default ButtonComponent;

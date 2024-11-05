@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonComponent from "../Shared/button";
 
 const HeadlineBox = () => {
   return (
@@ -13,9 +14,10 @@ const HeadlineBox = () => {
             Shipping Needs.
           </p>
           <div className="w-full flex justify-end items-center mt-auto">
-            <button className="w-[270px] h-[70px] bg-gradient-to-b from-[#2F53FE] to-[#1B3CDE] font-interBold font-bold text-[20px] text-white text-center cursor-pointer rounded-[12px]">
+            {/* <button className="w-[270px] h-[70px] bg-gradient-to-b from-[#2F53FE] to-[#1B3CDE] font-interBold font-bold text-[20px] text-white text-center cursor-pointer rounded-[12px]">
               REQUEST QUOTE
-            </button>
+            </button> */}
+            <ButtonComponent title="Request Quote" className="w-[270px] h-[70px]"/>
           </div>
         </div>
       </div>
