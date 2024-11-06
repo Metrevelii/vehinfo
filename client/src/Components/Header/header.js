@@ -90,7 +90,7 @@ const Header = ({ users }) => {
           } w-full flex justify-around items-center h-auto py-[10px] fixed z-40`}
         >
           {/* BURGER MENU  */}
-          <div className="relative">
+          <div className="">
             <label className="burger" htmlFor="burger">
               <input
                 type="checkbox"
@@ -103,9 +103,9 @@ const Header = ({ users }) => {
               <span></span>
             </label>
             {isMenuOpen && (
-              <div className="absolute z-10 top-[62px] w-[220px] h-[auto] py-[10px] bg-primary-whiteSecond border border-solid border-primary-blue rounded-[6px]">
+              <div className="absolute z-50 top-[95px] left-[0px] right-[0px] mx-auto w-full h-[auto] py-[10px] bg-primary-whiteSecond border border-solid border-primary-blackSecond">
                 <div className="w-full h-full flex justify-start items-center flex-col">
-                  <div className="w-full h-auto p-[10px] flex justify-center items-center">
+                  <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
                     <Link
                       to="/about_us"
                       className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center"
@@ -114,7 +114,7 @@ const Header = ({ users }) => {
                       {t("header.aboutus")}{" "}
                     </Link>
                   </div>
-                  <div className="w-full h-auto p-[10px] flex justify-center items-center">
+                  <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
                     <Link
                       to="/delivery_calc"
                       className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center"
@@ -122,7 +122,7 @@ const Header = ({ users }) => {
                       {t("header.calc")}
                     </Link>
                   </div>
-                  <div className="w-full h-auto p-[10px] flex justify-center items-center">
+                  <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
                     <Link
                       to="/contacts"
                       className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
