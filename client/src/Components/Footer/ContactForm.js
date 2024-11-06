@@ -98,6 +98,7 @@ const ContactForm = () => {
                                 <option value="+995" className="text-[#5d636b]">+995 (Geo)</option>
                                 <option value="+994" className="text-[#5d636b]">+994 (AZ)</option>
                                 <option value="+7" className="text-[#5d636b]">+7 (RUS)</option>
+                                <option value="+7" className="text-[#5d636b]">+7 (KAZ)</option>
                           
                             </Field>
                             <ErrorMessage name="countryCode" component="div" className="text-red-500 text-sm font-interMedium mt-[5px] absolute z-[5]" />

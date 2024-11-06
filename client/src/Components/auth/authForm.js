@@ -6,6 +6,8 @@ import { userRegister, userSignIn } from '../../store/actions/user.actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
+import ButtonComponent from '../Shared/button';
+
 
 const AuthForm = (props) => {
     const notifications = useSelector(state => state.notifications);
@@ -50,9 +52,9 @@ const AuthForm = (props) => {
                 onSubmit={handleSubmit}
             >
                 {( isSubmitting ) => (
-                    <Form className="flex flex-col space-y-4">
-                        <div className="flex flex-col w-[250px] h-[60px] mb-[1.5rem]">
-                            <label htmlFor="email" className="font-regular">Enter your email</label>
+                    <Form className="flex flex-col space-y-4 w-[80%] lg:w-auto xl:w-auto 2xl:w-auto">
+                        <div className="flex flex-col w-full lg:w-[250px] xl:w-[250px] 2xl:w-[250px] h-[60px] mb-[1.5rem]">
+                            <label htmlFor="email" className="font-interRegular font-[16px] mb-[0.5rem] text-primary-blue">Enter your email</label>
                             <Field 
                                 type="email" 
                                 id="email" 
@@ -62,8 +64,8 @@ const AuthForm = (props) => {
                             />
                             <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
                         </div>
-                        <div className="flex flex-col w-[250px] h-[60px]" style={{ marginBottom: '1.5rem' }}>
-                            <label htmlFor="password" className="font-regular">Enter your password</label>
+                        <div className="flex flex-col w-full lg:w-[250px] xl:w-[250px] 2xl:w-[250px] h-[60px]" style={{ marginBottom: '1.5rem' }}>
+                            <label htmlFor="password" className="font-interRegular font-[16px] mb-[0.5rem] text-primary-blue">Enter your password</label>
                             <Field 
                                 type="password" 
                                 id="password" 
@@ -73,12 +75,7 @@ const AuthForm = (props) => {
                             />
                             <ErrorMessage name="password" component="div" className="text-red-500 text-sm" />
                         </div>
-                        <button 
-                            type="submit" 
-                            className="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600 transition-colors mt-8"
-                        >
-                            { props.formType ? 'Register':'Login'}
-                        </button>
+                        <ButtonComponent className="w-[100%] md:w-[220px] lg:w-[220px] xl:w-[220px] 2xl:w-[220px] h-[48px] rounded-[12px] font-interMedium text-[16px]" title={props.formType ? 'Register' : 'Login'} />
                     </Form>
                 )}
             </Formik>
