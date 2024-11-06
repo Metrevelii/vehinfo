@@ -11,6 +11,7 @@ import DashboardIcon from './DashboardIcon';
 import UserIcon from './UserIcon';
 import ContactsIcon from './ContactsIcon';
 import ManageIcon from './ManageIcon';
+import EmailIcon from './EmailIcon';
 
 export const Icons = {
     ExpIcon: ExpIcon,
@@ -25,5 +26,6 @@ export const Icons = {
     DashboardIcon: DashboardIcon,
     UserIcon: UserIcon,
     ContactsIcon: ContactsIcon,
-    ManageIcon: ManageIcon
+    ManageIcon: ManageIcon,
+    EmailIcon: EmailIcon
 }

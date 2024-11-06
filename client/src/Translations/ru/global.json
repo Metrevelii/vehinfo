@@ -1,11 +1,41 @@
 {
     "header": {
-        "aboutus": "About Us",
+        "aboutus": "О нас",
         "faq": "FAQ",
-        "calc": "Delivery Calc",
-        "contact": "Contact"
+        "calc": "Калькулятор",
+        "contact": "Контакт",
+        "dashboard": "Панель"
     },
     "home": {
-        "body": "A Store designed for you"
+        "text1": "Ваш логистический партнер для бесперебойной доставки",
+        "text2": "Logistika Xidmətimiz Bütün Sizin üçün Sondan Uca Həllər Təmin edir Göndərmə Ehtiyacları",
+        "shortlyaboutus": "Коротко о нас",
+        "text4": "A Store designed for you",
+        "text5": "A Store designed for you"
+    },
+    "advantages": {
+        "adv1": "Преимущества работы с нами",
+        "adv2": "Опыт",
+        "adv3": "Безопасность",
+        "adv4": "Офис в Азербайджане",
+        "adv5": "Низкие цены",
+        "adv6": "",
+        "adv7": "",
+        "adv8": ""
+    },
+    "forall": {
+        "reqquote": "Запросить расценки"
+    },
+    "footer": {
+        "foot1": "Расположение",
+        "foot2": "Телефон",
+        "foot3": "Почта",
+        "foot4": "",
+        "foot5": "",
+        "foot6": "",
+        "foot7": "",
+        "foot8": "",
+        "foot9": ""
+
     }
 }

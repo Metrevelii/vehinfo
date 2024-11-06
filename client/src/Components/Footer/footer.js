@@ -10,7 +10,7 @@ const Footer = () => {
   const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
  
-
+  const { t } = useTranslation("global");
 
   return (
     <footer className="footer_bg_img ">
@@ -24,7 +24,7 @@ const Footer = () => {
                 <div className="w-full xl:w-auto 2xl:w-auto flex sm:items-center md:items-center lg:items-start xl:items-start 2xl:items-start items-center flex-col">
 
                   <h4 className="font-interBold  text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] 2xl:text-[20px] uppercase text-primary-whiteTransparent">
-                    LOCATION
+                    {t("footer.foot1")} 
                   </h4>
                   <div className="mt-[0.5rem] xl:mt-4 2xl:mt-4 flex flex-col justify-start items-start">
                     <p className="font-interRegular text-center text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] text-primary-whiteTransparent">
@@ -37,7 +37,7 @@ const Footer = () => {
 
                 <div className="mt-[2.5rem] sm:mt-[2.5rem] md:mt-[2rem] lg:mt-[1.5rem]   xl:mt-12 2xl:mt-12 w-full flex justify-center flex-col sm:items-center md:items-center lg:items-start xl:items-start 2xl:items-start items-center">
                   <h4 className="font-interBold  text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] uppercase text-primary-whiteTransparent">
-                    Phone
+                    {t("footer.foot2")} 
                   </h4>
                   <p className="mt-[0.5rem] xl:mt-4 2xl:mt-4 text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] text-primary-whiteTransparent font-interRegular ">
                   {site.vars.phone}
@@ -45,7 +45,7 @@ const Footer = () => {
                 </div>
                 <div className="mt-[2.5rem] sm:mt-[2.5rem] md:mt-[2rem] lg:mt-[1.5rem]  xl:mt-12 2xl:mt-12 w-full flex justify-center flex-col sm:items-center md:items-center lg:items-start xl:items-start 2xl:items-start items-center">
                   <h4 className="font-interBold  text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] uppercase text-primary-whiteTransparent">
-                    Mail
+                    {t("footer.foot3")} 
                   </h4>
                   <p className="mt-[0.5rem] xl:mt-4 2xl:mt-4 text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] text-primary-whiteTransparent font-interRegular ">
                   {site.vars.email}
@@ -62,7 +62,7 @@ const Footer = () => {
           
           <div className="flex flex-col justify-start py-[2rem] items-center  w-full h-auto     xl:w-[700px]    2xl:w-[700px]  rounded-[12px] xs:px-[0.5rem] sm:px-[0.5rem] md:px-[1rem] lg:px-16 xl:px-16 2xl:px-16 bg-white bg-contactBg bg-cover bg-center bg-no-repeat">
             <div className="font-interBold text-[20px] sm:text-[22px] md:text-[28px] xl:text-[32px] 2xl:text-[32px] text-black mb-[0.5rem] uppercase">
-              REQUEST A QUOTE
+              {t("forall.reqquote")} 
             </div>
             <ContactForm />
             <Social facebook={site.vars.facebook} instagram={site.vars.instagram} />

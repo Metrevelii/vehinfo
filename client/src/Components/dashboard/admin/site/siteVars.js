@@ -64,7 +64,7 @@ const SiteVars = () => {
                     type="text"
                     id="addressaz"
                     name="addressaz"
-                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-[50%] bg-[#fff] text-[#5d636b] relative"
+                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium relative"
                    
                     {...formik.getFieldProps('addressaz')}
                 />
@@ -79,7 +79,7 @@ const SiteVars = () => {
                     type="text"
                     id="addressru"
                     name="addressru"
-                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-[50%] bg-[#fff] text-[#5d636b] relative"
+                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium relative"
                    
                     {...formik.getFieldProps('addressru')}
                 />
@@ -97,27 +97,14 @@ const SiteVars = () => {
                     name="phone"
       
                     {...formik.getFieldProps('phone')}
-                     className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-[50%] bg-[#fff] text-[#5d636b] relative"
+                     className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium relative"
                 />
                 {formik.touched.phone && formik.errors.phone ? (
                     <div className="error">{formik.errors.phone}</div>
                 ) : null}
             </div>
 
-            <div className="flex items-start justify-center flex-col mt-[20px]">
-                <label htmlFor="hours">Edit hours</label>
-                <input
-                    type="text"
-                    id="hours"
-                    name="hours"
-        
-                    {...formik.getFieldProps('hours')}
-                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-[50%] bg-[#fff] text-[#5d636b] relative"
-                />
-                {formik.touched.hours && formik.errors.hours ? (
-                    <div className="error">{formik.errors.hours}</div>
-                ) : null}
-            </div>
+           
 
             <div className="flex items-start justify-center flex-col mt-[20px]">
                 <label htmlFor="email">Edit email</label>
@@ -127,7 +114,7 @@ const SiteVars = () => {
                     name="email"
            
                     {...formik.getFieldProps('email')}
-                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-[50%] bg-[#fff] text-[#5d636b] relative"
+                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium relative"
                 />
                 {formik.touched.email && formik.errors.email ? (
                     <div className="error">{formik.errors.email}</div>
@@ -141,7 +128,7 @@ const SiteVars = () => {
                     name="facebook"
            
                     {...formik.getFieldProps('facebook')}
-                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-[50%] bg-[#fff] text-[#5d636b] relative"
+                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium relative"
                 />
                 {formik.touched.facebook && formik.errors.facebook ? (
                     <div className="error">{formik.errors.facebook}</div>
@@ -155,7 +142,7 @@ const SiteVars = () => {
                     name="instagram"
            
                     {...formik.getFieldProps('instagram')}
-                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-[50%] bg-[#fff] text-[#5d636b] relative"
+                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium relative"
                 />
                 {formik.touched.instagram && formik.errors.instagram ? (
                     <div className="error">{formik.errors.instagram}</div>

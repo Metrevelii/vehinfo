@@ -1,11 +1,41 @@
 {
     "header": {
-        "aboutus": "ჩვენს შესახებ",
+        "aboutus": "Haqqımızda",
         "faq": "FAQ",
-        "calc": "კალკულატორი",
-        "contact": "კონტაქტი"
+        "calc": "Kalkulyator",
+        "contact": "Əlaqə",
+        "dashboard": "Panel"
     },
     "home": {
-        "body": "Rasashvebi ravaxar"
+        "text1": "Problemsiz Çatdırılma üçün Logistik Tərəfdaşınız",
+        "text2": "Logistika Xidmətimiz Bütün Sizin üçün Sondan Uca Həllər Təmin edir Göndərmə Ehtiyacları",
+        "shortlyaboutus": "Qısaca Haqqımızda",
+        "text4": "A Store designed for you",
+        "text5": "A Store designed for you"
+    },
+    "advantages": {
+        "adv1": "Bizimlə işləməyin üstünlükləri",
+        "adv2": "Təcrübə",
+        "adv3": "Təhlükəsizlik",
+        "adv4": "Azərbaycanda ofis",
+        "adv5": "Aşağı qiymətlər",
+        "adv6": "",
+        "adv7": "",
+        "adv8": ""
+    },
+    "forall": {
+        "reqquote": "Sitat tələb edin"
+    },
+    "footer": {
+        "foot1": "Məkan",
+        "foot2": "Telefon",
+        "foot3": "Poçt",
+        "foot4": "",
+        "foot5": "",
+        "foot6": "",
+        "foot7": "",
+        "foot8": "",
+        "foot9": ""
+
     }
 }
