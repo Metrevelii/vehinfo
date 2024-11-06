@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from "../../../store/actions/contact.action";
  
 
-const ContactInfo = (signOutUser) => {
+const ContactInfo = ({signOutUser}) => {
     const dispatch = useDispatch();
     const { contacts, loading, error } = useSelector((state) => state.contact);
 
