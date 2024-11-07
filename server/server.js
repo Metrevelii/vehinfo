@@ -50,6 +50,17 @@ app.use((err, req, res, next) => {
 })
 
 
+app.use(express.static('client/build'));
+
+/// should get NODE_ENV from server
+if (process.env.NODE_ENV === 'production') {
+    const path = require('path');
+
+    app.get('/* ', (req, res) => {
+        res.sendFile(path.resolve(_dirname, '../client', 'build', 'index.html'))
+    });
+}
+
 
 const port = process.env.PORT || 3001;
 
