@@ -14,6 +14,7 @@ let grantsObject = {
         auction: allRights,
         location: allRights,
         site: allRights,
+        contact: allRights,
  
  
     },

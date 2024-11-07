@@ -3,7 +3,7 @@ import DashboardLayout from "../../hoc/dashbordLayout";
  
 
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from "../../../store/actions/contact.action";
+import { fetchContacts, deleteContact } from "../../../store/actions/contact.action";
  
 
 const ContactInfo = ({signOutUser}) => {
@@ -23,6 +23,10 @@ const ContactInfo = ({signOutUser}) => {
 
     console.log(contacts);
 
+    const handleDelete = (contactId) => {
+        dispatch(deleteContact(contactId));
+    };
+
     return (
         <DashboardLayout title="Comments"  signOutUser={signOutUser}>
 
@@ -36,7 +40,8 @@ const ContactInfo = ({signOutUser}) => {
                         {loading && <p>Loading...</p>}
                         {error && <p>Error loading contacts</p>}
                         {contacts.map((contact) => (
-                            <div key={contact._id} className="w-full border-t border-b border-gray-300 flex flex-col p-2">
+                            <div key={contact._id} className="w-full border-t border-b border-gray-300 flex flex-col p-2 relative">
+                                <button onClick={() => handleDelete(contact._id)} className="absolute top-[10px] right-[10px] z-10 py-[3px] px-[5px] h-auto font-interRegular text-[14px] rounded-[4px] bg-primary-white hover:bg-primary-blue text-primary-blue hover:text-primary-white border border-primary-blue cursor-pointer">DELETE</button>
                                 <div className="flex w-full items-center mt-2">
                                     <div className="font-interMedium font-bold text-primary-purple text-[13px]">{contact.name}</div>
                                     <div className="font-interMedium font-bold text-primary-purple text-[13px] ml-[7px]">{contact.surname}</div>

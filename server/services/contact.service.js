@@ -21,4 +21,18 @@ const getAllContacts = async () => {
     }
 };
 
-module.exports = { createContact, getAllContacts };
+const deleteContact = async (contactId) => {
+    try {
+        const deletedContact = await Contact.findByIdAndDelete(contactId);
+        if (!deletedContact) {
+            throw new ApiError(httpStatus.NOT_FOUND, 'Contact not found');
+        }
+        return deletedContact;
+    } catch (error) {
+        throw new ApiError(httpStatus.BAD_REQUEST, 'Error deleting contact');
+    }
+};
+
+
+
+module.exports = { createContact, getAllContacts, deleteContact  };

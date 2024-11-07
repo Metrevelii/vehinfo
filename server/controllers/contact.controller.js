@@ -36,6 +36,15 @@ const contactController = {
         } catch ( error) {
             next (error);
         }
+    },
+    async deleteContact(req, res, next) {
+        try {
+            const contactId = req.params.id;
+            const deletedContact = await contactService.deleteContact(contactId);
+            res.status(httpStatus.OK).json(deletedContact);
+        } catch (error) {
+            next(error);
+        }
     }
 };
 
