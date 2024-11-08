@@ -11,6 +11,7 @@ const Header = ({ users }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  
 
   const { isMobile } = useBreakpoint();
 
@@ -66,11 +67,15 @@ const Header = ({ users }) => {
                 <NavLink to="/" title={t("header.aboutus")} />
                 <NavLink to="/delivery_calc" title={t("header.calc")} />
                 <NavLink to="/" title={t("header.contact")} />
+              
+
                 {users.auth ? (
                   <>
                     <NavLink to="/dashboard" title={t("header.dashboard")}></NavLink>
                   </>
-                ) : null}
+                ) : <>
+                  <NavLink to="/sign_in" title={t("header.signIn")} />
+                  </>}
               </nav>
 
               <div>
