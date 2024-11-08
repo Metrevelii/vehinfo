@@ -21,7 +21,7 @@ const ContactInfo = ({signOutUser}) => {
         getContacts();
     }, [dispatch, loading, contacts.length]);
 
-    console.log(contacts);
+   
 
     const handleDelete = (contactId) => {
         dispatch(deleteContact(contactId));
