@@ -132,13 +132,7 @@ const ContactForm = () => {
 
                  
                     <div className="flex justify-start">
-                        {/* <button 
-                            type="submit" 
-                            className="w-[220px] h-[38px] md:h-[48px] lg:h-[48px] xl:w-[220px] 2xl:w-[220px] xl:h-[48px] 2xl:h-[48px] bg-gradient-to-b from-[#2F53FE] to-[#1B3CDE] font-interBold font-bold text-[16px] xl:text-[20px] 2xl:text-[20px] text-white text-center cursor-pointer rounded-[12px]"
-                        >
-                             {loading ? 'Sending...' : 'Send'}
-                        </button> */}
-                        <ButtonComponent title={"Send"} className="w-[220px] h-[38px] md:h-[48px] lg:h-[48px] xl:w-[220px] 2xl:w-[220px] xl:h-[48px] 2xl:h-[48px]"/>
+                        <ButtonComponent title={loading ? 'Sending' : 'Send'} className="w-[220px] h-[38px] md:h-[48px] lg:h-[48px] xl:w-[220px] 2xl:w-[220px] xl:h-[48px] 2xl:h-[48px]"/>
                     </div>
                     {success && <div className="text-green-500">Message sent successfully!</div>}
                     {error && <div className="text-red-500">{error}</div>}
