@@ -11,4 +11,7 @@ router.route('/profile')
 router.patch('/email', auth('updateOwn','profile'), usersController.updateUserEmail);
 router.get('/verify', usersController.verifyAccount);
 
+router.post('/password-reset-request', usersController.requestPasswordReset);  
+router.post('/password-reset', usersController.resetPassword);
+
 module.exports = router;

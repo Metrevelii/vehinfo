@@ -54,7 +54,48 @@ const registerEmail = async(userEmail, user) => {
     }
 }
 
+const sendPasswordResetEmail = async (userEmail, token) => {
+    try {
+        let mailGenerator = new Mailgen({
+            theme: 'default',
+            product: {
+                name: 'MyApp',
+                link: `${process.env.EMAIL_MAIL_URL}`,
+            }
+        });
+
+        const email = {
+            body: {
+                name: userEmail,
+                intro: 'You requested a password reset. Click the link below to reset your password.',
+                action: {
+                    instructions: 'Click the link to reset your password.',
+                    button: {
+                        color: '#1a73e8',
+                        text: 'Reset your password',
+                        link: `${process.env.SITE_DOMAIN}reset-password?t=${token}`
+                    }
+                }
+            }
+        };
+
+        let emailBody = mailGenerator.generate(email);
+        let message = {
+            from: process.env.EMAIL,
+            to: userEmail,
+            subject: "Password Reset Request",
+            html: emailBody
+        };
+
+        await transporter.sendMail(message);
+
+    } catch (error) {
+        throw error;
+    }
+};
+
 
 module.exports = {
-    registerEmail
+    registerEmail,
+    sendPasswordResetEmail
 }
