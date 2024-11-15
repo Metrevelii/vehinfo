@@ -40,7 +40,7 @@ const LoginForm = ({ goBack }) => {
 
   return (
     <div className="w-full flex justify-center items-center flex-col">
-      <h2 className="font-interBold text-primary-blue text-[32px] mb-[1.5rem]">
+      <h2 className="font-interBold text-primary-black uppercase text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] mb-[1.5rem]">
         Log In
       </h2>
 
@@ -57,7 +57,7 @@ const LoginForm = ({ goBack }) => {
               <div className="flex flex-col w-full ">
                 <label
                   htmlFor="email"
-                  className="font-interRegular text-[16px] mb-[0.5rem] text-primary-blue"
+                  className="font-interRegular text-[16px] mb-[0.5rem] text-primary-lightGray"
                 >
                   Email
                 </label>
@@ -66,7 +66,7 @@ const LoginForm = ({ goBack }) => {
                   id="email"
                   name="email"
                   placeholder="Email"
-                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-blue rounded-[4px]"
+                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
                 />
                 <ErrorMessage
                   name="email"
@@ -78,7 +78,7 @@ const LoginForm = ({ goBack }) => {
               <div className="flex flex-col w-full mb-[1.5rem]">
                 <label
                   htmlFor="password"
-                  className="font-interRegular text-[16px] mb-[0.5rem] text-primary-blue"
+                  className="font-interRegular text-[16px] mb-[0.5rem] text-primary-lightGray"
                 >
                   Password
                 </label>
@@ -87,7 +87,7 @@ const LoginForm = ({ goBack }) => {
                   id="password"
                   name="password"
                   placeholder="Password"
-                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-blue rounded-[4px]"
+                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
                 />
                 <ErrorMessage
                   name="password"
@@ -98,7 +98,7 @@ const LoginForm = ({ goBack }) => {
               <div className="w-full flex justify-center items-center mt-[20px]">
                 <ButtonComponent
                   title="Log In"
-                  className="w-[100%] md:w-[220px] lg:w-[220px] xl:w-[220px] 2xl:w-[220px] h-[48px] rounded-[12px]"
+                  className="w-[100%] h-[48px] rounded-[12px]"
                 />
               </div>
             </Form>
@@ -106,7 +106,7 @@ const LoginForm = ({ goBack }) => {
         </Formik>
       )}
 
-      <button className="mt-[20px] text-primary-blue" onClick={goBack}>
+      <button className="mt-[20px] text-primary-blue font-interRegular text-[18px]" onClick={goBack}>
         Go back
       </button>
     </div>

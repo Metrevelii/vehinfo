@@ -51,12 +51,16 @@ module.exports = {
             whiteTransparent: '#ffffffcc',
             lightPurple: '#8a93c0',
             purpleLighter: '#b9bed1',
+            purpleMoreLight: "#7c8fc7",
+            lightGray: "#727272",
             black: '#222222',
             blackSecond: '#2c2c2c'
         },
     },
     boxShadow: {
       'custom': '0px 4px 13px 0px rgba(0, 0, 0, 0.23)',
+      'default': '0px 7px 35px 0px rgba(0, 0, 0, 0.25)',
+
     },
     },
   },

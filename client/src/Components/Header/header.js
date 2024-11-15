@@ -5,6 +5,7 @@ import LangBtn from "../Shared/langbtn";
 import { Link, useLocation } from "react-router-dom";
 import NavLink from "./NavLink";
 import useBreakpoint from "../../hooks/useBreakpoint";
+import { Icons } from '../../icons';
 
 const Header = ({ users }) => {
   const { t } = useTranslation("global");
@@ -35,6 +36,7 @@ const Header = ({ users }) => {
 
   useEffect(() => {
     setIsMenuOpen(false);
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   const isHomePage = location.pathname === "/";
@@ -66,18 +68,25 @@ const Header = ({ users }) => {
               <nav className="max-w-[300px] sm:max-w-[380px] md:max-w-[480px] xl:max-w-[570px] 2xl:max-w-[670px] h-full flex justify-around items-center">
                 <NavLink to="/" title={t("header.aboutus")} />
                 <NavLink to="/" title={t("header.contact")} />
-              
-
-                {users.auth ? (
-                  <>
-                    <NavLink to="/dashboard" title={t("header.dashboard")}></NavLink>
-                  </>
-                ) : <>
-                  <NavLink to="/sign-in" title={t("header.signIn")} />
-                  </>}
+                <NavLink to="/" title={t("forall.reqquote")} />
               </nav>
 
-              <div>
+              <div className="flex justify-center items-center">
+                {users.auth ? (
+                  <>
+                     <Link to="/dashboard" className="w-[112px] h-[48px] rounded-[12px] bg-primary-white shadow-custom flex justify-between px-[12px] items-center mr-[20px]">
+                      <Icons.HeaderUserIcon  className="w-[32px] h-[32px]"/>
+                      <p className="font-interMedium text-[16px] text-primary-black">{t("header.dashboard")}</p>
+                    </Link>
+                  </>
+                ) : <>
+                 
+                <Link to="/sign-in" className="w-[112px] h-[48px] rounded-[12px] bg-primary-white shadow-custom flex justify-between px-[12px] items-center mr-[20px]">
+                  <Icons.HeaderUserIcon  className="w-[32px] h-[32px]"/>
+                  <p className="font-interMedium text-[16px] text-primary-black">{t("header.signIn")}</p>
+                </Link>
+                  </>}
+
                 <LangBtn />
               </div>
             </div>
@@ -111,27 +120,28 @@ const Header = ({ users }) => {
                 <div className="w-full h-full flex justify-start items-center flex-col">
                   <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
                     <Link
-                      to="/about_us"
+                      to="/"
                       className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center"
                     >
                       {" "}
                       {t("header.aboutus")}{" "}
                     </Link>
                   </div>
+                  
                   <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
                     <Link
-                      to="/delivery_calc"
-                      className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center"
+                      to="/"
+                      className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
                     >
-                      {t("header.calc")}
+                      {t("header.contact")}{" "}
                     </Link>
                   </div>
                   <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
                     <Link
-                      to="/contacts"
+                      to="/"
                       className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
                     >
-                      {t("header.contact")}{" "}
+                      {t("forall.reqquote")}{" "}
                     </Link>
                   </div>
                   {users.auth ? (
@@ -145,7 +155,16 @@ const Header = ({ users }) => {
                         </Link>
                       </div>
                     </>
-                  ) : null}
+                  ) : <>
+                    <div className="w-full h-auto p-[10px] flex justify-center items-center">
+                        <Link
+                          to="/sign-in"
+                          className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
+                        >
+                          {t("header.signIn")}
+                        </Link>
+                      </div>
+                  </>}
                 </div>
               </div>
             )}

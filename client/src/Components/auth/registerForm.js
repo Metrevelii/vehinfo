@@ -49,7 +49,7 @@ const RegisterForm = ({ goBack }) => {
 
   return (
     <div className="w-full flex justify-center items-center flex-col">
-      <h2 className="font-interBold text-primary-blue text-[32px] mb-[1.5rem]">
+      <h2 className="font-interBold text-primary-black uppercase text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] mb-[1.5rem]">
         Register
       </h2>
 
@@ -66,7 +66,7 @@ const RegisterForm = ({ goBack }) => {
               <div className="flex flex-col w-full">
                 <label
                   htmlFor="firstname"
-                  className="mb-[0.5rem] text-[16px] font-interRegular text-primary-blue"
+                  className="mb-[0.5rem] text-[16px] font-interRegular text-primary-lightGray"
                 >
                   First Name
                 </label>
@@ -75,7 +75,7 @@ const RegisterForm = ({ goBack }) => {
                   id="firstname"
                   name="firstname"
                   placeholder="First Name"
-                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-blue rounded-[4px]"
+                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
                 />
                 <ErrorMessage
                   name="firstname"
@@ -87,7 +87,7 @@ const RegisterForm = ({ goBack }) => {
               <div className="flex flex-col w-full mb-[1.5rem]">
                 <label
                   htmlFor="lastname"
-                  className="font-interRegular text-[16px] mb-[0.5rem] text-primary-blue"
+                  className="font-interRegular text-[16px] mb-[0.5rem] text-primary-lightGray"
                 >
                   Last Name
                 </label>
@@ -96,7 +96,7 @@ const RegisterForm = ({ goBack }) => {
                   id="lastname"
                   name="lastname"
                   placeholder="Last Name"
-                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-blue rounded-[4px]"
+                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
                 />
                 <ErrorMessage
                   name="lastname"
@@ -108,7 +108,7 @@ const RegisterForm = ({ goBack }) => {
               <div className="flex flex-col w-full mb-[1.5rem]">
                 <label
                   htmlFor="email"
-                  className="font-interRegular text-[16px] mb-[0.5rem] text-primary-blue"
+                  className="font-interRegular text-[16px] mb-[0.5rem] text-primary-lightGray"
                 >
                   Email
                 </label>
@@ -117,7 +117,7 @@ const RegisterForm = ({ goBack }) => {
                   id="email"
                   name="email"
                   placeholder="Email"
-                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-blue rounded-[4px]"
+                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
                 />
                 <ErrorMessage
                   name="email"
@@ -129,7 +129,7 @@ const RegisterForm = ({ goBack }) => {
               <div className="flex flex-col w-full mb-[1.5rem]">
                 <label
                   htmlFor="password"
-                  className="font-interRegular text-primary-blue"
+                  className="font-interRegular text-primary-lightGray"
                 >
                   Password
                 </label>
@@ -138,7 +138,7 @@ const RegisterForm = ({ goBack }) => {
                   id="password"
                   name="password"
                   placeholder="Password"
-                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-blue rounded-[4px]"
+                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
                 />
                 <ErrorMessage
                   name="password"
@@ -150,7 +150,7 @@ const RegisterForm = ({ goBack }) => {
               <div className="w-full flex justify-center items-center mt-[20px]">
                 <ButtonComponent
                   title="Register"
-                  className="w-[100%] md:w-[220px] lg:w-[220px] xl:w-[220px] 2xl:w-[220px] h-[48px] rounded-[12px]"
+                  className="w-[100%] h-[48px] rounded-[12px]"
                 />
               </div>
             </Form>
@@ -158,7 +158,7 @@ const RegisterForm = ({ goBack }) => {
         </Formik>
       )}
 
-      <button className="mt-[20px] text-primary-blue" onClick={goBack}>
+      <button className="mt-[20px] text-primary-blue font-interRegular text-[18px]" onClick={goBack}>
         Go back
       </button>
     </div>

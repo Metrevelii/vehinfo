@@ -44,7 +44,7 @@ const ForgotPasswordForm = ({ goBack }) => {
 
   return (
     <div className="w-full flex justify-center items-center flex-col">
-      <h2 className="font-interBold text-primary-blue text-[32px] mb-[4.5rem]">
+      <h2 className="font-interBold text-primary-black uppercase text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] mb-[4.5rem]">
         Forgot Password
       </h2>
 
@@ -61,7 +61,7 @@ const ForgotPasswordForm = ({ goBack }) => {
               <div className="flex flex-col w-full">
                 <label
                   htmlFor="email"
-                  className="font-interRegular text-[16px] mb-[0.5rem] text-primary-blue"
+                  className="font-interRegular text-[16px] mb-[0.5rem] text-primary-lightGray"
                 >
                   Email
                 </label>
@@ -70,7 +70,7 @@ const ForgotPasswordForm = ({ goBack }) => {
                   id="email"
                   name="email"
                   placeholder="Enter your email"
-                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-blue rounded-[4px]"
+                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
                 />
                 <ErrorMessage
                   name="email"
@@ -82,7 +82,7 @@ const ForgotPasswordForm = ({ goBack }) => {
               <div className="w-full flex justify-center items-center">
                 <ButtonComponent
                   title="Send Reset Link"
-                  className="w-[100%] md:w-[220px] lg:w-[220px] xl:w-[220px] 2xl:w-[220px] h-[48px] rounded-[12px]"
+                  className="w-[100%] h-[48px] rounded-[12px]"
                 />
               </div>
             </Form>
@@ -92,8 +92,8 @@ const ForgotPasswordForm = ({ goBack }) => {
      {success && <div className="text-green-500 mt-4">{success}</div>}
      {error && <div className="text-red-500 mt-4">{error}</div>}
 
-      <button className="mt-[20px] text-primary-blue" onClick={goBack}>
-        Go back
+      <button className="mt-[20px] text-primary-blue font-interRegular text-[18px]" onClick={goBack}>
+        Go Back
       </button>
     </div>
   );

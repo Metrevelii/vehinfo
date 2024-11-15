@@ -62,7 +62,7 @@ const ResetPasswordForm = () => {
       <div className="mx-auto max-w-[1432px] px-4 w-[92%] sm:w-[94%] md:w-[553px] lg:w-[653px] xl:w-[753px] 2xl:w-[953px] h-[600px] rounded-[12px] bg-primary-white shadow-boxShadow">
         <div className="w-[100%] h-full py-[20px] flex justify-around flex-col sm:flex-col md:flex-col  lg:flex-row  xl:flex-row  2xl:flex-row rounded-[12px] bordermx-auto">
           <div className="w-full flex justify-center items-center flex-col">
-            <h2 className="font-interBold text-primary-blue text-[32px] mb-[1.5rem]">
+            <h2 className="font-interBold uppercase text-primary-black text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] mb-[1.5rem]">
               Register
             </h2>
 
@@ -88,7 +88,7 @@ const ResetPasswordForm = () => {
                         id="newPassword"
                         name="newPassword"
                         placeholder="Enter New Password"
-                        className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-blue rounded-[4px]"
+                        className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
                       />
                       <ErrorMessage
                         name="newPassword"
@@ -109,7 +109,7 @@ const ResetPasswordForm = () => {
                         id="repeatNewPassword"
                         name="repeatNewPassword"
                         placeholder="Repeat New Password"
-                        className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-blue rounded-[4px]"
+                        className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
                       />
                       <ErrorMessage
                         name="repeatNewPassword"
@@ -121,7 +121,7 @@ const ResetPasswordForm = () => {
                     <div className="w-full flex justify-center items-center">
                       <ButtonComponent
                         title="Reset Password"
-                        className="w-[100%] md:w-[220px] lg:w-[220px] xl:w-[220px] 2xl:w-[220px] h-[48px] rounded-[12px]"
+                        className="w-[100%] h-[48px] rounded-[12px]"
                       />
                     </div>
                     {successMessage && (
