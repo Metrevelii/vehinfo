@@ -81,7 +81,7 @@ const ContactForm = () => {
                     </div>
 
                 
-                    <div className="flex shadow-custom mb-[2rem]">
+                    <div className="flex shadow-custom mb-[2rem] rounded-[12px]">
                         <div className="xs:w-[130px] sm:w-[130px] md:w-[200px] lg:w-[200px] xl:w-[200px] 2xl:w-[200px] relative">
                             <Icons.EarthIcon className="w-[20px] h-[20px] absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 left-[10%] z-10"/>
                             <Icons.DownArrow className={`w-[16px] h-[16px] absolute top-1/2 transform -translate-y-1/2 right-[10%] z-10 pointer-events-none transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}/>
@@ -90,7 +90,7 @@ const ContactForm = () => {
                                 as="select" 
                                 id="countryCode" 
                                 name="countryCode" 
-                                className="h-[46px] rounded-tl-[12px] rounded-bl-[12px] appearance-none w-full bg-[#fff] xs:text-[12px] sm:text-[14] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] text-[#5d636b] xs:pl-[30px] sm:pl-[30px] md:pl-[40px] lg:pl-[40px] xl:pl-[40px] 2xl:pl-[40px] pr-[25px] relative  border-r-2 border-r-primary-purpleLighter"
+                                className="h-[46px] rounded-tl-[12px] rounded-bl-[12px] appearance-none w-full bg-[#fff] xs:text-[12px] sm:text-[14px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] text-[#5d636b] xs:pl-[30px] sm:pl-[30px] md:pl-[40px] lg:pl-[40px] xl:pl-[40px] 2xl:pl-[40px] pr-[25px] relative  border-r-2 border-r-primary-purpleLighter"
                                 onClick={handleClick} 
                                 onBlur={handleBlur} 
                             >

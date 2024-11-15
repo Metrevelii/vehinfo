@@ -9,7 +9,9 @@ export const userRegister = (values) => {
         try{
             const user = await axios.post(`/api/auth/register`,{
                 email:values.email, 
-                password:values.password
+                password:values.password,
+                firstname: values.firstname,
+                lastname: values.lastname
             });
             dispatch(actions.userAuthenticate({data: user.data.user,auth: true}))
             dispatch(actions.successGlobal('Welcome !! check you mail to verify account.'))

@@ -3,7 +3,7 @@ const httpStatus = require('http-status');
 const { ApiError } = require('../middleware/apiError');
 const userService = require('./user.service');
 
-const createUser = async(email, password) => {
+const createUser = async(email, password, firstname, lastname) => {
     try {
         if (await User.emailTaken(email)) {
             throw new ApiError(httpStatus.BAD_REQUEST, 'Sorry email already taken');
@@ -11,7 +11,9 @@ const createUser = async(email, password) => {
 
         const user = new User({
             email,
-            password
+            password,
+            firstname,
+            lastname
         });
         await user.save();
         return user;

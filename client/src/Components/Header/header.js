@@ -65,7 +65,6 @@ const Header = ({ users }) => {
               </div>
               <nav className="max-w-[300px] sm:max-w-[380px] md:max-w-[480px] xl:max-w-[570px] 2xl:max-w-[670px] h-full flex justify-around items-center">
                 <NavLink to="/" title={t("header.aboutus")} />
-                <NavLink to="/delivery_calc" title={t("header.calc")} />
                 <NavLink to="/" title={t("header.contact")} />
               
 
@@ -74,7 +73,7 @@ const Header = ({ users }) => {
                     <NavLink to="/dashboard" title={t("header.dashboard")}></NavLink>
                   </>
                 ) : <>
-                  <NavLink to="/sign_in" title={t("header.signIn")} />
+                  <NavLink to="/sign-in" title={t("header.signIn")} />
                   </>}
               </nav>
 

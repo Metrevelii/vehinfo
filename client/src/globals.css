@@ -97,6 +97,16 @@ code {
   height: 1273px;
 }
 
+.shipBg {
+  background-image:
+  url("../public/images/header-image.webp");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: top center;
+
+width: 100%;
+height: 1000px;
+}
 
 @media screen and (max-width: 1024px) and (min-width: 300px) {
 

@@ -27,7 +27,7 @@ const DashboardLayout = ({ signOutUser, title, children }) => {
             </li>
             <li className="flex-center cursor-pointer p-16-semibold w-[90%] whitespace-nowrap">
               <Link
-                to="/dashboard/user/user_info"
+                to="/dashboard/user/user-info"
                 className="group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-primary-blue hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear"
               >
                 <Icons.UserIcon className="w-[24px] h-[24px] shrink-0 fill-black" />
