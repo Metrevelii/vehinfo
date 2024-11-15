@@ -51,11 +51,11 @@ const Header = ({ users }) => {
                 ? "fixed bg-primary-blue"
                 : "absolute bg-transparent"
               : "relative bg-primary-blue"
-          } w-full flex justify-center items-center h-[100px] z-30 top-0 left-0 right-0 mx-auto transition-colors duration-300`}
+          } w-full flex justify-center items-center h-[72px] z-30 top-0 left-0 right-0 mx-auto transition-colors duration-300`}
         >
           <div className="mx-auto max-w-full sm:max-w-[620px] md:max-w-[760px]  lg:max-w-[940px] xl:max-w-[1280px]  2xl:max-w-[1432px] w-full">
             <div
-              className={`px-[15px] flex justify-between items-center h-[100px]`}
+              className={`px-[15px] flex justify-between items-center h-full`}
             >
               <div className="header__logo">
                 <Link
@@ -66,9 +66,9 @@ const Header = ({ users }) => {
                 </Link>
               </div>
               <nav className="max-w-[300px] sm:max-w-[380px] md:max-w-[480px] xl:max-w-[570px] 2xl:max-w-[670px] h-full flex justify-around items-center">
-                <NavLink to="/" title={t("header.aboutus")} />
+                <NavLink to="/about-us" title={t("header.aboutus")} />
                 <NavLink to="/" title={t("header.contact")} />
-                <NavLink to="/" title={t("forall.reqquote")} />
+                <NavLink to="/request-quote" title={t("forall.reqquote")} />
               </nav>
 
               <div className="flex justify-center items-center">

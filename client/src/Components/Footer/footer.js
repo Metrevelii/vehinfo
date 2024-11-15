@@ -1,6 +1,5 @@
 import React from "react";
 import ContactForm from "./ContactForm";
-import Social from './social';
 
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
@@ -60,13 +59,10 @@ const Footer = () => {
            null
           }
           
-          <div className="flex flex-col justify-start py-[2rem] items-center  w-full h-auto     xl:w-[700px]    2xl:w-[700px]  rounded-[12px] xs:px-[0.5rem] sm:px-[0.5rem] md:px-[1rem] lg:px-16 xl:px-16 2xl:px-16 bg-white bg-contactBg bg-cover bg-center bg-no-repeat">
-            <div className="font-interBold text-[20px] sm:text-[22px] md:text-[28px] xl:text-[32px] 2xl:text-[32px] text-black mb-[0.5rem] uppercase">
-              {t("forall.reqquote")} 
-            </div>
-            <ContactForm />
-            <Social facebook={site.vars.facebook} instagram={site.vars.instagram} />
-          </div>
+           
+          <ContactForm />
+ 
+        
         </div>
       </div>
     </footer>
