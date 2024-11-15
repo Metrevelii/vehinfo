@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import RegisterForm from './registerForm';  
 import LoginForm from './loginForm';  
+import ForgotPasswordForm from "./forgetPasswordForm";
 
 import ButtonComponent from '../../Components/Shared/button';
 
@@ -34,13 +35,13 @@ const RegisterLogin = (props) => {
                   Register
                 </button>
               </div>
-                <button className="font-interRegular text-[#757575] mt-[25px]">Forgot Password?</button>
+                <button className="font-interRegular text-[#757575] mt-[25px]" onClick={() => toggleFormType('forgotPassword')}>Forgot Password?</button>
               </div>
             )}
 
             {formType === "register" && <RegisterForm goBack={() => setFormType(null)} />}
             {formType === "login" && <LoginForm goBack={() => setFormType(null)} />}
-            
+            {formType === "forgotPassword" && <ForgotPasswordForm goBack={() => setFormType(null)} />}
             
               
           </div>

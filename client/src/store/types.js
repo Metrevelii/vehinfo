@@ -21,6 +21,7 @@ export const CLEAR_NOTIFICATION = 'clear_notification';
 export const AUTH_USER = 'auth_user';
 export const SIGN_OUT = 'sign_out';
 export const UPDATE_USER_PROFILE = 'update_user_profile';
+export const RESET_PASSWORD_REQUEST = 'reset_password_request';
 
 export const GET_SITE_VARS = 'get_site_vars';
 export const UPDATE_SITE_VARS = 'update_site_vars';

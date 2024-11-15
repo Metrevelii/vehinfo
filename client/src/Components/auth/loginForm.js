@@ -29,10 +29,10 @@ const LoginForm = ({ goBack }) => {
   };
 
   useEffect(() => {
-    // Navigate to dashboard if login is successful
+ 
     if (notifications?.success && users?.auth) {
-      setLoading(false); // Stop loading
-      navigate("/dashboard"); // Redirect to dashboard
+      setLoading(false); 
+      navigate("/dashboard");  
     } else {
       setLoading(false);
     }

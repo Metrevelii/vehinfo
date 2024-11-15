@@ -87,3 +87,38 @@ export const userUpdateProfile = (data) => {
         }
     }
 } 
+
+export const userRequestPasswordReset = (email) => {
+    return async(dispatch) => {
+        try {
+       
+            await axios.post('/api/users/password-reset-request', { email });
+
+        
+            dispatch(actions.successGlobal('Password reset email sent. Please check your inbox.'));
+        } catch (error) {
+       
+            dispatch(actions.errorGlobal(error.response.data.message || 'Something went wrong.'));
+        }
+    }
+}
+
+export const resetPassword = ({ token, password }) => {
+    return async (dispatch) => {
+        try {
+            // Sending password reset request to the backend
+            await axios.post(`/api/users/password-reset`, {
+                token,
+                password
+            });
+
+            // Dispatching success notification
+            dispatch(actions.successGlobal('Your password has been successfully reset.'));
+            return { success: true };  // Return success status
+        } catch (error) {
+            const errorMessage = error.response?.data?.message || "An error occurred while resetting your password.";
+            dispatch(actions.errorGlobal(errorMessage));  // Dispatching error message
+            return { success: false, error: errorMessage };  // Return error status
+        }
+    };
+};

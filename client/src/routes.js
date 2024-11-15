@@ -12,6 +12,7 @@ import Footer from "./Components/Footer/footer";
 import Home from "./Components/Home/index";
 import Header from "./Components/Header/header";
 import RegisterLogin from "./Components/auth/index";
+import ResetPasswordForm from "./Components/auth/resetPasswordForm";
 
 import UserDashboard from "./Components/dashboard";
 
@@ -60,7 +61,7 @@ const RoutesMain = (props) => {
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/sign-in" element={<RegisterLogin />} />
-                  {/* <Route path="/sign-in" element={<RegisterLogin />} /> */}
+                  <Route path="/password-reset" element={<ResetPasswordForm />} />
                   <Route path="/dashboard" element={ <ProtectedUserDashboard signOutUser={signOutUser} />} />
                   <Route path="/dashboard/admin/contact_infos" element={ <ProtectedContactInfo signOutUser={signOutUser} />} />
                   <Route path="/dashboard/admin/manage_site" element={ <ProtectedManageSite signOutUser={signOutUser} />} />

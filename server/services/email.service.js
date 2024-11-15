@@ -73,7 +73,7 @@ const sendPasswordResetEmail = async (userEmail, token) => {
                     button: {
                         color: '#1a73e8',
                         text: 'Reset your password',
-                        link: `${process.env.SITE_DOMAIN}reset-password?t=${token}`
+                        link: `${process.env.SITE_DOMAIN}password-reset?t=${token}`
                     }
                 }
             }
