@@ -25,3 +25,5 @@ export const RESET_PASSWORD_REQUEST = 'reset_password_request';
 
 export const GET_SITE_VARS = 'get_site_vars';
 export const UPDATE_SITE_VARS = 'update_site_vars';
+
+export const SET_TRANSLATIONS = 'SET_TRANSLATIONS';

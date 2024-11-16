@@ -15,6 +15,7 @@ let grantsObject = {
         location: allRights,
         site: allRights,
         contact: allRights,
+        translations: allRights,
  
  
     },
