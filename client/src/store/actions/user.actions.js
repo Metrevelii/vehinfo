@@ -29,7 +29,7 @@ export const userSignIn = (values) => {
                 password:values.password
             });
             dispatch(actions.userAuthenticate({data: user.data.user,auth: true}))
-            dispatch(actions.successGlobal('Welcome!!'))
+            dispatch(actions.successGlobal('You logged in.'))
         } catch(error){
             dispatch(actions.errorGlobal(error.response.data.message))
 
@@ -66,7 +66,7 @@ export const userSignOut = () => {
         removeTokenCookie();
         dispatch(actions.userSignOut());
         dispatch(actions.clearNotification());
-        dispatch(actions.successGlobal('Good bye !!'))
+        dispatch(actions.successGlobal('You have been logged out.'))
     }
 }
 

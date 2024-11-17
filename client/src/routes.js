@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
  
+import MainLayout from "./Components/hoc/mainLayout";
 import Loader from "./Components/utils/loader";
 import AuthGuard  from './Components/hoc/authGuard';
 
@@ -60,23 +61,25 @@ const RoutesMain = (props) => {
           ) : (
             <>
               <Header users={users} signOutUser={signOutUser} />
-          
+                <MainLayout>
 
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about-us" element={<AboutUs />} />
-                  <Route path="/request-quote" element={<ContactForm className="w-full flex justify-center items-center py-[80px]"/>} />
-                  <Route path="/sign-in" element={<RegisterLogin />} />
-                  <Route path="/password-reset" element={<ResetPasswordForm />} />
-                  <Route path="/dashboard" element={ <ProtectedUserDashboard signOutUser={signOutUser} />} />
-                  <Route path="/dashboard/admin/contact_infos" element={ <ProtectedContactInfo signOutUser={signOutUser} />} />
-                  <Route path="/dashboard/admin/manage_site" element={ <ProtectedManageSite signOutUser={signOutUser} />} />
-                  <Route path="/dashboard/admin/manage_texts" element={ <ProtectedManageTexts signOutUser={signOutUser} />} />
-                  <Route path="/dashboard/user/user-info" element={ <ProtectedUserInfo signOutUser={signOutUser} />} />
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about-us" element={<AboutUs />} />
+                    <Route path="/request-quote" element={<ContactForm className="w-full flex justify-center items-center py-[80px]"/>} />
+                    <Route path="/sign-in" element={<RegisterLogin />} />
+                    <Route path="/password-reset" element={<ResetPasswordForm />} />
+                    <Route path="/dashboard" element={ <ProtectedUserDashboard signOutUser={signOutUser} />} />
+                    <Route path="/dashboard/admin/contact_infos" element={ <ProtectedContactInfo signOutUser={signOutUser} />} />
+                    <Route path="/dashboard/admin/manage_site" element={ <ProtectedManageSite signOutUser={signOutUser} />} />
+                    <Route path="/dashboard/admin/manage_texts" element={ <ProtectedManageTexts signOutUser={signOutUser} />} />
+                    <Route path="/dashboard/user/user-info" element={ <ProtectedUserInfo signOutUser={signOutUser} />} />
 
 
 
-                </Routes>
+                  </Routes>
+                </MainLayout>
+
          
               <Footer />
             </>
