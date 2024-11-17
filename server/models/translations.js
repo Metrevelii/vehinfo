@@ -1,42 +1,144 @@
 const mongoose = require('mongoose');
 
-const translationSchema = mongoose.Schema({
-    language: {
-        type: String,
+const translationsSchema = mongoose.Schema({
+    text1ru: {
         required: true,
-        enum: ['az', 'ru'],
+        type: String,
     },
-    translations: {
-        header: {
-            aboutus: { type: String, required: true },
-            faq: { type: String, required: true },
-            signIn: { type: String, required: true },
-            calc: { type: String, required: true },
-            contact: { type: String, required: true },
-            dashboard: { type: String, required: true }
-        },
-        home: {
-            text1: { type: String, required: true },
-            text2: { type: String, required: true },
-            shortlyaboutus: { type: String, required: true },
-            text4: { type: String, required: true },
-            text5: { type: String, required: true }
-        },
-        advantages: {
-            adv1: { type: String, required: true },
-            adv2: { type: String, required: true },
-            adv3: { type: String, required: true },
-            adv4: { type: String, required: true },
-            adv5: { type: String, required: true },
-        },
-        footer: {
-            foot1: { type: String, required: true },
-            foot2: { type: String, required: true },
-            foot3: { type: String, required: true }
-        }
+    text1az: {
+        required: true,
+        type: String,
+    },
+    text2ru: {
+        required: true,
+        type: String,
+    },
+    text2az: {
+        required: true,
+        type: String,
+    },
+    text3ru: {
+        required: true,
+        type: String,
+    },
+    text3az: {
+        required: true,
+        type: String,
+    },
+    text4ru: {
+        required: true,
+        type: String,
+    },
+    text4az: {
+        required: true,
+        type: String,
+    },
+    text5ru: {
+        required: true,
+        type: String,
+    },
+    text5az: {
+        required: true,
+        type: String,
+    },
+    text6ru: {
+        required: true,
+        type: String,
+    },
+    text6az: {
+        required: true,
+        type: String,
+    },
+    text7ru: {
+        required: true,
+        type: String,
+    },
+    text7az: {
+        required: true,
+        type: String,
+    },
+    text8ru: {
+        required: true,
+        type: String,
+    },
+    text8az: {
+        required: true,
+        type: String,
+    },
+    text9ru: {
+        required: true,
+        type: String,
+    },
+    text9az: {
+        required: true,
+        type: String,
+    },
+    text10ru: {
+        required: true,
+        type: String,
+    },
+    text10az: {
+        required: true,
+        type: String,
+    },
+    text11ru: {
+        required: true,
+        type: String,
+    },
+    text11az: {
+        required: true,
+        type: String,
+    },
+    text12ru: {
+        required: true,
+        type: String,
+    },
+    text12az: {
+        required: true,
+        type: String,
+    },
+    text13ru: {
+        required: true,
+        type: String,
+    },
+    text13az: {
+        required: true,
+        type: String,
+    },
+    text14ru: {
+        required: true,
+        type: String,
+    },
+    text14az: {
+        required: true,
+        type: String,
+    },
+    text15ru: {
+        required: true,
+        type: String,
+    },
+    text15az: {
+        required: true,
+        type: String,
+    },
+    text16ru: {
+        required: true,
+        type: String,
+    },
+    text16az: {
+        required: true,
+        type: String,
+    },
+    text17ru: {
+        required: true,
+        type: String,
+    },
+    text17az: {
+        required: true,
+        type: String,
     }
-});
+})
 
-const Translation = mongoose.model('Translation', translationSchema);
+const Translation = mongoose.model('Translations', translationsSchema)
 
 module.exports = { Translation };

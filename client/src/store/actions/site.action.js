@@ -19,27 +19,3 @@ export const updateSiteVars = (args) => {
     }
 
 }
-
-export const fetchTranslations = (language) => {
-    return async (dispatch) => {
-        try {
-            const response = await axios.get(`/api/translations/${language}`, getAuthHeader());
-            dispatch(actions.setTranslations(response.data));
-        } catch (error) {
-            dispatch(actions.errorGlobal(error.response?.data?.message || 'Error fetching translations'));
-        }
-    };
-};
-
- 
-export const updateTranslations = (language, translations) => {
-    return async (dispatch) => {
-        try {
-            const response = await axios.patch(`/api/translations/${language}`, translations, getAuthHeader());
-            dispatch(actions.setTranslations(response.data));
-            dispatch(actions.successGlobal('Translations updated successfully!'));
-        } catch (error) {
-            dispatch(actions.errorGlobal(error.response?.data?.message || 'Error updating translations'));
-        }
-    };
-};

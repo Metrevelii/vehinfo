@@ -57,6 +57,15 @@ const DashboardLayout = ({ signOutUser, title, children }) => {
                   Manage Site
                 </Link>
               </li>
+              <li className="flex-center cursor-pointer p-16-semibold w-[90%] whitespace-nowrap">
+                <Link
+                  to="/dashboard/admin/manage_texts"
+                  className="group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-primary-blue hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear"
+                >
+                  <Icons.ManageIcon className="w-[20px] h-[20px] fill-black" />
+                  Manage Texts
+                </Link>
+              </li>
             </ul>
           ) : null}
           <ul className="w-full flex flex-col gap-2 mt-[0.5rem]">

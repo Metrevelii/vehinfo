@@ -20,11 +20,13 @@ import UserDashboard from "./Components/dashboard";
 
 import ContactInfo from './Components/dashboard/admin/contactInfo';
 import ManageSite from "./Components/dashboard/admin/site";
+import ManageTexts from "./Components/dashboard/admin/texts";
 import UserInfo from './Components/dashboard/user/info';
 
 const ProtectedUserDashboard = AuthGuard(UserDashboard);
 const ProtectedContactInfo = AuthGuard(ContactInfo);
 const ProtectedManageSite = AuthGuard(ManageSite);
+const ProtectedManageTexts = AuthGuard(ManageTexts);
 const ProtectedUserInfo = AuthGuard(UserInfo);
 
 const RoutesMain = (props) => {
@@ -69,6 +71,7 @@ const RoutesMain = (props) => {
                   <Route path="/dashboard" element={ <ProtectedUserDashboard signOutUser={signOutUser} />} />
                   <Route path="/dashboard/admin/contact_infos" element={ <ProtectedContactInfo signOutUser={signOutUser} />} />
                   <Route path="/dashboard/admin/manage_site" element={ <ProtectedManageSite signOutUser={signOutUser} />} />
+                  <Route path="/dashboard/admin/manage_texts" element={ <ProtectedManageTexts signOutUser={signOutUser} />} />
                   <Route path="/dashboard/user/user-info" element={ <ProtectedUserInfo signOutUser={signOutUser} />} />
 
 

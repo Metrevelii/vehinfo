@@ -1,6 +1,6 @@
 import React from 'react';
 import { useFormik } from 'formik';
-import * as Yup from 'yup';
+// import * as Yup from 'yup';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { updateSiteVars } from '../../../../store/actions/site.action';
@@ -19,31 +19,7 @@ const SiteVars = () => {
             facebook: site.vars.facebook,
             instagram: site.vars.instagram,
         },
-        validationSchema: Yup.object({
-            addressaz: Yup.string()
-                .min(3, 'You need to add more')
-                .max(100, 'You need to add less')
-                .required('This is required'),
-            addressru: Yup.string()
-                .min(3, 'You need to add more')
-                .max(100, 'You need to add less')
-                .required('This is required'),
-            phone: Yup.string()
-                .max(15, 'You need to add less')
-                .required('This is required'),
-            hours: Yup.string()
-                .max(100, 'You need to add less')
-                .required('This is required'),
-            email: Yup.string()
-                .email('You need to add a valid email')
-                .required('This is required'),
-            facebook: Yup.string()
-                
-                .required('This is required'),
-            instagram: Yup.string()
-              
-                .required('This is required')
-        }),
+        
         onSubmit: (values) => {
             dispatch(updateSiteVars(
                 {
@@ -59,7 +35,7 @@ const SiteVars = () => {
         <form className="mt-3" onSubmit={formik.handleSubmit}>
 
             <div className="flex items-start justify-center flex-col mt-[20px]">
-                <label htmlFor="address">Edit address AZ</label>
+                <label className="font-interMedium text-primary-blue text-[14px]" htmlFor="address">Edit address AZ</label>
                 <input
                     type="text"
                     id="addressaz"
@@ -74,7 +50,7 @@ const SiteVars = () => {
                 ) : null}
             </div>
             <div className="flex items-start justify-center flex-col mt-[20px]">
-                <label htmlFor="address">Edit address RU</label>
+                <label className="font-interMedium text-primary-blue text-[14px]" htmlFor="address">Edit address RU</label>
                 <input
                     type="text"
                     id="addressru"
@@ -90,7 +66,7 @@ const SiteVars = () => {
             </div>
 
             <div className="flex items-start justify-center flex-col mt-[20px]">
-                <label htmlFor="phone">Edit phone</label>
+                <label className="font-interMedium text-primary-blue text-[14px]" htmlFor="phone">Edit phone</label>
                 <input
                     type="text"
                     id="phone"
@@ -107,7 +83,7 @@ const SiteVars = () => {
            
 
             <div className="flex items-start justify-center flex-col mt-[20px]">
-                <label htmlFor="email">Edit email</label>
+                <label className="font-interMedium text-primary-blue text-[14px]" htmlFor="email">Edit email</label>
                 <input
                     type="email"
                     id="email"
@@ -121,7 +97,7 @@ const SiteVars = () => {
                 ) : null}
             </div>
             <div className="flex items-start justify-center flex-col mt-[20px]">
-                <label htmlFor="email">Edit facebook profile</label>
+                <label className="font-interMedium text-primary-blue text-[14px]" htmlFor="email">Edit facebook profile</label>
                 <input
                     type="text"
                     id="facebook"
@@ -135,7 +111,7 @@ const SiteVars = () => {
                 ) : null}
             </div>
             <div className="flex items-start justify-center flex-col mt-[20px]">
-                <label htmlFor="email">Edit instagram profile</label>
+                <label className="font-interMedium text-primary-blue text-[14px]" htmlFor="email">Edit instagram profile</label>
                 <input
                     type="text"
                     id="instagram"

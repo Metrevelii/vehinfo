@@ -7,7 +7,8 @@ import {
     UPDATE_USER_PROFILE,
     GET_SITE_VARS,
     UPDATE_SITE_VARS,
-    SET_TRANSLATIONS
+    GET_TRANSLATION_VARS,
+    UPDATE_TRANSLATION_VARS,
 } from '../types';
 
 // user
@@ -60,7 +61,12 @@ export const updateSiteVars = (vars) => ({
     payload: vars
 })
 
-export const setTranslations = (translations) => ({
-    type: SET_TRANSLATIONS,
-    payload: translations
-});
+export const translationGetVars = (vars) => ({
+    type: GET_TRANSLATION_VARS,
+    payload: vars
+})
+
+export const updateTranslationVars = (vars) => ({
+    type: UPDATE_TRANSLATION_VARS,
+    payload: vars
+})

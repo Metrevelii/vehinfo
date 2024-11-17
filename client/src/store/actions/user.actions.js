@@ -43,6 +43,9 @@ export const userIsAuth = () => {
             const site = await axios.get('/api/site');
             dispatch(actions.siteGetVars(site.data));
 
+            const translation = await axios.get('/api/translations');
+            dispatch(actions.translationGetVars(translation.data));
+
 
             if(!getTokenCookie()){
                 throw new Error();
