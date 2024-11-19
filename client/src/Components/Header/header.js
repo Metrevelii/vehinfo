@@ -5,14 +5,19 @@ import LangBtn from "../Shared/langbtn";
 import { Link, useLocation } from "react-router-dom";
 import NavLink from "./NavLink";
 import useBreakpoint from "../../hooks/useBreakpoint";
-import { Icons } from '../../icons';
+import { Icons } from "../../icons";
+
+import { useSelector } from "react-redux";
 
 const Header = ({ users }) => {
   const { t } = useTranslation("global");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  
+
+  const translation = useSelector((state) => state.translations);
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   const { isMobile } = useBreakpoint();
 
@@ -66,26 +71,61 @@ const Header = ({ users }) => {
                 </Link>
               </div>
               <nav className="max-w-[300px] sm:max-w-[380px] md:max-w-[480px] xl:max-w-[570px] 2xl:max-w-[670px] h-full flex justify-around items-center">
-                <NavLink to="/about-us" title={t("header.aboutus")} />
-                <NavLink to="/" title={t("header.contact")} />
-                <NavLink to="/request-quote" title={t("forall.reqquote")} />
+                {translation && translation.vars ? (
+                  <>
+                    <NavLink
+                      to="/about-us"
+                      title={
+                        currentLanguage === "az"
+                          ? translation.vars.text17az
+                          : translation.vars.text17ru
+                      }
+                    />
+                    <NavLink
+                      to="/"
+                      title={
+                        currentLanguage === "az"
+                          ? translation.vars.text16az
+                          : translation.vars.text16ru
+                      }
+                    />
+                    
+                  </>
+                ) : (
+                  <>
+                    <NavLink to="/about-us" title={t("header.aboutus")} />
+                    <NavLink to="/" title={t("header.contact")} />
+                  </>
+                    
+                )}
               </nav>
 
               <div className="flex justify-center items-center">
                 {users.auth ? (
                   <>
-                     <Link to="/dashboard" className="w-[112px] h-[48px] rounded-[12px] bg-primary-white shadow-custom flex justify-between px-[12px] items-center mr-[20px]">
-                      <Icons.HeaderUserIcon  className="w-[32px] h-[32px]"/>
-                      <p className="font-interMedium text-[16px] text-primary-black">{t("header.dashboard")}</p>
+                    <Link
+                      to="/dashboard"
+                      className="w-[112px] h-[48px] rounded-[12px] bg-primary-white shadow-custom flex justify-between px-[12px] items-center mr-[20px]"
+                    >
+                      <Icons.HeaderUserIcon className="w-[32px] h-[32px] shrink-0" />
+                      <p className="font-interMedium text-[16px] text-primary-black">
+                        {t("header.dashboard")}
+                      </p>
                     </Link>
                   </>
-                ) : <>
-                 
-                <Link to="/sign-in" className="w-[112px] h-[48px] rounded-[12px] bg-primary-white shadow-custom flex justify-between px-[12px] items-center mr-[20px]">
-                  <Icons.HeaderUserIcon  className="w-[32px] h-[32px]"/>
-                  <p className="font-interMedium text-[16px] text-primary-black">{t("header.signIn")}</p>
-                </Link>
-                  </>}
+                ) : (
+                  <>
+                    <Link
+                      to="/sign-in"
+                      className="w-[112px] h-[48px] rounded-[12px] bg-primary-white shadow-custom flex justify-between px-[12px] items-center mr-[20px]"
+                    >
+                      <Icons.HeaderUserIcon className="w-[32px] h-[32px]" />
+                      <p className="font-interMedium text-[16px] text-primary-black">
+                        {t("header.signIn")}
+                      </p>
+                    </Link>
+                  </>
+                )}
 
                 <LangBtn />
               </div>
@@ -97,12 +137,12 @@ const Header = ({ users }) => {
           className={`${
             isHomePage
               ? isScrolled
-                ? "fixed bg-primary-blue"
+                ? "fixed bg-primary-white"
                 : "absolute bg-transparent"
-              : "relative bg-primary-blue"
+              : "relative bg-primary-white"
           } w-full flex justify-around items-center h-auto py-[10px] fixed z-40`}
         >
-          {/* BURGER MENU  */}
+      
           <div className="">
             <label className="burger" htmlFor="burger">
               <input
@@ -116,34 +156,55 @@ const Header = ({ users }) => {
               <span></span>
             </label>
             {isMenuOpen && (
-              <div className="absolute z-50 top-[95px] left-[0px] right-[0px] mx-auto w-full h-[auto] py-[10px] bg-primary-whiteSecond border border-solid border-primary-blackSecond">
+              <div className="absolute z-50 top-[95px] left-[0px] right-[0px] mx-auto w-full h-[auto] py-[10px] bg-primary-white">
                 <div className="w-full h-full flex justify-start items-center flex-col">
-                  <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
-                    <Link
-                      to="/"
-                      className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center"
-                    >
-                      {" "}
-                      {t("header.aboutus")}{" "}
-                    </Link>
-                  </div>
-                  
-                  <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
-                    <Link
-                      to="/"
-                      className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
-                    >
-                      {t("header.contact")}{" "}
-                    </Link>
-                  </div>
-                  <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
-                    <Link
-                      to="/"
-                      className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
-                    >
-                      {t("forall.reqquote")}{" "}
-                    </Link>
-                  </div>
+                  {translation && translation.vars ? (
+                    <>
+                      <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
+                        <Link
+                          to="/about-us"
+                          className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center"
+                        >
+                          {currentLanguage === "az"
+                            ? translation.vars.text17az
+                            : translation.vars.text17ru}
+                        </Link>
+                      </div>
+
+                      <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
+                        <Link
+                          to="/"
+                          className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
+                        >
+                          {currentLanguage === "az"
+                            ? translation.vars.text16az
+                            : translation.vars.text16ru}
+                        </Link>
+                      </div>
+                      
+                    </>
+                  ) : (
+                    <>
+                      <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
+                        <Link
+                          to="/"
+                          className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center"
+                        >
+                          {t("header.aboutus")}
+                        </Link>
+                      </div>
+
+                      <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
+                        <Link
+                          to="/"
+                          className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
+                        >
+                          {t("header.contact")}
+                        </Link>
+                      </div>
+                      
+                    </>
+                  )}
                   {users.auth ? (
                     <>
                       <div className="w-full h-auto p-[10px] flex justify-center items-center">
@@ -155,8 +216,9 @@ const Header = ({ users }) => {
                         </Link>
                       </div>
                     </>
-                  ) : <>
-                    <div className="w-full h-auto p-[10px] flex justify-center items-center">
+                  ) : (
+                    <>
+                      <div className="w-full h-auto p-[10px] flex justify-center items-center">
                         <Link
                           to="/sign-in"
                           className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
@@ -164,7 +226,8 @@ const Header = ({ users }) => {
                           {t("header.signIn")}
                         </Link>
                       </div>
-                  </>}
+                    </>
+                  )}
                 </div>
               </div>
             )}
@@ -174,7 +237,7 @@ const Header = ({ users }) => {
           <div className="w-[60px] h-[23px">
             <Link
               to="/"
-              className=" text-[24px] font-InterBold text-primary-white"
+              className=" text-[24px] font-InterBold text-primary-black"
             >
               LOGO
             </Link>

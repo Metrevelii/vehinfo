@@ -13,7 +13,7 @@ import Footer from "./Components/Footer/footer";
 import Home from "./Components/Home/index";
 import Header from "./Components/Header/header";
 import AboutUs from "./Components/AboutUs";
-import ContactForm from "./Components/Footer/ContactForm";
+
 import RegisterLogin from "./Components/auth/index";
 import ResetPasswordForm from "./Components/auth/resetPasswordForm";
 
@@ -66,7 +66,7 @@ const RoutesMain = (props) => {
                   <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about-us" element={<AboutUs />} />
-                    <Route path="/request-quote" element={<ContactForm className="w-full flex justify-center items-center py-[80px]"/>} />
+                    
                     <Route path="/sign-in" element={<RegisterLogin />} />
                     <Route path="/password-reset" element={<ResetPasswordForm />} />
                     <Route path="/dashboard" element={ <ProtectedUserDashboard signOutUser={signOutUser} />} />
