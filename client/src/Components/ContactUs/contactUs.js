@@ -17,9 +17,9 @@ const ContactUs = () => {
 
   return (
     <div className="mx-auto md:max-w-[940px]  xl:max-w-[1200px]  2xl:max-w-[1432px] px-4 w-full">
-      <div className="w-full h-auto lg:h-[488px]  xl:h-[488px]  2xl:h-[488px] shadow-default mx-auto mt-[3rem] lg:mt-[7rem] xl:mt-[7rem] 2xl:mt-[7rem] flex justify-between items-center flex-col lg:flex-row xl:flex-row 2xl:flex-row pl-[0px] lg:pl-[25px] xl:pl-[25px] 2xl:pl-[25px]">
-        <div className="w-[90%] py-[2rem] h-full lg:w-[48%] xl:w-[48%] 2xl:w-[48%] flex justify-start items-start flex-col">
-          <div className="font-interBold text-[20px] sm:text-[22px] md:text-[22px] xl:text-[22px] 2xl:text-[22px] text-black mb-[0.5rem] uppercase">
+      <div className="w-full h-auto lg:h-[520px]  xl:h-[520px]  2xl:h-[520px] rounded-[12px] shadow-default mx-auto mt-[3rem] lg:mt-[7rem] xl:mt-[7rem] 2xl:mt-[7rem] flex justify-between items-center flex-col lg:flex-row xl:flex-row 2xl:flex-row">
+        <div className="pl-[0px] lg:pl-[25px] xl:pl-[25px] 2xl:pl-[25px] w-[90%] py-[2rem] h-full lg:w-[48%] xl:w-[48%] 2xl:w-[48%] flex justify-start items-start flex-col">
+          <div className="font-interBold text-[20px] sm:text-[22px] md:text-[22px] xl:text-[32px] 2xl:text-[22px] text-black mb-[0.5rem] uppercase">
             {currentLanguage === "az"
               ? translation.vars.text16az
               : translation.vars.text16ru}

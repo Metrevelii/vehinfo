@@ -58,19 +58,19 @@ const ForgotPasswordForm = ({ goBack }) => {
         >
           {() => (
             <Form className="flex flex-col space-y-4 w-[90%] sm:w-[65%] md:w-[60%] lg:w-[50%] xl:w-[40%] 2xl:w-[40%]">
-              <div className="flex flex-col w-full">
+              <div className="flex flex-col w-full relative">
                 <label
                   htmlFor="email"
-                  className="font-interRegular text-[16px] mb-[0.5rem] text-primary-lightGray"
+                  className="font-interRegular text-[16px] mb-[0.5rem] text-primary-lightGray absolute z-5 left-[10px] top-[2px]"
                 >
-                  Email
+                  Enter your email
                 </label>
                 <Field
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Enter your email"
-                  className="border p-2 bg-[#d4dce7] text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
+                  placeholder=""
+                  className="border px-2 pt-[20px] pb-[2px] bg-[#d4dce7] font-interBold text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
                 />
                 <ErrorMessage
                   name="email"
@@ -82,7 +82,7 @@ const ForgotPasswordForm = ({ goBack }) => {
               <div className="w-full flex justify-center items-center">
                 <ButtonComponent
                   title="Send Reset Link"
-                  className="w-[100%] h-[48px] rounded-[12px]"
+                  className="w-[100%] h-[56px] rounded-[12px]"
                 />
               </div>
             </Form>

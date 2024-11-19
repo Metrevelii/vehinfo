@@ -29,6 +29,7 @@ module.exports = {
       },
       backdropBlur: {
         "custom-19": "19px",
+        "custom-25": "25px",
       },
       backgroundSize: {
         full: "100% 100%",
@@ -46,6 +47,7 @@ module.exports = {
       colors: {
         primary: {
           blue: "#2c4ff8",
+          blueHover: "#0C14FF",
           white: "#fff",
           whiteSecond: "#f8f8f8",
           whiteTransparent: "#ffffffcc",
@@ -60,6 +62,8 @@ module.exports = {
       boxShadow: {
         custom: "0px 4px 13px 0px rgba(0, 0, 0, 0.23)",
         default: "0px 7px 35px 0px rgba(0, 0, 0, 0.25)",
+        button: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+
       },
     },
   },

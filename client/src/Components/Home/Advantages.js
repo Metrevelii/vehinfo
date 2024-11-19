@@ -13,7 +13,7 @@ const Advantages = () => {
 //   const { t } = useTranslation("global");
 
   return (
-    <div className="flex flex-col justify-start items-start mt-[5rem]">
+    <div className="flex flex-col justify-start items-start mt-[2rem] md:mt-[7rem] xl:mt-[10rem] 2xl:mt-[10rem]">
       <div className="font-interBold font-bold xs:text-[16px] sm:text-[24px] md:text-[26px] xl:text-[28px] 2xl:text-[28px] text-white xs:mb-[2vw] sm:mb-[2vw] mb-6 uppercase">
         {currentLanguage === "az"  ? translation.vars.text5az  : translation.vars.text5ru}
       </div>

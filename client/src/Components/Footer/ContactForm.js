@@ -158,7 +158,7 @@ const ContactForm = ({ mainClassName }) => {
                 </div>
               </div>
 
-              <div className="mb-[1.5rem] sm:mb-[1.5rem] md:mb-[2.5rem] lg:mb-[2.5rem] xl:mb-[2.5rem] 2xl:mb-[2.5rem] relative">
+              <div className="mb-[1rem] sm:mb-[1rem] md:mb-[1rem] lg:mb-[1.5rem] xl:mb-[1.5rem] 2xl:mb-[1.5rem] relative">
                 <Field
                   as="textarea"
                   id="comment"
@@ -177,7 +177,7 @@ const ContactForm = ({ mainClassName }) => {
               <div className="flex justify-start">
                 <ButtonComponent
                   title={loading ? "Sending" : "Send"}
-                  className="w-[220px] h-[38px] md:h-[48px] lg:h-[48px] xl:w-[220px] 2xl:w-[220px] xl:h-[48px] 2xl:h-[48px]"
+                  className="w-[220px] h-[46px] md:h-[48px] lg:h-[48px] xl:w-[220px] 2xl:w-[220px] xl:h-[48px] 2xl:h-[48px] shadow-button"
                 />
               </div>
               {success && (

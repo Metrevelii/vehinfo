@@ -16,15 +16,15 @@ const LangBtn = () => {
     <>
       {
         !isMobile ? 
-        <div className="w-44 h-12 rounded-lg bg-white shadow-md p-1">
+        <div className="w-44 h-12 rounded-[12px] bg-white shadow-md p-1">
           <div className="w-full h-full flex justify-center items-center">
             <div
-              className={`w-1/2 h-full rounded-md flex justify-center items-center cursor-pointer ${
+              className={`w-1/2 h-full rounded-[12px] flex justify-center items-center cursor-pointer ${
                 currentLanguage === "ru" ? "bg-blue-700 border border-blue-800" : ""
               }`}
               onClick={() => handleChangeLanguage("ru")}
             >
-              <div className="w-6 h-6 rounded-full bg-ruFlag bg-repeat bg-contain bg-center border border-white"></div>
+              <div className="w-6 h-6 rounded-[12px] bg-ruFlag bg-repeat bg-contain bg-center border border-white"></div>
               <div
                 className={`ml-1 font-interMedium text-base ${
                   currentLanguage === "ru" ? "text-white" : "text-black"
@@ -34,12 +34,12 @@ const LangBtn = () => {
               </div>
             </div>
             <div
-              className={`w-1/2 h-full rounded-md flex justify-center items-center cursor-pointer ${
+              className={`w-1/2 h-full rounded-[12px] flex justify-center items-center cursor-pointer ${
                 currentLanguage === "az" ? "bg-blue-700 border border-blue-800" : ""
               }`}
               onClick={() => handleChangeLanguage("az")}
             >
-              <div className="w-6 h-6 rounded-full bg-azFlag bg-repeat bg-contain bg-center border border-white"></div>
+              <div className="w-6 h-6 rounded-[12px] bg-azFlag bg-repeat bg-contain bg-center border border-white"></div>
               <div
                 className={`ml-1 font-interMedium text-base ${
                   currentLanguage === "az" ? "text-white" : "text-black"
@@ -59,7 +59,7 @@ const LangBtn = () => {
                 }`}
                 onClick={() => handleChangeLanguage("ru")}
               >
-                <div className="w-[22px] h-[22px] rounded-full bg-ruFlag bg-repeat bg-contain bg-center border border-white"></div>
+                <div className="w-[22px] h-[22px] rounded-[12px] bg-ruFlag bg-repeat bg-contain bg-center border border-white"></div>
                 <div
                   className={`ml-1 font-[12px] text-base font-interMedium ${
                     currentLanguage === "ru" ? "text-white" : "text-black"
@@ -74,7 +74,7 @@ const LangBtn = () => {
                 }`}
                 onClick={() => handleChangeLanguage("az")}
               >
-                <div className="w-[22px] h-[22px] rounded-full bg-azFlag bg-repeat bg-contain bg-center border border-white"></div>
+                <div className="w-[22px] h-[22px] rounded-[12px] bg-azFlag bg-repeat bg-contain bg-center border border-white"></div>
                 <div
                   className={`ml-1 font-[12px] text-base font-interMedium ${
                     currentLanguage === "az" ? "text-white" : "text-black"
