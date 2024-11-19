@@ -58,7 +58,7 @@ const Header = ({ users }) => {
               : "relative bg-primary-blue"
           } w-full flex justify-center items-center h-[72px] z-30 top-0 left-0 right-0 mx-auto transition-colors duration-300`}
         >
-          <div className=" mx-auto md:max-w-[940px]  xl:max-w-[1200px]  2xl:max-w-[1432px] px-4 w-full w-full">
+          <div className=" mx-auto md:max-w-[940px]  xl:max-w-[1200px]  2xl:max-w-[1432px] px-4 w-full">
             <div
               className={`flex justify-between items-center h-full`}
             >
@@ -82,7 +82,7 @@ const Header = ({ users }) => {
                       }
                     />
                     <NavLink
-                      to="/"
+                      to="/contact-us"
                       title={
                         currentLanguage === "az"
                           ? translation.vars.text16az
@@ -93,7 +93,7 @@ const Header = ({ users }) => {
                 ) : (
                   <>
                     <NavLink to="/about-us" title={t("header.aboutus")} />
-                    <NavLink to="/" title={t("header.contact")} />
+                    <NavLink to="/contact-us" title={t("header.contact")} />
                   </>
                 )}
               </nav>
@@ -181,7 +181,7 @@ const Header = ({ users }) => {
                 <div className="w-full h-full flex justify-start items-center flex-col">
                   {translation && translation.vars ? (
                     <>
-                      <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
+                      <div className="w-[60%] h-auto py-[25px] px-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
                         <Link
                           to="/about-us"
                           className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center"
@@ -192,9 +192,9 @@ const Header = ({ users }) => {
                         </Link>
                       </div>
 
-                      <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
+                      <div className="w-[60%] h-auto py-[25px] px-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
                         <Link
-                          to="/"
+                          to="/contact-us"
                           className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
                         >
                           {currentLanguage === "az"
@@ -205,18 +205,18 @@ const Header = ({ users }) => {
                     </>
                   ) : (
                     <>
-                      <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
+                      <div className="w-[60%] h-auto py-[25px] px-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
                         <Link
-                          to="/"
+                          to="/about-us"
                           className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center"
                         >
                           {t("header.aboutus")}
                         </Link>
                       </div>
 
-                      <div className="w-[60%] h-auto p-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
+                      <div className="w-[60%] h-auto py-[25px] px-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
                         <Link
-                          to="/"
+                          to="/contact-us"
                           className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
                         >
                           {t("header.contact")}
@@ -226,7 +226,7 @@ const Header = ({ users }) => {
                   )}
                   {users.auth ? (
                     <>
-                      <div className="w-full h-auto p-[10px] flex justify-center items-center">
+                      <div className="w-[60%] h-auto py-[25px] px-[10px]  flex justify-center items-center">
                         <Link
                           to="/dashboard"
                           className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
@@ -237,7 +237,7 @@ const Header = ({ users }) => {
                     </>
                   ) : (
                     <>
-                      <div className="w-full h-auto p-[10px] flex justify-center items-center">
+                      <div className="w-[60%] h-auto py-[25px] px-[10px]   flex justify-center items-center">
                         <Link
                           to="/sign-in"
                           className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "

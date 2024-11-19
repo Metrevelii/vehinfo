@@ -73,7 +73,7 @@ const Footer = () => {
             </div>
           ) : null}
 
-          <ContactForm />
+          <ContactForm mainClassName={'flex flex-col justify-start py-[2rem] items-center  w-full h-auto    md:w-[600px] xl:w-[700px]    2xl:w-[700px]  rounded-[12px] xs:px-[0.5rem] sm:px-[0.5rem] md:px-[1rem] lg:px-16 xl:px-16 2xl:px-16 bg-white bg-contactBg bg-cover bg-center bg-no-repeat'}/>
         </div>
       </div>
     </footer>
