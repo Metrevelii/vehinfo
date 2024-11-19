@@ -136,6 +136,110 @@ const translationsSchema = mongoose.Schema({
     text17az: {
         required: true,
         type: String,
+    },
+    text18ru: {
+        required: true,
+        type: String,
+    },
+    text18az: {
+        required: true,
+        type: String,
+    },
+    text19ru: {
+        required: true,
+        type: String,
+    },
+    text19az: {
+        required: true,
+        type: String,
+    },
+    text20ru: {
+        required: true,
+        type: String,
+    },
+    text20az: {
+        required: true,
+        type: String,
+    },
+    text21ru: {
+        required: true,
+        type: String,
+    },
+    text21az: {
+        required: true,
+        type: String,
+    },
+    text22ru: {
+        required: true,
+        type: String,
+    },
+    text22az: {
+        required: true,
+        type: String,
+    },
+    text23ru: {
+        required: true,
+        type: String,
+    },
+    text23az: {
+        required: true,
+        type: String,
+    },
+    text24ru: {
+        required: true,
+        type: String,
+    },
+    text24az: {
+        required: true,
+        type: String,
+    },
+    text25ru: {
+        required: true,
+        type: String,
+    },
+    text25az: {
+        required: true,
+        type: String,
+    },
+    text26ru: {
+        required: true,
+        type: String,
+    },
+    text26az: {
+        required: true,
+        type: String,
+    },
+    text27ru: {
+        required: true,
+        type: String,
+    },
+    text27az: {
+        required: true,
+        type: String,
+    },
+    text28ru: {
+        required: true,
+        type: String,
+    },
+    text28az: {
+        required: true,
+        type: String,
+    },
+    text29ru: {
+        required: true,
+        type: String,
+    },
+    text29az: {
+        required: true,
+        type: String,
+    },
+    text30ru: {
+        required: true,
+        type: String,
+    },
+    text30az: {
+        required: true,
+        type: String,
     }
 })
 

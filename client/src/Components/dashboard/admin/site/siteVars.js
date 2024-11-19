@@ -10,6 +10,8 @@ const SiteVars = () => {
 
     const formik = useFormik({
         initialValues: {
+            countryaz: site.vars.countryaz,
+            countryru: site.vars.countryru,
             addressaz: site.vars.addressaz,
             addressru: site.vars.addressru,
             phone: site.vars.phone,
@@ -33,6 +35,36 @@ const SiteVars = () => {
     return (
         <form className="mt-3" onSubmit={formik.handleSubmit}>
 
+            <div className="flex items-start justify-center flex-col mt-[20px]">
+                <label className="font-interMedium text-primary-blue text-[14px]" htmlFor="address">Edit country AZ</label>
+                <input
+                    type="text"
+                    id="countryaz"
+                    name="countryaz"
+                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium relative"
+                   
+                    {...formik.getFieldProps('countryaz')}
+                />
+                
+                {formik.touched.countryaz && formik.errors.countryaz ? (
+                    <div className="error">{formik.errors.countryaz}</div>
+                ) : null}
+            </div>
+            <div className="flex items-start justify-center flex-col mt-[20px]">
+                <label className="font-interMedium text-primary-blue text-[14px]" htmlFor="address">Edit country RU</label>
+                <input
+                    type="text"
+                    id="countryru"
+                    name="countryru"
+                    className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium relative"
+                   
+                    {...formik.getFieldProps('countryru')}
+                />
+                
+                {formik.touched.countryru && formik.errors.countryru ? (
+                    <div className="error">{formik.errors.countryru}</div>
+                ) : null}
+            </div>
             <div className="flex items-start justify-center flex-col mt-[20px]">
                 <label className="font-interMedium text-primary-blue text-[14px]" htmlFor="address">Edit address AZ</label>
                 <input

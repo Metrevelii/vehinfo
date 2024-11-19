@@ -15,13 +15,13 @@ const Home = () => {
   return (
     <Fragment>
       <div className="homepage">
-        <div className="mx-auto max-w-[1432px] xs:px-[0.5rem] px-4 w-full xs:mt-[70vw] lg:mt-[20rem] xl:mt-[30rem] 2xl:mt-[30rem]">
+        <div className="  mx-auto md:max-w-[940px]  xl:max-w-[1200px]  2xl:max-w-[1432px] px-4 w-full xs:mt-[70vw] lg:mt-[20rem] xl:mt-[30rem] 2xl:mt-[30rem]">
           <HeadlineBox />
           <Advantages />
         </div>
       </div>
       <AboutUs />
-      <div className="mx-auto max-w-[1432px] px-4 w-full hidden xl:block 2xl:block">
+      <div className="mx-auto md:max-w-[940px]  xl:max-w-[1200px]  2xl:max-w-[1432px] px-4 w-full hidden xl:block 2xl:block">
         <h1 className="font-interBold font-bold text-[32px] text-black mb-4 uppercase">
           {currentLanguage === "az"
             ? translation.vars.text14az

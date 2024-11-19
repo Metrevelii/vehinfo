@@ -1,6 +1,14 @@
 const mongoose = require('mongoose');
 
 const siteSchema = mongoose.Schema({
+    countryaz: {
+        required: true,
+        type: String,
+    },
+    countryru: {
+        required: true,
+        type: String,
+    },
     addressaz: {
         required: true,
         type: String,

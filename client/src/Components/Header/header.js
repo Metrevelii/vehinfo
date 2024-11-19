@@ -58,9 +58,9 @@ const Header = ({ users }) => {
               : "relative bg-primary-blue"
           } w-full flex justify-center items-center h-[72px] z-30 top-0 left-0 right-0 mx-auto transition-colors duration-300`}
         >
-          <div className="mx-auto max-w-full sm:max-w-[620px] md:max-w-[760px]  lg:max-w-[940px] xl:max-w-[1280px]  2xl:max-w-[1432px] w-full">
+          <div className=" mx-auto md:max-w-[940px]  xl:max-w-[1200px]  2xl:max-w-[1432px] px-4 w-full w-full">
             <div
-              className={`px-[15px] flex justify-between items-center h-full`}
+              className={`flex justify-between items-center h-full`}
             >
               <div className="header__logo">
                 <Link
@@ -89,14 +89,12 @@ const Header = ({ users }) => {
                           : translation.vars.text16ru
                       }
                     />
-                    
                   </>
                 ) : (
                   <>
                     <NavLink to="/about-us" title={t("header.aboutus")} />
                     <NavLink to="/" title={t("header.contact")} />
                   </>
-                    
                 )}
               </nav>
 
@@ -142,7 +140,6 @@ const Header = ({ users }) => {
               : "relative bg-primary-white"
           } w-full flex justify-around items-center h-auto py-[10px] fixed z-40`}
         >
-      
           <div className="">
             <label className="burger" htmlFor="burger">
               <input
@@ -151,9 +148,33 @@ const Header = ({ users }) => {
                 checked={isMenuOpen}
                 onChange={toggleMenu}
               />
-              <span></span>
-              <span></span>
-              <span></span>
+              <span
+                className={`${
+                  isHomePage
+                    ? isScrolled
+                      ? " bg-primary-black"
+                      : "bg-primary-white"
+                    : "bg-primary-black"
+                }`}
+              ></span>
+              <span
+                className={`${
+                  isHomePage
+                    ? isScrolled
+                      ? " bg-primary-black"
+                      : "bg-primary-white"
+                    : "bg-primary-black"
+                }`}
+              ></span>
+              <span
+                className={`${
+                  isHomePage
+                    ? isScrolled
+                      ? " bg-primary-black"
+                      : "bg-primary-white"
+                    : "bg-primary-black"
+                }`}
+              ></span>
             </label>
             {isMenuOpen && (
               <div className="absolute z-50 top-[95px] left-[0px] right-[0px] mx-auto w-full h-[auto] py-[10px] bg-primary-white">
@@ -181,7 +202,6 @@ const Header = ({ users }) => {
                             : translation.vars.text16ru}
                         </Link>
                       </div>
-                      
                     </>
                   ) : (
                     <>
@@ -202,7 +222,6 @@ const Header = ({ users }) => {
                           {t("header.contact")}
                         </Link>
                       </div>
-                      
                     </>
                   )}
                   {users.auth ? (
