@@ -343,3 +343,9 @@ height: 1000px;
  
   border-top: 0.5px solid rgba(120, 130, 136, 1);
 }
+
+.absCentered {
+  left: 50%;
+  top: 115%;
+  transform: translate(-50%, -50%);
+}

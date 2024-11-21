@@ -45,6 +45,7 @@ const Header = ({ users }) => {
   }, [location.pathname]);
 
   const isHomePage = location.pathname === "/";
+  
 
   return (
     <>
