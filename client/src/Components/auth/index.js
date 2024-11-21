@@ -36,12 +36,12 @@ const RegisterLogin = (props) => {
                 </h1>
                 <div className="flex justify-center items-center flex-col mt-[50px]">
                   <ButtonComponent
-                    className="w-[200px] sm:w-[230px] md:w-[280px] lg:w-[350px] xl:w-[467px] 2xl:w-[467px] h-[50px] md:h-[50px] xl:h-[65px] 2xl:h-[65px] rounded-[12px] flex justify-center items-center bg-primary-blue font-interRegular text-primary-white text-[20px] mt-[20px]"
+                    className="w-[200px] sm:w-[230px] md:w-[280px] lg:w-[350px] xl:w-[467px] 2xl:w-[467px] h-[50px] md:h-[50px] xl:h-[65px] 2xl:h-[65px] rounded-[12px] flex justify-center items-center font-interRegular text-primary-white text-[20px] mt-[20px]"
                     onClick={() => toggleFormType("login")}
                     title={"Log In"}
                   />
                   <button
-                    className="w-[200px] sm:w-[230px] md:w-[280px] lg:w-[350px] xl:w-[467px] 2xl:w-[467px] h-[50px] md:h-[50px] xl:h-[65px] 2xl:h-[65px] rounded-[12px] flex justify-center items-center border border-solid border-[#7c8fc7] font-interRegular text-primary-blue text-[20px] mt-[20px]"
+                    className="w-[200px] sm:w-[230px] md:w-[280px] lg:w-[350px] xl:w-[467px] 2xl:w-[467px] h-[50px] md:h-[50px] xl:h-[65px] 2xl:h-[65px] rounded-[12px] flex justify-center items-center border border-solid border-[#919191] font-interRegular text-primary-black text-[20px] mt-[20px]"
                     onClick={() => toggleFormType("register")}
                   >
                     Register

@@ -12,7 +12,7 @@ const TextInput = ({ id, name, formik }) => {
   return (
     <div className="flex items-start justify-center flex-col mt-[20px] w-full">
       <label
-        className="font-interMedium text-primary-blue text-[14px]"
+        className="font-interMedium text-primary-black text-[14px]"
         htmlFor={id}
       >
         Edit {name}
@@ -21,7 +21,7 @@ const TextInput = ({ id, name, formik }) => {
         type="text"
         id={id}
         name={name}
-        className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium relative"
+        className="h-[46px]  rounded border border-solid mt-[7px] border-primary-orange px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium relative"
         {...formik.getFieldProps(name)}
       />
       {formik.touched[name] && formik.errors[name] ? (
@@ -204,7 +204,7 @@ const TextVars = () => {
           title={"Edit texts"}
         />
         <button
-          className="w-[48%] md:w-[48%] lg:w-[165px] xl:w-[220px] 2xl:w-[220px] h-[48px] rounded-[12px] flex justify-center items-center border border-solid border-[#7c8fc7] font-interRegular text-primary-blue text-[16px]"
+          className="w-[48%] md:w-[48%] lg:w-[165px] xl:w-[220px] 2xl:w-[220px] h-[48px] rounded-[12px] flex justify-center items-center border border-solid border-[#7c8fc7] font-interRegular text-primary-black text-[16px]"
           type="button"
           onClick={toggleLanguage}
         >

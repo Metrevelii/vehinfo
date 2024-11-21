@@ -43,11 +43,16 @@ module.exports = {
           "linear-gradient(180deg, rgba(255, 255, 255, 0.57) 0%, #FFFFFF 100%)",
         "linear-gradient-gray":
           "linear-gradient(90deg, rgba(102, 102, 102, 0.51) 0%, #4E4E4E 48.5%, rgba(102, 102, 102, 0.51) 100%)" ,
+          "linear-gradient-orange":
+            "linear-gradient(180deg, #FB622C 0%, #F15B25 100%)",
       },
       colors: {
         primary: {
           blue: "#2c4ff8",
           blueHover: "#0C14FF",
+          orange: "#f15a24",
+          orangeHeader: "#FC632C",
+          orangeBorder: "#ce410f",
           white: "#fff",
           whiteSecond: "#f8f8f8",
           whiteTransparent: "#ffffffcc",

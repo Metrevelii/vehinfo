@@ -20,7 +20,7 @@ const LangBtn = () => {
           <div className="w-full h-full flex justify-center items-center">
             <div
               className={`w-1/2 h-full rounded-[12px] flex justify-center items-center cursor-pointer ${
-                currentLanguage === "ru" ? "bg-blue-700 border border-blue-800" : ""
+                currentLanguage === "ru" ? "bg-primary-orange border border-primary-orangeBorder" : ""
               }`}
               onClick={() => handleChangeLanguage("ru")}
             >
@@ -35,7 +35,7 @@ const LangBtn = () => {
             </div>
             <div
               className={`w-1/2 h-full rounded-[12px] flex justify-center items-center cursor-pointer ${
-                currentLanguage === "az" ? "bg-blue-700 border border-blue-800" : ""
+                currentLanguage === "az" ? "bg-primary-orange border border-primary-orangeBorder" : ""
               }`}
               onClick={() => handleChangeLanguage("az")}
             >
@@ -55,7 +55,7 @@ const LangBtn = () => {
             <div className="w-full h-full flex justify-between items-center flex-col">
               <div
                 className={`w-[60px] h-[32px] rounded-[12px] flex justify-center items-center cursor-pointer ${
-                  currentLanguage === "ru" ? "bg-blue-700 border border-blue-800" : ""
+                  currentLanguage === "ru" ? "bg-primary-orange border border-primary-orangeBorder" : ""
                 }`}
                 onClick={() => handleChangeLanguage("ru")}
               >
@@ -70,7 +70,7 @@ const LangBtn = () => {
               </div>
               <div
                 className={`w-[60px] h-[32px] rounded-[12px] flex justify-center items-center cursor-pointer ${
-                  currentLanguage === "az" ? "bg-blue-700 border border-blue-800" : ""
+                  currentLanguage === "az" ? "bg-primary-orange border border-primary-orangeBorder" : ""
                 }`}
                 onClick={() => handleChangeLanguage("az")}
               >

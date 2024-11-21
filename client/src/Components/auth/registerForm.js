@@ -54,7 +54,7 @@ const RegisterForm = ({ goBack }) => {
       </h2>
 
       {loading ? (
-        <div>Loading...</div>
+        <div className="font-interMedium font-700 text-primary-black text-[20px]">Loading...</div>
       ) : (
         <Formik
           initialValues={initialValues}
@@ -75,7 +75,7 @@ const RegisterForm = ({ goBack }) => {
                   id="firstname"
                   name="firstname"
                   placeholder=""
-                  className="border px-2 pt-[20px] pb-[0px] bg-[#d4dce7] font-interBold text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
+                  className="border px-2 pt-[20px] pb-[0px] bg-[#d4dce7] font-interBold text-[#000] border-solid border-[#F25B25] h-[54px] rounded-[12px] shadow-boxShadow"
                 />
                 <ErrorMessage
                   name="firstname"
@@ -96,7 +96,7 @@ const RegisterForm = ({ goBack }) => {
                   id="lastname"
                   name="lastname"
                   placeholder=""
-                  className="border px-2 pt-[20px] pb-[0px] bg-[#d4dce7] font-interBold text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
+                  className="border px-2 pt-[20px] pb-[0px] bg-[#d4dce7] font-interBold text-[#000] border-solid border-[#F25B25] h-[54px] rounded-[12px] shadow-boxShadow"
                 />
                 <ErrorMessage
                   name="lastname"
@@ -117,7 +117,7 @@ const RegisterForm = ({ goBack }) => {
                   id="email"
                   name="email"
                   placeholder=""
-                  className="border  px-2 pt-[20px] pb-[0px] bg-[#d4dce7] font-interBold text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
+                  className="border  px-2 pt-[20px] pb-[0px] bg-[#d4dce7] font-interBold text-[#000] border-solid border-[#F25B25] h-[54px] rounded-[12px] shadow-boxShadow"
                 />
                 <ErrorMessage
                   name="email"
@@ -138,7 +138,7 @@ const RegisterForm = ({ goBack }) => {
                   id="password"
                   name="password"
                   placeholder=""
-                  className="border px-2 pt-[20px] pb-[0px] bg-[#d4dce7] font-interBold text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
+                  className="border px-2 pt-[20px] pb-[0px] bg-[#d4dce7] font-interBold text-[#000] border-solid border-[#F25B25] h-[54px] rounded-[12px] shadow-boxShadow"
                 />
                 <ErrorMessage
                   name="password"
@@ -158,7 +158,7 @@ const RegisterForm = ({ goBack }) => {
         </Formik>
       )}
 
-      <button className="mt-[20px] text-primary-blue font-interRegular text-[18px]" onClick={goBack}>
+      <button className="mt-[20px] text-primary-black font-interRegular text-[18px]" onClick={goBack}>
         Go back
       </button>
     </div>

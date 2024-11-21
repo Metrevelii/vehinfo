@@ -49,7 +49,7 @@ const ForgotPasswordForm = ({ goBack }) => {
       </h2>
 
       {loading ? (
-        <div>Loading...</div>
+        <div className="font-interMedium font-700 text-primary-black text-[20px]">Loading...</div>
       ) : (
         <Formik
           initialValues={{ email: "" }}
@@ -70,7 +70,7 @@ const ForgotPasswordForm = ({ goBack }) => {
                   id="email"
                   name="email"
                   placeholder=""
-                  className="border px-2 pt-[20px] pb-[2px] bg-[#d4dce7] font-interBold text-[#000] border-solid border-primary-purpleMoreLight h-[54px] rounded-[12px] shadow-boxShadow"
+                  className="border px-2 pt-[20px] pb-[2px] bg-[#d4dce7] font-interBold text-[#000] border-solid border-[#F25B25] h-[54px] rounded-[12px] shadow-boxShadow"
                 />
                 <ErrorMessage
                   name="email"
@@ -92,7 +92,7 @@ const ForgotPasswordForm = ({ goBack }) => {
      {success && <div className="text-green-500 mt-4">{success}</div>}
      {error && <div className="text-red-500 mt-4">{error}</div>}
 
-      <button className="mt-[20px] text-primary-blue font-interRegular text-[18px]" onClick={goBack}>
+      <button className="mt-[20px] text-primary-black font-interRegular text-[18px]" onClick={goBack}>
         Go Back
       </button>
     </div>

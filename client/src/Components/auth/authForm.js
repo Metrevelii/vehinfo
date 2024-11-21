@@ -54,7 +54,7 @@ const AuthForm = (props) => {
                 {( isSubmitting ) => (
                     <Form className="flex flex-col space-y-4 w-[80%] lg:w-auto xl:w-auto 2xl:w-auto">
                         <div className="flex flex-col w-full lg:w-[250px] xl:w-[250px] 2xl:w-[250px] h-[60px] mb-[1.5rem]">
-                            <label htmlFor="email" className="font-interRegular font-[16px] mb-[0.5rem] text-primary-blue">Enter your email</label>
+                            <label htmlFor="email" className="font-interRegular font-[16px] mb-[0.5rem] text-primary-black">Enter your email</label>
                             <Field 
                                 type="email" 
                                 id="email" 
@@ -65,7 +65,7 @@ const AuthForm = (props) => {
                             <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
                         </div>
                         <div className="flex flex-col w-full lg:w-[250px] xl:w-[250px] 2xl:w-[250px] h-[60px]" style={{ marginBottom: '1.5rem' }}>
-                            <label htmlFor="password" className="font-interRegular font-[16px] mb-[0.5rem] text-primary-blue">Enter your password</label>
+                            <label htmlFor="password" className="font-interRegular font-[16px] mb-[0.5rem] text-primary-black">Enter your password</label>
                             <Field 
                                 type="password" 
                                 id="password" 

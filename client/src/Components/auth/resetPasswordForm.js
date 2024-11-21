@@ -79,7 +79,7 @@ const ResetPasswordForm = () => {
                     <div className="flex flex-col w-full">
                       <label
                         htmlFor="newPassword"
-                        className="mb-[0.5rem] text-[16px] font-interRegular text-primary-blue"
+                        className="mb-[0.5rem] text-[16px] font-interRegular text-primary-black"
                       >
                         Enter New Password
                       </label>
@@ -100,7 +100,7 @@ const ResetPasswordForm = () => {
                     <div className="flex flex-col w-full">
                       <label
                         htmlFor="repeatNewPassword"
-                        className="mb-[0.5rem] text-[16px] font-interRegular text-primary-blue"
+                        className="mb-[0.5rem] text-[16px] font-interRegular text-primary-black"
                       >
                         Repeat New Password
                       </label>

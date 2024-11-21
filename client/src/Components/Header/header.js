@@ -7,6 +7,8 @@ import NavLink from "./NavLink";
 import useBreakpoint from "../../hooks/useBreakpoint";
 import { Icons } from "../../icons";
 
+import Social from "../Footer/social";
+
 import { useSelector } from "react-redux";
 
 const Header = ({ users }) => {
@@ -45,7 +47,6 @@ const Header = ({ users }) => {
   }, [location.pathname]);
 
   const isHomePage = location.pathname === "/";
-  
 
   return (
     <>
@@ -54,22 +55,26 @@ const Header = ({ users }) => {
           className={`${
             isHomePage
               ? isScrolled
-                ? "fixed bg-primary-blue"
+                ? "fixed bg-primary-orangeHeader"
                 : "absolute bg-transparent"
-              : "relative bg-primary-blue"
+              : "relative bg-primary-orangeHeader"
           } w-full flex justify-center items-center h-[72px] z-30 top-0 left-0 right-0 mx-auto transition-colors duration-300`}
         >
           <div className=" mx-auto md:max-w-[940px]  xl:max-w-[1200px]  2xl:max-w-[1432px] px-4 w-full">
-            <div
-              className={`flex justify-between items-center h-full`}
-            >
-              <div className="header__logo">
+            <div className={`flex justify-between items-center h-full`}>
+              <div
+                className={`${
+                  isHomePage
+                    ? isScrolled
+                      ? "logo-black"
+                      : "logo-white"
+                    : "logo-black"
+                } w-[150px] md:w-[155px] lg:w-[170px] xl:w-[186px] 2xl:w-[186px] h-[41px]`}
+              >
                 <Link
                   to="/"
                   className="w-full h-full flex justify-center items-center"
-                >
-                  {/* <Logo /> */}
-                </Link>
+                ></Link>
               </div>
               <nav className="max-w-[300px] sm:max-w-[380px] md:max-w-[480px] xl:max-w-[570px] 2xl:max-w-[670px] h-full flex justify-around items-center">
                 {translation && translation.vars ? (
@@ -106,7 +111,15 @@ const Header = ({ users }) => {
                       to="/dashboard"
                       className="w-[112px] h-[48px] rounded-[12px] bg-primary-white shadow-custom flex justify-between px-[12px] items-center mr-[20px]"
                     >
-                      <Icons.HeaderUserIcon className="w-[32px] h-[32px] shrink-0" />
+                      <Icons.HeaderUserIcon
+                        className={`${
+                          isHomePage
+                            ? isScrolled
+                              ? "fill-primary-black"
+                              : "fill-primary-orange"
+                            : "fill-primary-black"
+                        } w-[32px] h-[32px] shrink-0`}
+                      />
                       <p className="font-interMedium text-[16px] text-primary-black">
                         {t("header.dashboard")}
                       </p>
@@ -116,10 +129,32 @@ const Header = ({ users }) => {
                   <>
                     <Link
                       to="/sign-in"
-                      className="w-[112px] h-[48px] rounded-[12px] bg-primary-white shadow-custom flex justify-between px-[12px] items-center mr-[20px]"
+                      className={`${
+                        isHomePage
+                          ? isScrolled
+                            ? " bg-primary-white"
+                            : " bg-primary-white"
+                          : " bg-primary-white"
+                      } w-[112px] h-[48px] rounded-[12px] shadow-custom flex justify-between px-[12px] items-center mr-[20px]`}
                     >
-                      <Icons.HeaderUserIcon className="w-[32px] h-[32px]" />
-                      <p className="font-interMedium text-[16px] text-primary-black">
+                      <Icons.HeaderUserIcon
+                        className={`${
+                          isHomePage
+                            ? isScrolled
+                              ? "fill-primary-black"
+                              : " fill-primary-orange"
+                            : "fill-primary-black"
+                        } w-[32px] h-[32px] shrink-0`}
+                      />
+                      <p
+                        className={`${
+                          isHomePage
+                            ? isScrolled
+                              ? "text-primary-black"
+                              : " text-primary-black"
+                            : "text-primary-black"
+                        } font-interMedium text-[16px]`}
+                      >
                         {t("header.signIn")}
                       </p>
                     </Link>
@@ -135,10 +170,12 @@ const Header = ({ users }) => {
         <header
           className={`${
             isHomePage
-              ? isScrolled
+              ? isScrolled || isMenuOpen
                 ? "fixed bg-primary-white"
                 : "absolute bg-transparent"
-              : "relative bg-primary-white"
+              : isMenuOpen
+              ? "relative bg-primary-white"
+              : "relative bg-transparent"
           } w-full flex justify-around items-center h-auto py-[10px] fixed z-40`}
         >
           <div className="">
@@ -151,27 +188,33 @@ const Header = ({ users }) => {
               />
               <span
                 className={`${
-                  isHomePage
+                  isMenuOpen
+                    ? "bg-primary-black"
+                    : isHomePage
                     ? isScrolled
-                      ? " bg-primary-black"
+                      ? "bg-primary-black"
                       : "bg-primary-white"
                     : "bg-primary-black"
                 }`}
               ></span>
               <span
                 className={`${
-                  isHomePage
+                  isMenuOpen
+                    ? "bg-primary-black"
+                    : isHomePage
                     ? isScrolled
-                      ? " bg-primary-black"
+                      ? "bg-primary-black"
                       : "bg-primary-white"
                     : "bg-primary-black"
                 }`}
               ></span>
               <span
                 className={`${
-                  isHomePage
+                  isMenuOpen
+                    ? "bg-primary-black"
+                    : isHomePage
                     ? isScrolled
-                      ? " bg-primary-black"
+                      ? "bg-primary-black"
                       : "bg-primary-white"
                     : "bg-primary-black"
                 }`}
@@ -249,20 +292,31 @@ const Header = ({ users }) => {
                     </>
                   )}
                 </div>
+                <div className="w-full flex justify-start items-center mt-[2.5rem]">
+                  <Social />
+                </div>
               </div>
             )}
           </div>
           {/*  */}
           {/* LOGO */}
-          <div className="w-[60px] h-[23px">
+          <div
+            className={`${
+              isMenuOpen
+                ? "logo-orange"
+                : isHomePage
+                ? isScrolled
+                  ? "logo-orange"
+                  : "logo-white"
+                : "logo-orange"
+            } w-[143px] h-[32px]`}
+          >
             <Link
               to="/"
               className=" text-[24px] font-InterBold text-primary-black"
-            >
-              LOGO
-            </Link>
+            ></Link>
           </div>
-          <div className="">
+          <div className="shadow-custom rounded-[12px]">
             <LangBtn />
           </div>
         </header>

@@ -80,15 +80,13 @@ const Footer = () => {
               }
             />
           </div>
-          <div className="flex justify-center items-center py-[20px] relative borderTop w-full">
-            <div className="interBold uppercase text-[32px] text-primary-white hidden md:block lg:block xl:block 2xl:block">
-              LOGO
-            </div>
-            <p className="font-interMedium text-primary-lightGray text-[12px] absolute left-[0px]">
+          <div className="flex justify-between sm:justify-between md:justify-center lg:justify-center  xl:justify-center 2xl:justify-center items-center py-[20px] relative borderTop w-full">
+            <p className="font-interMedium text-primary-lightGray text-[12px] static sm:static  md:absolute  lg:absolute  xl:absolute  2xl:absolute left-[0px]">
               {currentLanguage === "az"
                 ? translation.vars.text21az
                 : translation.vars.text21ru}
             </p>
+            <div className="w-[143px] h-[32px] logo-white"></div>
           </div>
         </div>
       </div>

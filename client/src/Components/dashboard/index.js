@@ -8,12 +8,12 @@ const UserDashboard = ({ users, signOutUser }) => {
       <div className="">
  
 
-        <div className="w-[20rem] rounded-lg border-2 border-primary-blue bg-transparent p-4 text-center shadow-lg">
+        <div className="w-[20rem] rounded-lg border-2 border-primary-orange bg-transparent p-4 text-center shadow-lg">
      
-            <Icons.UserIcon className="w-[50px] h-[50px] fill-primary-blue"/>
+            <Icons.UserIcon className="w-[50px] h-[50px] fill-primary-orange"/>
         
    
-          <h2 className="mt-4 text-xl font-interBold text-primary-blue">
+          <h2 className="mt-4 text-xl font-interBold text-primary-orange">
             {users.data.firstname} {users.data.lastname}
           </h2>
           <div className="flex center items-center">

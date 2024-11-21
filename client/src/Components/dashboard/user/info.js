@@ -35,22 +35,22 @@ const UserInfo = ({ users, signOutUser }) => {
     <DashboardLayout title="User information" signOutUser={signOutUser}>
       <form className="mt-[30px] w-full" onSubmit={formik.handleSubmit}>
         <div className="flex items-start justify-center flex-col mt-[20px]">
-          <label htmlFor="firstname" className="font-interMedium text-primary-blue text-[14px]">Edit your firstname</label>
+          <label htmlFor="firstname" className="font-interMedium text-primary-black text-[14px]">Edit your firstname</label>
           <input
             type="text"
             id="firstname"
             name="firstname"
-            className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium text-[16px] relative"
+            className="h-[46px]  rounded border border-solid mt-[7px] border-primary-orange px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium text-[16px] relative"
             {...formik.getFieldProps("firstname")}
           />
         </div>
         <div className="flex items-start justify-center flex-col mt-[20px]">
-          <label htmlFor="lastname" className="font-interMedium text-primary-blue text-[14px]">Edit your lastname</label>
+          <label htmlFor="lastname" className="font-interMedium text-primary-black text-[14px]">Edit your lastname</label>
           <input
             type="text"
             id="lastname"
             name="lastname"
-            className="h-[46px]  rounded border border-solid mt-[7px] border-primary-blue px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium text-[16px] relative"
+            className="h-[46px]  rounded border border-solid mt-[7px] border-primary-orange px-[20px] w-full lg:w-[50%] xl:w-[50%] 2xl:w-[50%] bg-[#fff] text-primary-black font-interMedium text-[16px] relative"
             {...formik.getFieldProps("lastname")}
           />
         </div>

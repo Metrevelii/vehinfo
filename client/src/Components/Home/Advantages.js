@@ -22,7 +22,7 @@ const Advantages = () => {
       <div className="grid grid-cols-2 xs:gap-[0.2rem] gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 w-full  items-center">
         <AdvantageBox
           icon={
-            <Icons.ExpIcon className="w-[25px] h-[25px] fill-primary-lightPurple text-primary" />
+            <Icons.ExpIcon className="w-[25px] h-[25px] fill-primary-lightPurple  group-hover:fill-primary-black text-primary" />
           }
           title={
             currentLanguage === "az"
@@ -34,12 +34,10 @@ const Advantages = () => {
               ? translation.vars.text4az
               : translation.vars.text4ru
           }
-          textColor="text-primary-black"
-          paraColor="text-primary-blackSecond"
         />
         <AdvantageBox
           icon={
-            <Icons.SafetyIcon className="w-[20px] h-[24px] fill-primary-lightPurple text-primary" />
+            <Icons.SafetyIcon className="w-[20px] h-[24px] fill-primary-lightPurple group-hover:fill-primary-black text-primary" />
           }
           title={
             currentLanguage === "az"
@@ -51,12 +49,10 @@ const Advantages = () => {
               ? translation.vars.text7az
               : translation.vars.text7ru
           }
-          textColor="text-primary-black"
-          paraColor="text-primary-blackSecond"
         />
         <AdvantageBox
           icon={
-            <Icons.LocationIcon className="w-[18px] h-[28px] fill-primary-lightPurple text-primary" />
+            <Icons.LocationIcon className="w-[18px] h-[28px] fill-primary-lightPurple group-hover:fill-primary-black text-primary" />
           }
           title={
             currentLanguage === "az"
@@ -68,12 +64,10 @@ const Advantages = () => {
               ? translation.vars.text9az
               : translation.vars.text9ru
           }
-          textColor="text-primary-black"
-          paraColor="text-primary-blackSecond"
         />
         <AdvantageBox
           icon={
-            <Icons.PricesIcon className="w-[28px] h-[28px] fill-primary-lightPurple text-primary" />
+            <Icons.PricesIcon className="w-[28px] h-[28px] fill-primary-lightPurple group-hover:fill-primary-black text-primary" />
           }
           title={
             currentLanguage === "az"
@@ -85,8 +79,6 @@ const Advantages = () => {
               ? translation.vars.text11az
               : translation.vars.text11ru
           }
-          textColor="text-primary-black"
-          paraColor="text-primary-blackSecond"
         />
       </div>
     </div>

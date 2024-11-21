@@ -8,7 +8,7 @@ const NavLink = ({ to, title, className }) => {
 
 
     return (
-        <div className="flex justify-center items-center xs:w-[70px] sm:w-[100px] md:w-[140px] xl:w-[140px] 2xl:w-[150px] h-full transition-colors duration-300 cursor-pointer hover:bg-[#2d2d860d] relative">
+        <div className="flex justify-center items-center xs:w-[70px] sm:w-[80px] md:w-[100px] xl:w-[140px] 2xl:w-[150px] h-full transition-colors duration-300 cursor-pointer hover:bg-[#2d2d860d] relative">
             <div
                 className={`absolute w-[25px] rounded-[10px] h-[2px] bg-primary-white z-5 absCentered transition-opacity duration-300 ${
                     isActive ? 'opacity-100' : 'opacity-0'

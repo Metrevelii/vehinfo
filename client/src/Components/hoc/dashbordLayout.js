@@ -19,7 +19,7 @@ const DashboardLayout = ({ signOutUser, title, children }) => {
             <li className="flex-center cursor-pointer p-16-semibold w-[90%] whitespace-nowrap">
               <Link
                 to="/dashboard"
-                className="group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-primary-blue hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear"
+                className="group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-linear-gradient-orange hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear"
               >
                 <Icons.DashboardIcon className="w-[20px] h-[20px] shrink-0" />
                 Dashboard
@@ -28,7 +28,7 @@ const DashboardLayout = ({ signOutUser, title, children }) => {
             <li className="flex-center cursor-pointer p-16-semibold w-[90%] whitespace-nowrap">
               <Link
                 to="/dashboard/user/user-info"
-                className="group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-primary-blue hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear"
+                className="group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-linear-gradient-orange hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear"
               >
                 <Icons.UserIcon className="w-[24px] h-[24px] shrink-0 fill-black" />
                 User Information
@@ -42,7 +42,7 @@ const DashboardLayout = ({ signOutUser, title, children }) => {
               <li className="flex-center cursor-pointer p-16-semibold w-[90%] whitespace-nowrap">
                 <Link
                   to="/dashboard/admin/contact_infos"
-                  className="group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-primary-blue hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear"
+                  className="group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-linear-gradient-orange hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear"
                 >
                   <Icons.ContactsIcon className="w-[20px] h-[20px] fill-black" />
                   Contact Infos
@@ -51,7 +51,7 @@ const DashboardLayout = ({ signOutUser, title, children }) => {
               <li className="flex-center cursor-pointer p-16-semibold w-[90%] whitespace-nowrap">
                 <Link
                   to="/dashboard/admin/manage_site"
-                  className="group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-primary-blue hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear"
+                  className="group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-linear-gradient-orange hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear"
                 >
                   <Icons.ManageIcon className="w-[20px] h-[20px] fill-black" />
                   Manage Site
@@ -60,7 +60,7 @@ const DashboardLayout = ({ signOutUser, title, children }) => {
               <li className="flex-center cursor-pointer p-16-semibold w-[90%] whitespace-nowrap">
                 <Link
                   to="/dashboard/admin/manage_texts"
-                  className="group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-primary-blue hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear"
+                  className="group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-linear-gradient-orange hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear"
                 >
                   <Icons.ManageIcon className="w-[20px] h-[20px] fill-black" />
                   Manage Texts
@@ -71,7 +71,7 @@ const DashboardLayout = ({ signOutUser, title, children }) => {
           <ul className="w-full flex flex-col gap-2 mt-[0.5rem]">
             <li className="flex-center cursor-pointer p-16-semibold w-[90%] whitespace-nowrap">
               <button
-                className=" group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-primary-blue hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear "
+                className=" group p-16-semibold flex size-full gap-4 p-4 group font-interBold text-[16px] rounded-full bg-cover hover:bg-linear-gradient-orange hover:shadow-inner   hover:text-primary-white text-primary-black transition-all ease-linear "
                 onClick={signOutUser}
               >
                 <Icons.LogoutIcon className="w-[20px] h-[20px] shrink-0" />

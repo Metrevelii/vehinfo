@@ -26,7 +26,7 @@ const ContactUs = () => {
           </div>
           <div className="flex flex-col flex-start items-start">
             <div className="flex justify-center items-center mt-[20px] xl:mt-[30px] 2xl:mt-[30px]">
-              <Icons.LocationIcon className="w-[18px] h-[28px] fill-primary-blue" />
+              <Icons.LocationIcon className="w-[18px] h-[28px] fill-primary-orange" />
               <p className="font-interRegular font-bold text-primary-black uppercase text-[16px] xl:text-[20px] 2xl:text-[20px] ml-[10px]">
                 {t("footer.foot1")}
               </p>
@@ -44,7 +44,7 @@ const ContactUs = () => {
               </p>
             </div>
             <div className="flex justify-center items-center mt-[30px]">
-              <Icons.PhoneIcon className="w-[18px] h-[28px] fill-primary-blue" />
+              <Icons.PhoneIcon className="w-[18px] h-[28px] fill-primary-orange" />
               <p className="font-interRegular font-bold text-primary-black uppercase text-[16px] xl:text-[20px] 2xl:text-[20px] ml-[10px]">
                 {t("footer.foot2")}
               </p>
@@ -56,7 +56,7 @@ const ContactUs = () => {
              
             </div>
             <div className="flex justify-center items-center mt-[30px]">
-              <Icons.MailIcon className="w-[18px] h-[28px] fill-primary-blue" />
+              <Icons.MailIcon className="w-[18px] h-[28px] fill-primary-orange" />
               <p className="font-interRegular font-bold text-primary-black uppercase text-[16px] xl:text-[20px] 2xl:text-[20px] ml-[10px]">
                 {t("footer.foot3")}
               </p>

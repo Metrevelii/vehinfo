@@ -89,6 +89,7 @@ code {
       #050613 100%
     ),
     url("../public/images/homeimg.webp");
+
     
   background-size: cover;
   background-repeat: no-repeat;
@@ -349,4 +350,26 @@ height: 1000px;
   left: 50%;
   top: 115%;
   transform: translate(-50%, -50%);
+}
+
+.logo-orange {
+  background-image: url("../public/images/mainlogo-orange.webp");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logo-black {
+  background-image: url("../public/images/mainlogo-bl.webp");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logo-white {
+  background-image: url("../public/images/mainlogo-wh.webp");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
