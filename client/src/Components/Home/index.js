@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <Fragment>
       <div className="homepage">
-        <div className="  mx-auto md:max-w-[940px]  xl:max-w-[1200px]  2xl:max-w-[1432px] px-4 w-full mt-[12rem] sm:mt-[25rem] md:mt-[45rem] lg:mt-[27rem] xl:mt-[35rem] 2xl:mt-[35rem]">
+        <div className="mx-auto md:max-w-[940px]  xl:max-w-[1200px]  2xl:max-w-[1432px] px-4 w-full mt-[18rem] sm:mt-[25rem] md:mt-[32rem] lg:mt-[27rem] xl:mt-[42rem] 2xl:mt-[42rem]">
           <HeadlineBox />
           <Advantages />
         </div>

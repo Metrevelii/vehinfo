@@ -88,7 +88,8 @@ code {
       rgba(6, 7, 23, 0.814445) 84.23%,
       #050613 100%
     ),
-    url("../public/images/header-image.webp");
+    url("../public/images/homeimg.webp");
+    
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;

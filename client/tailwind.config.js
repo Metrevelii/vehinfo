@@ -29,7 +29,7 @@ module.exports = {
       },
       backdropBlur: {
         "custom-19": "19px",
-        "custom-25": "25px",
+        "custom-25": "5px",
       },
       backgroundSize: {
         full: "100% 100%",
@@ -51,6 +51,7 @@ module.exports = {
           white: "#fff",
           whiteSecond: "#f8f8f8",
           whiteTransparent: "#ffffffcc",
+          whiteOpacity: "rgba(255, 255, 255, 0.7)",
           lightPurple: "#8a93c0",
           purpleLighter: "#b9bed1",
           purpleMoreLight: "#7c8fc7",
