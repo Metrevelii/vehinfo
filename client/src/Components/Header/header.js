@@ -300,7 +300,8 @@ const Header = ({ users }) => {
           </div>
           {/*  */}
           {/* LOGO */}
-          <div
+          <Link
+            to="/"
             className={`${
               isMenuOpen
                 ? "logo-orange"
@@ -311,11 +312,8 @@ const Header = ({ users }) => {
                 : "logo-orange"
             } w-[143px] h-[32px]`}
           >
-            <Link
-              to="/"
-              className=" text-[24px] font-InterBold text-primary-black"
-            ></Link>
-          </div>
+          
+          </Link>
           <div className="shadow-custom rounded-[12px]">
             <LangBtn />
           </div>

@@ -6,6 +6,8 @@
         "calc": "Kalkulyator",
         "contact": "Əlaqə",
         "quote": "Sitat",
+        "register": "Qeydiyyatdan keçin",
+        "forgotPassword": "parol unutmusunuz?",
         "dashboard": "Panel"
     },
     "texts": {

@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { userRequestPasswordReset } from "../../store/actions/user.actions";
 
 import ButtonComponent from "../Shared/button";
+import { useTranslation } from "react-i18next";
 
 const ForgotPasswordForm = ({ goBack }) => {
   const [loading, setLoading] = useState(false);
@@ -13,6 +14,8 @@ const ForgotPasswordForm = ({ goBack }) => {
   const [error, setError] = useState(""); 
 
   const dispatch = useDispatch();
+
+  const { t } = useTranslation("global");
 
   const handleSubmit = async (values) => {
     setLoading(true);
@@ -45,7 +48,7 @@ const ForgotPasswordForm = ({ goBack }) => {
   return (
     <div className="w-full flex justify-center items-center flex-col">
       <h2 className="font-interBold text-primary-black uppercase text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] mb-[4.5rem]">
-        Forgot Password
+      {t("header.forgotPassword")}
       </h2>
 
       {loading ? (

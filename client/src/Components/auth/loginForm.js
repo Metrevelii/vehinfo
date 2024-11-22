@@ -6,7 +6,10 @@ import { userSignIn } from "../../store/actions/user.actions";
 import ButtonComponent from "../Shared/button";
 import { useNavigate } from "react-router-dom";
 
+import { useTranslation } from "react-i18next";
+
 const LoginForm = ({ goBack }) => {
+  const { t } = useTranslation("global");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -41,7 +44,7 @@ const LoginForm = ({ goBack }) => {
   return (
     <div className="w-full flex justify-center items-center flex-col">
       <h2 className="font-interBold text-primary-black uppercase text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] mb-[1.5rem]">
-        Log In
+        {t("header.signIn")}
       </h2>
 
       {loading ? (
