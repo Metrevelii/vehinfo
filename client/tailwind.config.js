@@ -36,7 +36,8 @@ module.exports = {
       },
       backgroundImage: {
         footer: "url('../public/images/footer-main-bg.jpg')",
-        contactBg: "url('../public/images/contactform-bg.webp')",
+        contactBg: "url('../public/images/contacts-bg.webp')",
+        contactBgMob: "url('../public/images/contacts-bg-mob.webp')",
         azFlag: "url('../public/images/az-flag.png')",
         ruFlag: "url('../public/images/ru-flag.png')",
         "linear-gradient-white":
