@@ -57,7 +57,7 @@ const Header = ({ users }) => {
               ? isScrolled
                 ? "fixed bg-primary-orangeHeader"
                 : "absolute bg-transparent"
-              : "relative bg-primary-orangeHeader"
+              : "fixed bg-primary-orangeHeader"
           } w-full flex justify-center items-center h-[72px] z-30 top-0 left-0 right-0 mx-auto transition-colors duration-300`}
         >
           <div className=" mx-auto md:max-w-[940px]  xl:max-w-[1200px]  2xl:max-w-[1432px] px-4 w-full">
@@ -174,8 +174,8 @@ const Header = ({ users }) => {
                 ? "fixed bg-primary-white"
                 : "absolute bg-transparent"
               : isMenuOpen
-              ? "relative bg-primary-white"
-              : "relative bg-transparent"
+              ? "fixed bg-primary-white"
+              : "fixed bg-primary-white"
           } w-full flex justify-around items-center h-auto py-[10px] fixed z-40`}
         >
           <div className="">
