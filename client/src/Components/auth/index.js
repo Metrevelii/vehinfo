@@ -24,7 +24,7 @@ const RegisterLogin = (props) => {
 
   return (
     <>
-      <div className="w-full py-[30px] h-auto bg-[#fff] flex justify-center items-center">
+      <div className="w-full py-[30px] h-auto bg-[#fff] flex justify-center items-center mt-[100px]">
         <div className="mx-auto max-w-[1432px] shadow-default px-4 w-[92%] sm:w-[94%] md:w-[553px] lg:w-[653px] xl:w-[753px] 2xl:w-[953px] h-[600px] rounded-[12px] bg-primary-white shadow-boxShadow">
           <div className="w-[100%] h-full py-[20px] flex justify-around flex-col sm:flex-col md:flex-col  lg:flex-row  xl:flex-row  2xl:flex-row rounded-[12px] bordermx-auto">
             {formType === null && (
