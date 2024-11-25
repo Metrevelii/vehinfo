@@ -12,7 +12,7 @@ const DashboardLayout = ({ signOutUser, title, children }) => {
  
 
   return (
-    <div className="mx-auto max-w-full sm:max-w-[620px] md:max-w-[760px] px-[15px] lg:max-w-[940px] xl:max-w-[1280px]  2xl:max-w-[1432px] w-full">
+    <div className="mx-auto max-w-full my-[100px] sm:max-w-[620px] md:max-w-[760px] px-[15px] lg:max-w-[940px] xl:max-w-[1280px]  2xl:max-w-[1432px] w-full">
       <div className="flex mb-[50px] min-h-[700px] flex-col lg:flex-row xl:flex-row 2xl:flex-row">
         <div className="border-r border-[#f8f8f8] mt-[30px] w-full lg:w-[25%] xl:w-[25%] 2xl:w-[25%]">
           <ul className="w-full flex flex-col gap-2">

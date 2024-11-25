@@ -78,7 +78,7 @@ const ContactForm = ({ mainClassName }) => {
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="Name"
+                    placeholder={t("texts.name")}
                     className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative"
                   />
                   <ErrorMessage
@@ -92,7 +92,7 @@ const ContactForm = ({ mainClassName }) => {
                     type="text"
                     id="surname"
                     name="surname"
-                    placeholder="Surname"
+                    placeholder={t("texts.surname")}
                     className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative"
                   />
                   <ErrorMessage
@@ -147,7 +147,7 @@ const ContactForm = ({ mainClassName }) => {
                     type="text"
                     id="mobileNumber"
                     name="mobileNumber"
-                    placeholder="Mobile Number"
+                    placeholder={t("texts.mobnum")}
                     className="h-[46px]  rounded-tr-[12px] px-[20px] rounded-br-[12px] w-full bg-[#fff] text-[#5d636b] relative"
                   />
                   <ErrorMessage
@@ -164,7 +164,7 @@ const ContactForm = ({ mainClassName }) => {
                   id="comment"
                   name="comment"
                   rows="4"
-                  placeholder="You can leave comment here"
+                  placeholder={t("texts.leavecomment")}
                   className=" shadow-custom border p-2 w-full  h-[112px] sm:h-[70px] md:h-[70px] xl:h-[102px] 2xl:h-[102px] rounded-[12px] shadow-boxShadow bg-[#fff] resize-none text-[#5d636b]"
                 />
                 <ErrorMessage
@@ -176,7 +176,7 @@ const ContactForm = ({ mainClassName }) => {
 
               <div className="flex justify-start">
                 <ButtonComponent
-                  title={loading ? "Sending" : "Send"}
+                  title={loading ? `${t("texts.sending")}` : `${t("texts.send")}`}
                   className="w-[220px] h-[46px] md:h-[48px] lg:h-[48px] xl:w-[220px] 2xl:w-[220px] xl:h-[48px] 2xl:h-[48px] shadow-button"
                 />
               </div>

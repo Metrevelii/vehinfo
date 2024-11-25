@@ -66,7 +66,7 @@ const ForgotPasswordForm = ({ goBack }) => {
                   htmlFor="email"
                   className="font-interRegular text-[16px] mb-[0.5rem] text-primary-lightGray absolute z-5 left-[10px] top-[2px]"
                 >
-                  Enter your email
+                  {t("texts.enterEmail")}
                 </label>
                 <Field
                   type="email"
@@ -84,7 +84,7 @@ const ForgotPasswordForm = ({ goBack }) => {
 
               <div className="w-full flex justify-center items-center">
                 <ButtonComponent
-                  title="Send Reset Link"
+                  title={t("texts.sendLink")}
                   className="w-[100%] h-[56px] rounded-[12px]"
                 />
               </div>
@@ -96,7 +96,7 @@ const ForgotPasswordForm = ({ goBack }) => {
      {error && <div className="text-red-500 mt-4">{error}</div>}
 
       <button className="mt-[20px] text-primary-black font-interRegular text-[18px]" onClick={goBack}>
-        Go Back
+      {t("texts.goBack")}
       </button>
     </div>
   );

@@ -62,7 +62,7 @@ const LoginForm = ({ goBack }) => {
                   htmlFor="email"
                   className="font-interRegular text-[16px] mb-[0.5rem] text-primary-lightGray absolute z-5 left-[10px] top-[2px]"
                 >
-                  Email
+                  {t("texts.email")}
                 </label>
                 <Field
                   type="email"
@@ -83,7 +83,7 @@ const LoginForm = ({ goBack }) => {
                   htmlFor="password"
                   className="font-interRegular text-[16px] mb-[0.5rem] text-primary-lightGray absolute z-5 left-[10px] top-[2px]"
                 >
-                  Password
+                  {t("texts.password")}
                 </label>
                 <Field
                   type="password"
@@ -100,7 +100,7 @@ const LoginForm = ({ goBack }) => {
               </div>
               <div className="w-full flex justify-center items-center mt-[20px]">
                 <ButtonComponent
-                  title="Log In"
+                  title= {t("header.signIn")}
                   className="w-[100%] h-[56px] rounded-[12px]"
                 />
               </div>
@@ -110,7 +110,7 @@ const LoginForm = ({ goBack }) => {
       )}
 
       <button className="mt-[20px] text-primary-black font-interRegular text-[18px]" onClick={goBack}>
-        Go back
+        {t("texts.goBack")}
       </button>
     </div>
   );

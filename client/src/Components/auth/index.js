@@ -38,20 +38,20 @@ const RegisterLogin = (props) => {
                   <ButtonComponent
                     className="w-[200px] sm:w-[230px] md:w-[280px] lg:w-[350px] xl:w-[467px] 2xl:w-[467px] h-[50px] md:h-[50px] xl:h-[65px] 2xl:h-[65px] rounded-[12px] flex justify-center items-center font-interRegular text-primary-white text-[20px] mt-[20px]"
                     onClick={() => toggleFormType("login")}
-                    title={"Log In"}
+                    title={t("header.signIn")}
                   />
                   <button
                     className="w-[200px] sm:w-[230px] md:w-[280px] lg:w-[350px] xl:w-[467px] 2xl:w-[467px] h-[50px] md:h-[50px] xl:h-[65px] 2xl:h-[65px] rounded-[12px] flex justify-center items-center border border-solid border-[#919191] font-interRegular text-primary-black text-[20px] mt-[20px]"
                     onClick={() => toggleFormType("register")}
                   >
-                    Register
+                    {t("header.register")}
                   </button>
                 </div>
                 <button
                   className="font-interRegular text-[#757575] mt-[25px]"
                   onClick={() => toggleFormType("forgotPassword")}
                 >
-                  Forgot Password?
+                  {t("header.forgotPassword")}
                 </button>
               </div>
             )}

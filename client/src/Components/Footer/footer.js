@@ -37,7 +37,7 @@ const Footer = () => {
                               ? site.vars.countryaz
                               : site.vars.countryru}
                           </p>
-                          <p className="font-interRegular text-center text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] text-primary-whiteTransparent mt-0 lg:mt-[10px] xl:mt-[10px] 2xl:mt-[10px] xs:ml-[0px] sm:ml-[0px] md:ml-[5px] ml-[0px]">
+                          <p className="font-interRegular text-center text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] text-primary-whiteTransparent mt-0 lg:mt-[10px] xl:mt-[10px] 2xl:mt-[10px] xs:ml-[0px] sm:ml-[0px] md:ml-[5px] xl:ml-[0px] 2xl:ml-[0px]">
                             {currentLanguage === "az"
                               ? site.vars.addressaz
                               : site.vars.addressru}

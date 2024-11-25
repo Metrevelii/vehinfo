@@ -72,7 +72,7 @@ const RegisterForm = ({ goBack }) => {
                   htmlFor="firstname"
                   className="mb-[0.5rem] text-[16px] font-interRegular text-primary-lightGray absolute z-5 left-[10px] top-[2px]"
                 >
-                  First Name
+                  {t("texts.name")}
                 </label>
                 <Field
                   type="text"
@@ -93,7 +93,7 @@ const RegisterForm = ({ goBack }) => {
                   htmlFor="lastname"
                   className="font-interRegular text-[16px] mb-[0.5rem] text-primary-lightGray absolute z-5 left-[10px] top-[2px]"
                 >
-                  Last Name
+                  {t("texts.surname")}
                 </label>
                 <Field
                   type="text"
@@ -114,7 +114,7 @@ const RegisterForm = ({ goBack }) => {
                   htmlFor="email"
                   className="font-interRegular text-[16px] mb-[0.5rem] text-primary-lightGray absolute z-5 left-[10px] top-[2px]"
                 >
-                  Email
+                  {t("texts.email")}
                 </label>
                 <Field
                   type="email"
@@ -135,7 +135,7 @@ const RegisterForm = ({ goBack }) => {
                   htmlFor="password"
                   className="font-interRegular text-primary-lightGray absolute z-5 left-[10px] top-[2px]"
                 >
-                  Password
+                  {t("texts.password")}
                 </label>
                 <Field
                   type="password"
@@ -153,7 +153,7 @@ const RegisterForm = ({ goBack }) => {
 
               <div className="w-full flex justify-center items-center mt-[20px]">
                 <ButtonComponent
-                  title="Register"
+                  title={t("header.register")}
                   className="w-[100%] h-[56px] rounded-[12px]"
                 />
               </div>
@@ -163,7 +163,7 @@ const RegisterForm = ({ goBack }) => {
       )}
 
       <button className="mt-[20px] text-primary-black font-interRegular text-[18px]" onClick={goBack}>
-        Go back
+        {t("texts.goBack")}
       </button>
     </div>
   );
