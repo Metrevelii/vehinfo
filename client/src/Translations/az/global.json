@@ -6,6 +6,7 @@
         "calc": "Kalkulyator",
         "contact": "Əlaqə",
         "quote": "Sitat",
+        "benefits": "Üstünlüklər",
         "register": "Qeydiyyatdan keçin",
         "forgotPassword": "parol unutmusunuz?",
         "dashboard": "Panel"
@@ -26,8 +27,16 @@
         "goBack": "Geri qayıt",
         "enterEmail": "E-poçtunuzu daxil edin",
         "sendLink": "Link Göndər",
-        "text16": "",
-        "text17": ""
+        "text16": "Avtomobil dilerlərimizin əldə etdiyi üstünlüklər",
+        "text17": "bazarda ən yaxşı qiymətlər",
+        "text18": "şəxsi menecer",
+        "text19": "nəqliyyat vasitəsinin seçilməsində və hərracda iştirakında köməklik",
+        "text20": "ABŞ sığorta və diler hərraclarına giriş",
+        "text21": "sürətli nəqliyyat",
+        "text22": "Avtomobil nəqliyyatının sığortası",
+        "text23": "",
+        "text24": "",
+        "text25": ""
     },
     "home": {
         "text1": "Problemsiz Çatdırılma üçün Logistik Tərəfdaşınız",

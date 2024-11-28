@@ -15,6 +15,7 @@ import EmailIcon from './EmailIcon';
 import HeaderUserIcon from './HeadUserIcon';
 import PhoneIcon from './PhoneIcon';
 import MailIcon from './MailIcon';
+import RightArrow from './RightArrow';
 
 export const Icons = {
     ExpIcon: ExpIcon,
@@ -33,5 +34,6 @@ export const Icons = {
     EmailIcon: EmailIcon,
     HeaderUserIcon: HeaderUserIcon,
     PhoneIcon: PhoneIcon,
-    MailIcon: MailIcon
+    MailIcon: MailIcon,
+    RightArrow: RightArrow
 }

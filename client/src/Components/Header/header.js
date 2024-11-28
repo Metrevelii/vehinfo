@@ -95,11 +95,20 @@ const Header = ({ users }) => {
                           : translation.vars.text16ru
                       }
                     />
+                    <NavLink
+                      to="/benefits"
+                      title={
+                        currentLanguage === "az"
+                          ? translation.vars.text23az
+                          : translation.vars.text23ru
+                      }
+                    />
                   </>
                 ) : (
                   <>
                     <NavLink to="/about-us" title={t("header.aboutus")} />
                     <NavLink to="/contact-us" title={t("header.contact")} />
+                    <NavLink to="/contact-us" title={t("header.benefits")} />
                   </>
                 )}
               </nav>
@@ -135,7 +144,7 @@ const Header = ({ users }) => {
                             ? " bg-primary-white"
                             : " bg-primary-white"
                           : " bg-primary-white"
-                      } w-[112px] h-[48px] rounded-[12px] shadow-custom flex justify-between px-[12px] items-center mr-[20px]`}
+                      } w-[90px] h-[48px] lg:w-[112px] lg:h-[48px] rounded-[12px] shadow-custom flex justify-between px-[12px] items-center mr-[20px]`}
                     >
                       <Icons.HeaderUserIcon
                         className={`${
@@ -144,7 +153,7 @@ const Header = ({ users }) => {
                               ? "fill-primary-black"
                               : " fill-primary-orange"
                             : "fill-primary-black"
-                        } w-[32px] h-[32px] shrink-0`}
+                        } w-[25px] h-[25px] lg:w-[32px] lg:h-[32px] shrink-0`}
                       />
                       <p
                         className={`${
@@ -153,7 +162,7 @@ const Header = ({ users }) => {
                               ? "text-primary-black"
                               : " text-primary-black"
                             : "text-primary-black"
-                        } font-interMedium text-[16px]`}
+                        } font-interMedium text-[12px] lg:text-[16px]`}
                       >
                         {t("header.signIn")}
                       </p>
@@ -246,6 +255,16 @@ const Header = ({ users }) => {
                             : translation.vars.text16ru}
                         </Link>
                       </div>
+                      <div className="w-[60%] h-auto py-[25px] px-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
+                        <Link
+                          to="/benefits"
+                          className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
+                        >
+                          {currentLanguage === "az"
+                            ? translation.vars.text23az
+                            : translation.vars.text23ru}
+                        </Link>
+                      </div>
                     </>
                   ) : (
                     <>
@@ -264,6 +283,14 @@ const Header = ({ users }) => {
                           className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
                         >
                           {t("header.contact")}
+                        </Link>
+                      </div>
+                      <div className="w-[60%] h-auto py-[25px] px-[10px] flex justify-center items-center border-b-[1px] border-primary-blackSecond">
+                        <Link
+                          to="/benefits"
+                          className="w-full  font-interMedium text-[15px] text-primary-blackSecond flex justify-center items-center "
+                        >
+                          {t("header.benefits")}
                         </Link>
                       </div>
                     </>

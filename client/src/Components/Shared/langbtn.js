@@ -16,7 +16,7 @@ const LangBtn = () => {
     <>
       {
         !isMobile ? 
-        <div className="w-44 h-12 rounded-[12px] bg-white shadow-md p-1">
+        <div className="w-[130px] lg:w-44 h-12 rounded-[12px] bg-white shadow-md p-1">
           <div className="w-full h-full flex justify-center items-center">
             <div
               className={`w-1/2 h-full rounded-[12px] flex justify-center items-center cursor-pointer ${
@@ -26,7 +26,7 @@ const LangBtn = () => {
             >
               <div className="w-6 h-6 rounded-[12px] bg-ruFlag bg-repeat bg-contain bg-center border border-white"></div>
               <div
-                className={`ml-1 font-interMedium text-base ${
+                className={`ml-1 font-interMedium text-[14px] lg:text-[18px] ${
                   currentLanguage === "ru" ? "text-white" : "text-black"
                 }`}
               >
@@ -41,7 +41,7 @@ const LangBtn = () => {
             >
               <div className="w-6 h-6 rounded-[12px] bg-azFlag bg-repeat bg-contain bg-center border border-white"></div>
               <div
-                className={`ml-1 font-interMedium text-base ${
+                className={`ml-1 font-interMedium text-[14px] lg:text-[18px] ${
                   currentLanguage === "az" ? "text-white" : "text-black"
                 }`}
               >

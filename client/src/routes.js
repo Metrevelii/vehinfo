@@ -13,9 +13,11 @@ import Home from "./Components/Home/index";
 import Header from "./Components/Header/header";
 import AboutUs from "./Components/AboutUs";
 import ContactUs from "./Components/ContactUs/contactUs";
+import Benefits from "./Components/Benefits";
 
 import RegisterLogin from "./Components/auth/index";
 import ResetPasswordForm from "./Components/auth/resetPasswordForm";
+
 
 import UserDashboard from "./Components/dashboard";
 
@@ -68,6 +70,7 @@ const RoutesMain = (props) => {
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="/sign-in" element={<RegisterLogin />} />
                 <Route path="/password-reset" element={<ResetPasswordForm />} />
+                <Route path="/benefits" element={<Benefits />} />
                 <Route
                   path="/dashboard"
                   element={<ProtectedUserDashboard signOutUser={signOutUser} />}
