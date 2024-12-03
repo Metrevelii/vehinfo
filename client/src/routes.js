@@ -66,7 +66,7 @@ const RoutesMain = (props) => {
             <MainLayout>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about-us" element={<AboutUs />} />
+                <Route path="/about-us" element={<AboutUs marginY={'my-[100px]'}/>} />
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="/sign-in" element={<RegisterLogin />} />
                 <Route path="/password-reset" element={<ResetPasswordForm />} />

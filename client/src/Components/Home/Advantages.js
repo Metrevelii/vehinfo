@@ -22,7 +22,7 @@ const Advantages = () => {
       <div className="grid grid-cols-2 xs:gap-[0.2rem] gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 w-full  items-center">
         <AdvantageBox
           icon={
-            <Icons.ExpIcon className="w-[25px] h-[25px] fill-primary-lightPurple  group-hover:fill-primary-black text-primary" />
+            <Icons.ExpIcon className="w-[25px] h-[25px] fill-[#525252]  group-hover:fill-primary-black text-primary" />
           }
           title={
             currentLanguage === "az"
@@ -37,7 +37,7 @@ const Advantages = () => {
         />
         <AdvantageBox
           icon={
-            <Icons.SafetyIcon className="w-[20px] h-[24px] fill-primary-lightPurple group-hover:fill-primary-black text-primary" />
+            <Icons.SafetyIcon className="w-[20px] h-[24px] fill-[#525252] group-hover:fill-primary-black text-primary" />
           }
           title={
             currentLanguage === "az"
@@ -52,7 +52,7 @@ const Advantages = () => {
         />
         <AdvantageBox
           icon={
-            <Icons.LocationIcon className="w-[18px] h-[28px] fill-primary-lightPurple group-hover:fill-primary-black text-primary" />
+            <Icons.LocationIcon className="w-[18px] h-[28px] fill-[#525252] group-hover:fill-primary-black text-primary" />
           }
           title={
             currentLanguage === "az"
@@ -67,7 +67,7 @@ const Advantages = () => {
         />
         <AdvantageBox
           icon={
-            <Icons.PricesIcon className="w-[28px] h-[28px] fill-primary-lightPurple group-hover:fill-primary-black text-primary" />
+            <Icons.PricesIcon className="w-[28px] h-[28px] fill-[#525252] group-hover:fill-primary-black text-primary" />
           }
           title={
             currentLanguage === "az"

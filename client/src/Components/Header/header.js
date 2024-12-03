@@ -86,6 +86,8 @@ const Header = ({ users }) => {
                           ? translation.vars.text17az
                           : translation.vars.text17ru
                       }
+                      isHomePage={isHomePage}
+                      isScrolled={isScrolled}
                     />
                     <NavLink
                       to="/contact-us"
@@ -94,6 +96,8 @@ const Header = ({ users }) => {
                           ? translation.vars.text16az
                           : translation.vars.text16ru
                       }
+                      isHomePage={isHomePage}
+                      isScrolled={isScrolled}
                     />
                     <NavLink
                       to="/benefits"
@@ -102,13 +106,30 @@ const Header = ({ users }) => {
                           ? translation.vars.text23az
                           : translation.vars.text23ru
                       }
+                      isHomePage={isHomePage}
+                      isScrolled={isScrolled}
                     />
                   </>
                 ) : (
                   <>
-                    <NavLink to="/about-us" title={t("header.aboutus")} />
-                    <NavLink to="/contact-us" title={t("header.contact")} />
-                    <NavLink to="/contact-us" title={t("header.benefits")} />
+                    <NavLink
+                      to="/about-us"
+                      title={t("header.aboutus")}
+                      isHomePage={isHomePage}
+                      isScrolled={isScrolled}
+                    />
+                    <NavLink
+                      to="/contact-us"
+                      title={t("header.contact")}
+                      isHomePage={isHomePage}
+                      isScrolled={isScrolled}
+                    />
+                    <NavLink
+                      to="/contact-us"
+                      title={t("header.benefits")}
+                      isHomePage={isHomePage}
+                      isScrolled={isScrolled}
+                    />
                   </>
                 )}
               </nav>
@@ -338,9 +359,7 @@ const Header = ({ users }) => {
                   : "logo-white"
                 : "logo-orange"
             } w-[143px] h-[32px]`}
-          >
-          
-          </Link>
+          ></Link>
           <div className="shadow-custom rounded-[12px]">
             <LangBtn />
           </div>
