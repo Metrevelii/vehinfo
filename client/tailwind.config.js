@@ -39,7 +39,10 @@ module.exports = {
         contactBg: "url('../public/images/contacts-bg.webp')",
         contactBgMob: "url('../public/images/contacts-bg-mob.webp')",
         azFlag: "url('../public/images/az-flag.png')",
+        benefitsBg: "url('../public/images/lastpage-bg-updt.webp')",
+        benefitsBgMob: "url('../public/images/benefits-bg-mob.webp')",
         ruFlag: "url('../public/images/ru-flag.png')",
+        "linear-gradient-forbg": "linear-gradient(180deg, #080B20 0%, rgba(8, 11, 32, 0.96) 10%, rgba(8, 11, 32, 0) 16.48%, rgba(8, 11, 32, 0.06) 52.51%, rgba(6, 7, 23, 0.814445) 84.23%, #050613 100%)",
         "linear-gradient-white":
           "linear-gradient(180deg, rgba(255, 255, 255, 0.57) 0%, #FFFFFF 100%)",
         "linear-gradient-gray":

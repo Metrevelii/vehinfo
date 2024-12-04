@@ -145,9 +145,9 @@ const Header = ({ users }) => {
                         className={`${
                           isHomePage
                             ? isScrolled
-                              ? "fill-primary-black"
+                              ? "fill-[#525252]"
                               : "fill-primary-orange"
-                            : "fill-primary-black"
+                            : "fill-[#525252]"
                         } w-[32px] h-[32px] shrink-0`}
                       />
                       <p className="font-interMedium text-[16px] text-primary-black">
@@ -171,9 +171,9 @@ const Header = ({ users }) => {
                         className={`${
                           isHomePage
                             ? isScrolled
-                              ? "fill-primary-black"
+                              ? "fill-[#525252]"
                               : " fill-primary-orange"
-                            : "fill-primary-black"
+                            : "fill-[#525252]"
                         } w-[25px] h-[25px] lg:w-[32px] lg:h-[32px] shrink-0`}
                       />
                       <p

@@ -20,7 +20,7 @@ const AboutUs = ({ marginY }) => {
                   ? translation.vars.text18az
                   : translation.vars.text18ru}
               </h3>
-              <div className="2xl:mt-[3rem]  w-[100%] lg:w-[70%] xl:w-[70%] 2xl:w-[70%]">
+              <div className="2xl:mt-[3rem]  w-full">
                 <span className="font-interBold  text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px] text-[#000] ">
                   
                   {currentLanguage === "az"

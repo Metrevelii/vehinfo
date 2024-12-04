@@ -21,7 +21,7 @@ const NavLink = ({ to, title, isHomePage, isScrolled }) => {
       ></div>
       <Link to={to} className="w-full h-full flex justify-center items-center">
         <button
-          className={`font-medium text-[12px] md:text-[18px] xl:text-[20px] 2xl:text-[20px] text-white transition-all ease-in-out ${hoverColor}`}
+          className={` ${isActive ? 'font-bold' : 'font-medium'} text-[12px] md:text-[14px] xl:text-[16px] 2xl:text-[18px] text-white transition-all ease-in-out ${hoverColor}`}
         >
           {title}
         </button>
