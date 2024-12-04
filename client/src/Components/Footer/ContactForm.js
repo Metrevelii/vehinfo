@@ -73,13 +73,13 @@ const ContactForm = ({ mainClassName }) => {
 
             <Form className="w-full p-4 bg-transparent rounded">
               <div className="flex justify-between items-center  xs:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row mb-[2rem]">
-                <div className="flex flex-col xs:w-full sm:w-full md:w-[48%] lg:w-[48%] xl:w-[48%] 2xl:w-[48%] relative xs:mb-[2rem] sm:mb-[2rem] md:mb-0 lg:mb-0 xl:mb-0 2xl:mb-0">
+                <div className="flex flex-col xs:w-full sm:w-full md:w-[48%] lg:w-[48%] xl:w-[48%] 2xl:w-[48%] relative rounded-[12px] xs:mb-[2rem] sm:mb-[2rem] md:mb-0 lg:mb-0 xl:mb-0 2xl:mb-0">
                   <Field
                     type="text"
                     id="name"
                     name="name"
                     placeholder={t("texts.name")}
-                    className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative"
+                    className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative  focus:outline-black focus:ring-0 focus:border-black"
                   />
                   <ErrorMessage
                     name="name"
@@ -87,13 +87,13 @@ const ContactForm = ({ mainClassName }) => {
                     className="text-red-500 text-sm font-interMedium mt-[5px] absolute z-[5] bottom-[-50%] left-[1%]"
                   />
                 </div>
-                <div className="flex flex-col xs:w-full sm:w-full md:w-[48%] lg:w-[48%] xl:w-[48%] 2xl:w-[48%] relative">
+                <div className="flex flex-col xs:w-full sm:w-full md:w-[48%] lg:w-[48%] xl:w-[48%] 2xl:w-[48%] relative rounded-[12px]">
                   <Field
                     type="text"
                     id="surname"
                     name="surname"
                     placeholder={t("texts.surname")}
-                    className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative"
+                    className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative focus:outline-black focus:ring-0 focus:border-black"
                   />
                   <ErrorMessage
                     name="surname"
@@ -116,7 +116,7 @@ const ContactForm = ({ mainClassName }) => {
                     as="select"
                     id="countryCode"
                     name="countryCode"
-                    className="h-[46px] rounded-tl-[12px] rounded-bl-[12px] appearance-none w-full bg-[#fff] xs:text-[12px] sm:text-[14px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] text-[#5d636b] xs:pl-[30px] sm:pl-[30px] md:pl-[40px] lg:pl-[40px] xl:pl-[40px] 2xl:pl-[40px] pr-[25px] relative  border-r-2 border-r-primary-purpleLighter"
+                    className="h-[46px] rounded-tl-[12px] focus:outline-black focus:ring-0 focus:border-black rounded-bl-[12px] appearance-none w-full bg-[#fff] xs:text-[12px] sm:text-[14px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] text-[#5d636b] xs:pl-[30px] sm:pl-[30px] md:pl-[40px] lg:pl-[40px] xl:pl-[40px] 2xl:pl-[40px] pr-[25px] relative  border-r-2 border-r-primary-purpleLighter"
                     onClick={handleClick}
                     onBlur={handleBlur}
                   >
@@ -148,7 +148,7 @@ const ContactForm = ({ mainClassName }) => {
                     id="mobileNumber"
                     name="mobileNumber"
                     placeholder={t("texts.mobnum")}
-                    className="h-[46px]  rounded-tr-[12px] px-[20px] rounded-br-[12px] w-full bg-[#fff] text-[#5d636b] relative"
+                    className="h-[46px]  rounded-tr-[12px] focus:outline-black focus:ring-0 focus:border-black px-[20px] rounded-br-[12px] w-full bg-[#fff] text-[#5d636b] relative"
                   />
                   <ErrorMessage
                     name="mobileNumber"
@@ -165,7 +165,7 @@ const ContactForm = ({ mainClassName }) => {
                   name="comment"
                   rows="4"
                   placeholder={t("texts.leavecomment")}
-                  className=" shadow-custom border p-2 w-full  h-[112px] sm:h-[70px] md:h-[70px] xl:h-[102px] 2xl:h-[102px] rounded-[12px] shadow-boxShadow bg-[#fff] resize-none text-[#5d636b]"
+                  className=" shadow-custom border p-2 w-full  focus:outline-black focus:ring-0 focus:border-black h-[112px] sm:h-[70px] md:h-[70px] xl:h-[102px] 2xl:h-[102px] rounded-[12px] shadow-boxShadow bg-[#fff] resize-none text-[#5d636b]"
                 />
                 <ErrorMessage
                   name="comment"
