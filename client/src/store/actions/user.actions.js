@@ -14,7 +14,7 @@ export const userRegister = (values) => {
                 lastname: values.lastname
             });
             dispatch(actions.userAuthenticate({data: user.data.user,auth: true}))
-            dispatch(actions.successGlobal('Welcome !! check you mail to verify account.'))
+            dispatch(actions.successGlobal('Welcome !'))
         } catch(error){
             dispatch(actions.errorGlobal(error.response.data.message))
         }

@@ -79,7 +79,7 @@ const ContactForm = ({ mainClassName }) => {
                     id="name"
                     name="name"
                     placeholder={t("texts.name")}
-                    className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative  focus:outline-black focus:ring-0 focus:border-black"
+                    className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative  focus:outline-primary-orangeHeader focus:ring-0 focus:border-primary-orangeHeader"
                   />
                   <ErrorMessage
                     name="name"
@@ -93,7 +93,7 @@ const ContactForm = ({ mainClassName }) => {
                     id="surname"
                     name="surname"
                     placeholder={t("texts.surname")}
-                    className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative focus:outline-black focus:ring-0 focus:border-black"
+                    className="shadow-custom border p-2 bg-[#fff] text-[#a3acb9] rounded-[12px] relative focus:outline-primary-orangeHeader focus:ring-0 focus:border-primary-orangeHeader"
                   />
                   <ErrorMessage
                     name="surname"
@@ -116,12 +116,12 @@ const ContactForm = ({ mainClassName }) => {
                     as="select"
                     id="countryCode"
                     name="countryCode"
-                    className="h-[46px] rounded-tl-[12px] focus:outline-black focus:ring-0 focus:border-black rounded-bl-[12px] appearance-none w-full bg-[#fff] xs:text-[12px] sm:text-[14px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] text-[#5d636b] xs:pl-[30px] sm:pl-[30px] md:pl-[40px] lg:pl-[40px] xl:pl-[40px] 2xl:pl-[40px] pr-[25px] relative  border-r-2 border-r-primary-purpleLighter"
+                    className="h-[46px] rounded-tl-[12px] focus:outline-primary-orangeHeader focus:ring-0 focus:border-primary-orangeHeader rounded-bl-[12px] appearance-none w-full bg-[#fff] xs:text-[12px] sm:text-[14px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] text-[#5d636b] xs:pl-[30px] sm:pl-[30px] md:pl-[40px] lg:pl-[40px] xl:pl-[40px] 2xl:pl-[40px] pr-[25px] relative  border-r-2 border-r-primary-purpleLighter"
                     onClick={handleClick}
                     onBlur={handleBlur}
                   >
                     <option value="" className="text-[#5d636b]">
-                      Select
+                      {t("texts.select")}
                     </option>
                     <option value="+995" className="text-[#5d636b]">
                       +995 (Geo)
@@ -148,7 +148,7 @@ const ContactForm = ({ mainClassName }) => {
                     id="mobileNumber"
                     name="mobileNumber"
                     placeholder={t("texts.mobnum")}
-                    className="h-[46px]  rounded-tr-[12px] focus:outline-black focus:ring-0 focus:border-black px-[20px] rounded-br-[12px] w-full bg-[#fff] text-[#5d636b] relative"
+                    className="h-[46px]  rounded-tr-[12px] focus:outline-primary-orangeHeader focus:ring-0 focus:border-primary-orangeHeader px-[20px] rounded-br-[12px] w-full bg-[#fff] text-[#5d636b] relative"
                   />
                   <ErrorMessage
                     name="mobileNumber"
@@ -165,7 +165,7 @@ const ContactForm = ({ mainClassName }) => {
                   name="comment"
                   rows="4"
                   placeholder={t("texts.leavecomment")}
-                  className=" shadow-custom border p-2 w-full  focus:outline-black focus:ring-0 focus:border-black h-[112px] sm:h-[70px] md:h-[70px] xl:h-[102px] 2xl:h-[102px] rounded-[12px] shadow-boxShadow bg-[#fff] resize-none text-[#5d636b]"
+                  className=" shadow-custom border p-2 w-full  focus:outline-primary-orangeHeader focus:ring-0 focus:border-primary-orangeHeader h-[112px] sm:h-[70px] md:h-[70px] xl:h-[102px] 2xl:h-[102px] rounded-[12px] shadow-boxShadow bg-[#fff] resize-none text-[#5d636b]"
                 />
                 <ErrorMessage
                   name="comment"

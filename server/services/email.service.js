@@ -19,7 +19,7 @@ const registerEmail = async(userEmail, user) => {
         let mailGenerator = new Mailgen({
             theme: 'default',
             product: {
-                name: 'Vehicle info',
+                name: 'Cargo Logistic',
                 link: `${process.env.EMAIL_MAIL_URL}`,
             }
         })
@@ -27,15 +27,8 @@ const registerEmail = async(userEmail, user) => {
         const email = {
             body: {
                 name: userEmail,
-                intro: 'Welcome to Vehinfo ! We\`re very excited to have you on board',
-                action: {
-                    instructions: 'Click the link to activate your account',
-                    button: {
-                        color: '#1a73e8',
-                        text: 'Validate your account',
-                        link: `${process.env.SITE_DOMAIN}verification?t=${emailToken}`
-                    }
-                }
+                intro: 'Welcome to Cargo Logistic ! We\`re very excited to have you on board',
+              
             }
         }
 
@@ -43,7 +36,7 @@ const registerEmail = async(userEmail, user) => {
         let message = {
             from: process.env.EMAIL,
             to: userEmail,
-            subject: "Welcome to vehinfo",
+            subject: "Welcome to Cargo Logistic",
             html: emailBody
         };
 
