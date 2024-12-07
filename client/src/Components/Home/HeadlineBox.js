@@ -12,7 +12,7 @@ const HeadlineBox = () => {
 
   return (
     <>
-      <div className=" md:w-[600px]  h-auto px-[20px] xl:w-[750px]   2xl:w-[892px]  bg-black/30 backdrop-blur-custom-25">
+      <div className=" md:w-[600px] h-[140px] md:h-auto px-[20px] xl:w-[750px]   2xl:w-[892px]  bg-black/30 backdrop-blur-custom-25">
         <div className="w-full h-full flex flex-col justify-start items-start p-[15px] md:p-[20px] lg:p-[25px] xl:p-[35px] 2xl:p-[35px]">
           {translation && translation.vars ? (
             <>
