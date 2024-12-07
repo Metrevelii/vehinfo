@@ -22,6 +22,21 @@ const Advantages = () => {
       <div className="grid grid-cols-2 xs:gap-[0.2rem] gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 w-full  items-center">
         <AdvantageBox
           icon={
+            <Icons.PricesIcon className="w-[28px] h-[28px] fill-[#525252] group-hover:fill-primary-black text-primary" />
+          }
+          title={
+            currentLanguage === "az"
+              ? translation.vars.text10az
+              : translation.vars.text10ru
+          }
+          description={
+            currentLanguage === "az"
+              ? translation.vars.text11az
+              : translation.vars.text11ru
+          }
+        />
+        <AdvantageBox
+          icon={
             <Icons.ExpIcon className="w-[25px] h-[25px] fill-[#525252]  group-hover:fill-primary-black text-primary" />
           }
           title={
@@ -63,21 +78,6 @@ const Advantages = () => {
             currentLanguage === "az"
               ? translation.vars.text9az
               : translation.vars.text9ru
-          }
-        />
-        <AdvantageBox
-          icon={
-            <Icons.PricesIcon className="w-[28px] h-[28px] fill-[#525252] group-hover:fill-primary-black text-primary" />
-          }
-          title={
-            currentLanguage === "az"
-              ? translation.vars.text10az
-              : translation.vars.text10ru
-          }
-          description={
-            currentLanguage === "az"
-              ? translation.vars.text11az
-              : translation.vars.text11ru
           }
         />
       </div>
