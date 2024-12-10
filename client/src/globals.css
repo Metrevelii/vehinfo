@@ -79,7 +79,7 @@ code {
 }
 
 .homepage {
-  background: url("../public/images/webbg-upgraded.webp");
+  background: url("../public/images/webbg-upgr.webp");
 
     
   background-size: cover;
@@ -87,7 +87,7 @@ code {
   background-position: top center;
 
   width: 100%;
-  height: 1273px;
+  height: 932px;
 }
 
 .shipBg {
