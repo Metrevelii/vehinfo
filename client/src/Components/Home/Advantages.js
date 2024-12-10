@@ -7,6 +7,7 @@ import { Icons } from "../../icons";
 
 const Advantages = () => {
   const translation = useSelector((state) => state.translations);
+  const site = useSelector((state) => state.site);
   const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
 
@@ -74,10 +75,15 @@ const Advantages = () => {
               ? translation.vars.text8az
               : translation.vars.text8ru
           }
+          description2= {
+            currentLanguage === "az"
+              ? site.vars.countryaz
+              : site.vars.countryru
+          }
           description={
             currentLanguage === "az"
-              ? translation.vars.text9az
-              : translation.vars.text9ru
+            ? site.vars.addressaz
+            : site.vars.addressru
           }
         />
       </div>
