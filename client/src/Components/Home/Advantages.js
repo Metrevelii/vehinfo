@@ -15,11 +15,7 @@ const Advantages = () => {
 
   return (
     <div className="flex flex-col justify-start items-start mt-[1rem] md:mt-[3rem] xl:mt-[4rem] 2xl:mt-[4rem]">
-      <div className="font-interBold font-bold xs:text-[16px] sm:text-[24px] md:text-[26px] xl:text-[28px] 2xl:text-[28px] text-white xs:mb-[2vw] sm:mb-[2vw] mb-6 uppercase">
-        {currentLanguage === "az"
-          ? translation.vars.text5az
-          : translation.vars.text5ru}
-      </div>
+      
       <div className="grid grid-cols-2 xs:gap-[0.2rem] gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 w-full  items-center">
         <AdvantageBox
           icon={
